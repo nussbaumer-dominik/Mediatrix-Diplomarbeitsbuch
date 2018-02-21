@@ -12,7 +12,7 @@ Innerhalb eines \<div> Tags können die einzelnen Elemente ihre Größe "flexibe
 #### Erklärung anhand eines realen Beispiels
 Auf dem Dashboard soll eine seitliche Navigation angezeigt werden, die auf mobilen Geräten an den unteren Rand des Bildschirms wandert, siehe Abbildung 1. 
 
-![alt text](../../Design/Flexbox_Illustration_1.png)
+![alt text](/bilder/Dominik/Flexbox_Illustration_1.png)
 
 Mithilfe von Flexbox ist dieses Verhalten einfach zu erzielen.	
 Ich erstelle ein Elternelement mit folgenden Eigenschaften:
