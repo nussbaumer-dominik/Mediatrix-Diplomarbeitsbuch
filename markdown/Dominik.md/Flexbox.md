@@ -12,13 +12,13 @@ Innerhalb eines \<div> Tags können die einzelnen Elemente ihre Größe "flexibe
 ### Erklärung anhand eines realen Beispiels
 Auf dem Dashboard soll eine seitliche Navigation angezeigt werden, die auf mobilen Geräten an den unteren Rand des Bildschirms wandert, siehe Abbildung 1. 
 
-![alt text](bilder/Dominik/Flexbox_Illustration_1.png)
+![Flexbox Beispiel](bilder/Dominik/Flexbox_Illustration_1.png){width=90%}
 
 Mithilfe von Flexbox ist dieses Verhalten einfach zu erzielen.	
 Ich erstelle ein Elternelement mit folgenden Eigenschaften:
 
 
-```CSS
+```css
 .parent{
   display: flex;
   overflow: hidden;
@@ -28,7 +28,7 @@ Die Kindelemente dieser Flexbox werden auf der horizontalen Hauptachse ausgerich
 
 Dieses Element ist durch order:1 das erste Element in der Flexbox. Der Overflow auf der Y-Achse ist versteckt, um die Leiste zu fixieren. Weiters werden die Elemente innerhalb vertikal und horizontal zentriert und sind entlang der Y-Achse positioniert.
 
-```Css
+```css
 .side-nav{
   display: flex;
   order: 1;
@@ -39,7 +39,7 @@ Dieses Element ist durch order:1 das erste Element in der Flexbox. Der Overflow 
 ```
 Das Inhaltselement hat order:2 damit es neben dem ersten auf der X-Achse positioniert wird. Ebenso ist der Overflow auf der Y-Achse versteckt. 
 
-```Css
+```css
 .content{
   overflow-y: hidden;
   display: flex;
@@ -50,7 +50,7 @@ Das Inhaltselement hat order:2 damit es neben dem ersten auf der X-Achse positio
 ```
 Damit die Navigation auf mobilen Geräten am unteren Rand positioniert ist, benötigen wir eine Media Query. Mithilfe dieser können CSS-Stile anhand von verschiedenen Eigenschaften wie z.B. Bildschirmauflösung oder Seitenverhältnis manipuliert werden. Im untenstehenden Code-Block wird dies veranschaulicht. Indem wir die Hauptachse des Flexbox Elternelements auf die Y-Achse ändern, werden die beiden Kindelemente nun vertikal verteilt. Damit nun auch die Navigation unter dem Inhalt positioniert ist ändern wir die order auf 2. Weiters müssen die Höhe und Breite angepasst werden.
 
-```Css
+```css
 @media (max-width: 576px){
   .parent{
     flex-direction: column;	//changed
