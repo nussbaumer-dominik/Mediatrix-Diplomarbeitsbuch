@@ -32,6 +32,15 @@ do
 done
 cd ..
 
+rm diplom.bib
+
+cd bib
+for f in *.bib
+do
+    cat $f >> ../diplom.bib
+done
+cd ..
+
 LATEXOPT="--shell-escape"
 
 $LATEX ${LATEXOPT} diplomarbeit.tex &&
