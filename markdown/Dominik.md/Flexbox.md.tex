@@ -12,7 +12,7 @@ Bildschirmgröße. Anschließend ist es dem Browser überlassen, die Breite,
 Höhe, Position und Anordnung zu wählen.
 
 \hypertarget{das-konzept}{%
-\paragraph{Das Konzept}\label{das-konzept}}
+\subsubsection{Das Konzept}\label{das-konzept}}
 
 Die Grundidee ist es, dem Flex-Container die Möglichkeit zu geben, die
 Maße der Elemente so zu verändern, dass der Platz auf unterschiedlichen
@@ -21,7 +21,8 @@ lässt das Elternelement die Kindelemente je nach Bedarf wachsen oder
 schrumpfen.
 
 \hypertarget{technische-spezifikation}{%
-\paragraph{technische Spezifikation}\label{technische-spezifikation}}
+\subsubsection{technische
+Spezifikation}\label{technische-spezifikation}}
 
 Innerhalb eines \textless{}div\textgreater{} Tags können die einzelnen
 Elemente ihre Größe ``flexibel'' verändern. Sie wachsen, um freien Platz
@@ -32,7 +33,7 @@ Orientierungsänderungen bei mobilen Geräten oder Auflösungsänderungen
 auf Desktop Geräten betrifft.
 
 \hypertarget{erkluxe4rung-anhand-eines-realen-beispiels}{%
-\paragraph{Erklärung anhand eines realen
+\subsubsection{Erklärung anhand eines realen
 Beispiels}\label{erkluxe4rung-anhand-eines-realen-beispiels}}
 
 Auf dem Dashboard soll eine seitliche Navigation angezeigt werden, die
@@ -41,19 +42,21 @@ Abbildung 1.
 
 \begin{figure}
 \centering
-\includegraphics{../../Design/Flexbox_Illustration_1.png}
+\includegraphics{bilder/Dominik/Flexbox_Illustration_1.png}
 \caption{alt text}
 \end{figure}
 
 Mithilfe von Flexbox ist dieses Verhalten einfach zu erzielen.\\
 Ich erstelle ein Elternelement mit folgenden Eigenschaften:
 
-\begin{verbatim}
-.parent{
-  display: flex;
-  overflow: hidden;
-}
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{.parent}\NormalTok{\{}
+  \KeywordTok{display}\NormalTok{: flex;}
+  \KeywordTok{overflow}\NormalTok{: }\DecValTok{hidden}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
 
 Die Kindelemente dieser Flexbox werden auf der horizontalen Hauptachse
 ausgerichtet. Der Overflow auf der X- und Y-Achse wird ausgeblendet. Die
@@ -64,28 +67,32 @@ Overflow auf der Y-Achse ist versteckt, um die Leiste zu fixieren.
 Weiters werden die Elemente innerhalb vertikal und horizontal zentriert
 und sind entlang der Y-Achse positioniert.
 
-\begin{verbatim}
-.side-nav{
-  display: flex;
-  order: 1;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{.side-nav}\NormalTok{\{}
+  \KeywordTok{display}\NormalTok{: flex;}
+  \KeywordTok{order}\NormalTok{: }\DecValTok{1}\NormalTok{;}
+  \KeywordTok{justify-content}\NormalTok{: }\DecValTok{center}\NormalTok{;}
+  \KeywordTok{align-items}\NormalTok{: }\DecValTok{center}\NormalTok{;}
+  \KeywordTok{flex-direction}\NormalTok{: column;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
 
 Das Inhaltselement hat order:2 damit es neben dem ersten auf der X-Achse
 positioniert wird. Ebenso ist der Overflow auf der Y-Achse versteckt.
 
-\begin{verbatim}
-.content{
-  overflow-y: hidden;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  order: 2;
-}
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{.content}\NormalTok{\{}
+  \KeywordTok{overflow-y}\NormalTok{: }\DecValTok{hidden}\NormalTok{;}
+  \KeywordTok{display}\NormalTok{: flex;}
+  \KeywordTok{justify-content}\NormalTok{: }\DecValTok{center}\NormalTok{;}
+  \KeywordTok{flex-direction}\NormalTok{: column;}
+  \KeywordTok{order}\NormalTok{: }\DecValTok{2}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
 
 Damit die Navigation auf mobilen Geräten am unteren Rand positioniert
 ist, benötigen wir eine Media Query. Mithilfe dieser können CSS-Stile
@@ -97,16 +104,19 @@ nun vertikal verteilt. Damit nun auch die Navigation unter dem Inhalt
 positioniert ist ändern wir die order auf 2. Weiters müssen die Höhe und
 Breite angepasst werden.
 
-\begin{verbatim}
-@media (max-width: 576px){
-  .parent{
-    flex-direction: column; //changed
-  }
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{@media}\NormalTok{ (}\KeywordTok{max-width}\NormalTok{: }\DecValTok{576px}\NormalTok{)\{}
+  \FunctionTok{.parent}\NormalTok{\{}
+    \KeywordTok{flex-direction}\NormalTok{: column; //changed}
+\NormalTok{  \}}
 
-  .side-nav{
-      order: 2;             //changed
-      width: 100vw;         //changed
-      height: 66px;         //changed
-    }
-  }
-\end{verbatim}
+  \FunctionTok{.side-nav}\NormalTok{\{}
+      \KeywordTok{order}\NormalTok{: }\DecValTok{2}\NormalTok{;             //changed}
+      \KeywordTok{width}\NormalTok{: }\DecValTok{100vw}\NormalTok{;         //changed}
+      \KeywordTok{height}\NormalTok{: }\DecValTok{66px}\NormalTok{;         //changed}
+\NormalTok{    \}}
+\NormalTok{  \}}
+\end{Highlighting}
+\end{Shaded}
+
