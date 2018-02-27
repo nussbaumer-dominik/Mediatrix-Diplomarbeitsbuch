@@ -14,7 +14,7 @@ Auf dem Dashboard soll eine seitliche Navigation angezeigt werden, die auf mobil
 
 ![Flexbox Beispiel](bilder/Dominik/Flexbox_Illustration_1.png){width=90%}
 
-Mithilfe von Flexbox ist dieses Verhalten einfach zu erzielen.	
+Mithilfe von Flexbox ist dieses Verhalten einfach zu erzielen.
 Ich erstelle ein Elternelement mit folgenden Eigenschaften:
 
 
@@ -63,3 +63,5 @@ Damit die Navigation auf mobilen Geräten am unteren Rand positioniert ist, ben�
     }
   }
 ```
+
+### Möglichkeiten
