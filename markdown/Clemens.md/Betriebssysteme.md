@@ -1,4 +1,4 @@
-Ein Betriebssystem bezeichnet eine Sammlung von Programmen, die
+Ein Betriebssystem (BS) bezeichnet eine Sammlung von Programmen, die
 \begin{quote}
     ".. die Grundlage der mögl. Betriebsarten bildet und bes. die Abwicklung von Benutzerprogrammen steuert und überwacht."\cite[S. 288]{noauthor_neue_1991}
 \end{quote}
