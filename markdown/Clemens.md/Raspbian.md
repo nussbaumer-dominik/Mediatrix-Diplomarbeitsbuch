@@ -1,0 +1,1 @@
+Rasbian ist eine auf Debian bassierende Linux-Distribution. 
