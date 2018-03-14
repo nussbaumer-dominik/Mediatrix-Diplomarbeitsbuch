@@ -25,6 +25,7 @@
 
 \setcounter{secnumdepth}{3}
 
+\usepackage{dirtree}
 \usepackage{textcomp}
 
 \usepackage[T1]{fontenc}
@@ -355,11 +356,19 @@ Wien, \today
 %%%%%%%%%%%%%%%%%%%%%% Chapter Betriebssystem %%%%%%%%%%%%%%%%%%%%%
 \chapter{Betriebssystem}\label{Betriebssystem}
 
+\input{markdown/Clemens.md/Betriebssysteme.md}
+
 \section{Raspbian}\label{Raspbian}
 
 \renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
 
-% \input{markdown/Clemens.md/myChapter.md}
+\input{markdown/Clemens.md/Raspbian.md}
+
+\section{Webserver}\label{Webserver}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+\input{markdown/Clemens.md/Webserver.md}
 
 \section{Sicherheit}\label{Sicherheit}
 
@@ -410,7 +419,7 @@ Wien, \today
 
 \renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
 
-% \input{markdown/Clemens.md/myChapter.md}
+\input{markdown/Clemens.md/Ir.md}
 
 \section{Mischpult}\label{Mischpult}
 
@@ -504,7 +513,7 @@ Zusätzlich sollte es geben:
 
 %% Flattersatz -- damit werden die langen URLs besser umgebrochen
 \raggedright %% eventuell auskommentieren
-\bibliographystyle{plaindin}%Alternative unsrtdin - Nummern im Text aufsteigend
+\bibliographystyle{alphaurl}%Alternative unsrtdin - Nummern im Text aufsteigend
 \bibliography{diplom}
 
 
