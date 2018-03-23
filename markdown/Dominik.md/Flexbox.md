@@ -14,8 +14,8 @@ Auf der Seite soll eine seitliche Navigation angezeigt werden, die auf mobilen G
 ![Flexbox Beispiel Funktionalität](bilder/Dominik/Flexbox_Illustration_1.png){width=90%}
 
 Mithilfe von Flexbox ist dieses Verhalten einfach zu erzielen.
-Wie bereits erwähnt gibt es bei Flexbox Elternelemente und Kindelemente. Die Elternelemente, auch "Container" genannt, agieren als Rahmen, in denen die Kindelemente, oder "items", enthalten sind. 
-Für das Beispiel erstelle ich zunächst einen Container mit den Eigenschaften "display:flex". Dadurch weiß der Browser, dass dieses Element mit Flexbox positioniert werden soll. \cite{basic_concepts_flexbox}
+Wie bereits erwähnt gibt es bei Flexbox Elternelemente und Kindelemente. Die Elternelemente, auch "Container" genannt, agieren als Rahmen, in denen die Kindelemente, oder "items", enthalten sind.
+Für das Beispiel erstelle ich zunächst einen Container mit den Eigenschaften `"display:flex"`. Dadurch weiß der Browser, dass dieses Element mit Flexbox positioniert werden soll. \cite{basic_concepts_flexbox}
 
 ```css
 .parent{
@@ -23,9 +23,9 @@ Für das Beispiel erstelle ich zunächst einen Container mit den Eigenschaften "
   overflow: hidden;
 }
 ```
-Durch "display:flex" verwendet dieser \<div> Flexbox als Positionierungsmethode. Die Kindelemente dieses Flex-Containers werden auf der horizontalen Achse ausgerichtet. Der Overflow auf der X- und Y-Achse wird ausgeblendet. Die Navigation auf der Seite ist in folgendem Code-Block beschrieben.
+Die Kindelemente dieses "Flex-Containers" werden auf der horizontalen X-Achse ausgerichtet. Wenn der Inhalt eines Elements mehr Platz einnimmt als vorhanden, dann überläuft er die Grenzen. Damit dieser Zustand nicht eintritt wird der Überlauf des Flex-Containers mit `"overflow: hidden"` auf der X- und Y- achse ausgeblendet. Die Navigation auf der Seite ist in folgendem Code-Block beschrieben.
 
-Dieses Element ist durch "order: 1" das erste Element in der Flexbox, allerdings muss es nicht das erste im Markup sein. Mit Flexbox ist es möglich, die Reihenfolge unabhängig vom HTML-Code zu verändern. Damit die seitliche Navigationsleiste eine fixe Position behält wird ein Hack angewendet. Denn durch das setzen des Attributs "overflow-y: hidden" scrollt die Seite nur den restlichen Teil der Flexbox und nicht die Navigationsleiste. Weiters werden die Elemente innerhalb des Containers mit "justify-content: center" und "align-items: center" vertikal und horizontal zentriert und sind durch "flex-direction: column" entlang der Y-Achse positioniert.
+Dieses Element ist durch `"order: 1"` das erste Element in der Flexbox, allerdings muss es nicht das erste im Markup sein. Mit Flexbox ist es möglich, die Reihenfolge unabhängig vom HTML-Code zu verändern. Damit die seitliche Navigationsleiste eine fixe Position behält wird ein Hack angewendet. Denn durch das setzen des Attributs `"overflow-y: hidden"` scrollt die Seite nur den restlichen Teil der Flexbox und nicht die Navigationsleiste. Weiters werden die Elemente innerhalb des Containers mit "justify-content: center" und `"align-items: center"` vertikal und horizontal zentriert und sind durch `"flex-direction: column"` entlang der Y-Achse positioniert.
 
 ```css
 .side-nav{
@@ -36,7 +36,7 @@ Dieses Element ist durch "order: 1" das erste Element in der Flexbox, allerdings
   flex-direction: column;
 }
 ```
-Das Inhaltselement wird wegen dem Attribut "order: 2" neben dem ersten Element auf der X-Achse positioniert. 
+Das Inhaltselement wird wegen dem Attribut `"order: 2"` neben dem ersten Element auf der X-Achse positioniert. 
 Weiters wird
 
 ```css
@@ -48,7 +48,7 @@ Weiters wird
   order: 2;
 }
 ```
-Damit die Navigation auf mobilen Geräten am unteren Rand positioniert ist, benötigen wir eine "Media Query". Mithilfe dieser können CSS-Stile anhand von verschiedenen Eigenschaften wie z.B. Bildschirmauflösung oder Seitenverhältnis manipuliert werden. Im untenstehenden Code-Block wird dies veranschaulicht. Indem wir die Hauptachse des Flexbox Elternelements mit dem Attribut "flex-direction" auf die Y-Achse ändern, werden die beiden Kindelemente vertikal verteilt. Damit nun auch die Navigation unter dem Inhalt positioniert ist, ändern wir die Reihenfolge mit dem Attribut "order" auf 2. Weiters müssen die Höhe und Breite angepasst werden, damit das Element die gesamte Breite des Bildschirms einnimmt und nicht mehr die gesamte Höhe.
+Damit die Navigation auf mobilen Geräten am unteren Rand positioniert ist, benötigen wir eine "Media Query". Mithilfe dieser können CSS-Stile anhand von verschiedenen Eigenschaften wie z.B. Bildschirmauflösung oder Seitenverhältnis manipuliert werden. Im untenstehenden Code-Block wird dies veranschaulicht. Indem wir die Hauptachse des Flexbox Elternelements mit dem Attribut `"flex-direction: column"` auf die Y-Achse ändern, werden die beiden Kindelemente vertikal verteilt. Damit nun auch die Navigation unter dem Inhalt positioniert ist, ändern wir die Reihenfolge mit dem Attribut "order" auf 2. Weiters müssen die Höhe und Breite angepasst werden, damit das Element die gesamte Breite des Bildschirms einnimmt und nicht mehr die gesamte Höhe.
 
 ```css
 @media (max-width: 576px){
@@ -64,7 +64,7 @@ Damit die Navigation auf mobilen Geräten am unteren Rand positioniert ist, ben�
   }
 ```
 
-### Möglichkeiten
+### Möglichkeiten von Flexbox
 "Das Flexible Box Layout Module" eignet sich äußerst gut für die Umsetzung von einzelnen Komponenten, die in sich geschlossen funktionieren müssen. Die Regeln, wie sich Elemente innerhalb eines Containers zu verhalten haben, werden einmal festgelegt. Das erleichtert das Erstellen von Bereichen, in denen dynamisch Inhaltselemente hinzugefügt. Generell ist Flexbox die beste Technik um Teile einer Webseite zu schreiben, wo die Anzahl der Elemente unbekannt ist, beziehungsweise die Anzahl der Kindelemente nicht statisch ist.
 
-Ein weiteres Einsatzgebiet von Flexbox ist die vertikale und horizontale Zentrierung von Inhaltselementen. 
+Ein weiteres Einsatzgebiet von Flexbox ist die vertikale und horizontale Zentrierung von Inhaltselementen. Das Zentrieren ist in Flexbox eine knifflige Angelegenheit. Text kann mit dem Attribut `"text-align"` zentriert werden. Block Elemente kann man mit margins oder Transformationen zentrieren. Aber das sind alles Hacks in gewisser Weise. Mit Flexbox wird das vertikale und horizontale Zentrieren ein Kinderspiel. Innerhalb eines Flex Containers können Elemente mit der Eigenschaften `"justify-content: center"` horizontal und `"align-items: center"` vertikal zentriert werden. Diese Lösung ist wesentlich eleganter und funktioniert in allen Browsern.
