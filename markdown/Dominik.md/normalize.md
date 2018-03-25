@@ -1,0 +1,1 @@
+Jeder Browser wendet standardmäßig bestimmte Stile auf jede Seite an.

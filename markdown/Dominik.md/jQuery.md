@@ -1,0 +1,1 @@
+jQuery ist eine Bibliothek, die die Grundfunktionalität von JavaScript erweitert.
