@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> CSS Grid Beispiel </title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            background-color: #efefef;
+            border-radius: 10px;
+        }
+
+        .twitter {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100%;
+            height: 100%;
+            grid-gap: 1em;
+            padding: 1em;
+        }
+
+        .tweets {
+            background-color: #29374F
+        }
+
+        .nachrichten {
+            background-color: #29374F
+        }
+
+        .suche {
+            background-color: #29374F
+        }
+    </style>
+</head>
+
+<body>
+    <div class="twitter">
+        <div class="tweets box">
+            <h2>Tweets</h2>
+        </div>
+        <div class="nachrichten box">
+            <h2>Nachrichten</h2>
+        </div>
+        <div class="suche box">
+            <h2>Suche</h2>
+        </div>
+    </div>
+</body>
+
+</html>
