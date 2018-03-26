@@ -22,6 +22,7 @@ Weiters werden am Ende die weiteren Dateien eingebunden.\cite[S. 665 bis 672]{ju
 
 Nachfolgend werden die wichtigsten Dateien und Ordner im Konfigurationsverzeichnis /etc/apach2 beschrieben.
 
+
 \dirtree{%
 .1 /etc/apache2.
 .2 apache2.conf.
@@ -44,12 +45,42 @@ Nachfolgend werden die wichtigsten Dateien und Ordner im Konfigurationsverzeichn
 .3 server.key.
 }
 
+
 * **mods-available:**
+Enthält alle verfügbaren Module in der Form von .load Dateien.
 * **mods-enabled:**
+Enthält Symbolische Links auf die Modul Dateien in mods-available. 
+Nur die in diesem Ordner verlinkten Module werden auch beim Start des Webservers geladen.
 * **ports.conf:**
+In dieser Datei wird definiert auf welchen Ports der Webserver lauschen soll.
 * **sites-available:**
+Enthält alle verfügbaren Virtual Hosts in der Form von Konfigurations-Dateien.
 * **sites-enabled:**
+Enthält Symbolische Links auf die Virtual Hqsts Dateien in sites-available. 
+Nur die in diesem Ordner verlinkten Hosts werden auch beim Start des Webservers geladen.
 * **ssl:**
+Dieser Ordner enthält die Zertifikate für die SSL-Verbindung (\siehe{ssl}).
 
 
 ## Verwendete Module und Konfiguration
+In diesem Projekt wurden neben den Standard-Modulen, die Module: SSL, Proxy mit Proxy_WS und Rewrite verwendet.
+
+**SSL:**
+Diese Module stellt die Verwendung von SSL-gesichertem  Http zur verfügung (Https). 
+Für die verwendung wird ein SSL Zertifikat benötigt, diese kann entweder mit Hilfe der Software OpenSSL selbst erstellt werden,
+oder von einer offiziellen Stelle verifiziert werden. \cite{noauthor_mod_ssl_nodate}
+Bei diesem Projekt wurde das Zertifikat selbst erzeugt, da offizielle registrierte Zertifikate nur kostenpflichtig zu erhalten sind.
+
+**Proxy und Proxy WS:**
+Diese Modul stellt die Funktion eines Proxy-Servers zur Verfügung.
+Unter einem Proxy Server versteht man einen Server, der als einen Art Vermittler auftritt. Er leitet Anfragen von einem Netz in ein anderes 
+und erledigt somit die Anfrage an den Ziel Host für den anfragenden Client.\cite{noauthor_was_nodate}
+Die Erweiterung Proxy WS ermöglicht es auch Websocket-Verbindungen über einen Proxy in ein anderes Netz aufzubauen.
+Dies war in diesem Projekt notwendig, da Ratchet (\siehe{Ratchet}) keinen verschlüsselten Websocket-Verbindungen (WSS) unterstützt.
+Um trotzdem die Verbindung zu verschlüsseln wurde ein proxy auf den localhost ein gerichtet, dadur ist die Verbindung zum Webserver verschlüsset und 
+wird nur Server-intern auf einen nicht verschlüsselte Verbindung umgelegt.
+
+**Rewrite:**
+Dieses Modul stellt ermöglicht es die URL der Anfrage während der Laufzeit zu ändern.
+Dies geschieht mittels eines Regulärenausdrucks und einer "RewriteRule" (Umschreibungsregel).\cite{noauthor_mod_rewrite_nodate}
+Diese Modul wurde eingesetzt, um jede Anfrage, die eine ungesicherte Verbindung herstellen will, automatisch auf einen gesicherte Verbindung umzuleiten.
