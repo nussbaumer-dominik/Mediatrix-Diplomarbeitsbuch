@@ -29,9 +29,9 @@ Das HTML ist recht simpel, das ist auch einer der Vorteile von CSS Grid. Es gibt
 
 ```css
 .twitter {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 100vh;
 }
 ```
 
@@ -39,17 +39,17 @@ Zuallererst wird das \<div> Element mit der Klasse ".twitter" selektiert und mit
 
 ![Ein dreispaltiges CSS Grid Layout](bilder/Dominik/CSS_Grid_example_1.png){width=90%}
 
-Aus diesem Layout kann mit Grid sehr einfach ein zweispaltiges gemacht werden.
+Aus diesem Layout kann mit Grid sehr einfach ein einspaltiges gemacht werden.
 
 ```css
 .twitter {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50vh 50vh;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
 }
 ```
 
-Man muss lediglich die Anzahl der Spalten auf zwei ändern. Weiters fügt man eine weitere Zeile mit der halben Höhe hinzu. Das würde wie in Abbildung 5 aussehen.
+Man muss lediglich die Anzahl der Spalten auf eine ändern. Weiters fügt man zwei weitere Zeilen hinzu. Der Platz soll gleichmäßig aufgeteilt werden.. Das würde wie in Abbildung 5 aussehen.
 
 ![Ein zweispaltiges CSS Grid Layout mit zwei Zeilen](bilder/Dominik/CSS_Grid_example_2.png){width=90%}
 
@@ -57,10 +57,10 @@ Damit das Layout auf mobilen Geräten optimal angezeigt wird, können wir Media 
 
 ```css
 @media screen and (max-width: 576px) {
-  .twitter {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50vh 50vh;
-  }
+	.twitter {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 50vh 50vh;
+	}
 }
 ```
 
