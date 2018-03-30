@@ -1,4 +1,4 @@
-## Was ist jQuery
+## Was ist jQuery?
 
 jQuery ist eine Bibliothek, die von John Resig erfunden wurde, um das Programmieren mit Javascript zu vereinfachen. Diese vereinfacht Frontend Entwicklung durch das simplifizieren von Javascript Funktionen Animationen, AJAX(Asynchronous Javascript and XML), Dom Manipulation, das Arbeiten mit Events und vieles mehr. Dadurch schreibt man weniger Zeilen an Code und kann mehr in kurzer Zeit entwickeln.
 
@@ -24,13 +24,13 @@ Um das Potential von jQuery näher zu erläutern habe ich ein gängiges Beispiel
 
 ```javascript
 function fadeIn() {
-    var element = document.getElementById("element");
-    var transparenz = parseFloat(el.style.opacity);
-    var timer = setInterval(function () {
-        if(transparenz >= 1.0) clearInterval(timer);
-        transparenz += 0.1;
-        element.style.opacity = transparenz;
-    }, 50);
+	var element = document.getElementById("element");
+	var transparenz = parseFloat(el.style.opacity);
+	var timer = setInterval(function() {
+		if (transparenz >= 1.0) clearInterval(timer);
+		transparenz += 0.1;
+		element.style.opacity = transparenz;
+	}, 50);
 }
 fadeIn(element);
 ```
@@ -47,4 +47,4 @@ In jQuery sind bereits herkömmliche Animationen implementiert. Dadurch können 
 
 Allerdings hat alles auch Nachteile, bei jQuery ist es nicht anders. Der erste negative Aspekt dieser Bibliothek ist der leichte Einstieg und die niedrige Lernkurve. Dadurch hat sich über Jahre eine gigantische Gemeinschaft aufgebaut. Darunter hat zum Beispiel die Qualität von Open Source Plugins im Internet stark gelitten. Der zweite Nachteil ist, dass es einfach ist, ineffizienten Code zu schreiben, wenn das Javascript Wissen begrenzt ist. Die Performanz von jQuery kann verbessert werden, wenn man sich besser in Javascript auskennt. Manchmal ist es schneller eine normale Schleife zu verwenden als auf die jQuery Alternative zurückzugreifen. Das letzte und wohl größte Problem von jQuery ist der Overhead. Man muss eine 97kB große Datei importieren, verwendet aber meistens nur eine kleine Auswahl der verfügbaren Funktionen.
 
-Zu guter letzt kann ich sagen, dass so gut wie jedes größere Projekt von der Einbindung von jQuery profitiert. Nichtsdestotrotz sollte man zuerst reines Javascript lernen, um eine grundlegende Basis aufzubauen. Denn jQuery ist keine Garantie für guten Code, um das Aneignen von Programmierkenntnissen führt kein Weg herum.
+Zu guter letzt kann ich sagen, dass so gut wie jedes größere Projekt von der Einbindung von jQuery profitieren würde. Nichtsdestotrotz sollte man zuerst reines Javascript lernen, um eine grundlegende Basis aufzubauen. Denn jQuery ist keine Garantie für guten Code, um das Aneignen von Programmierkenntnissen führt kein Weg herum.
