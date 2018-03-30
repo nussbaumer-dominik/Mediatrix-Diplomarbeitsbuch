@@ -81,4 +81,4 @@ Wie beim Lernen von jeder anderen Technologie, werden Designer auch bei SASS mit
 
 Wenn man sich noch nicht sicher ist, ob man einen CSS Präprozessor verwenden sollte, habe ich ein paar Tipps parat. Der beste Weg das herauszufinden ist es zu verwenden. Man muss die Argumente dafür und dagegen in Hinblick auf die eigenen Ansprüche abwägen und sich seine eigene Meinung bilden.
 
-Der Umstieg kann schwer und langsam werden aber ich glaube, dass er es wert ist.
+Der Umstieg kann schwer und langsam werden, aber ich glaube, dass er es wert ist.

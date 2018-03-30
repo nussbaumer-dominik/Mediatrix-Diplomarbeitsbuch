@@ -67,3 +67,7 @@ Damit das Layout auf mobilen Geräten optimal angezeigt wird, können wir Media 
 Diese Media Query wird aktiviert, wenn die Breite des Bildschirms unter 576 Pixel beträgt. Das heißt diese Ansicht wird auf Smartphones angezeigt.
 
 ### Möglichkeiten
+
+Die größte Stärke von CSS Grid ist die explizite Positionierung auf zwei Achsen. Deswegen eignet sich dieses Modul hervorragend für komplette Webseitenlayouts. Die Grundstruktur einer Seite sollte mit CSS Grid aufgebaut sein. Solange die Anzahl der Elemente statisch ist, funktioniert das Raster System sehr gut. Die Kindelemente können bei einer Änderung der Bildschirmauflösung vollkommen neu angeordnet werden. Innerhalb der einzelnen Elemente könnte man Flexbox verwenden, da es sehr gut für die Umsetzung von Komponenten eingesetzt werden kann.
+
+Im Großen und Ganzen ist CSS Grid eines der spannendsten und mächtigsten Module das CSS derzeit zu bieten hat. Das W3C hat sich hohe Ziele für diese neue Positionierungsart gesetzt und ich glaube, dass CSS Grid diese übertreffen kann.
