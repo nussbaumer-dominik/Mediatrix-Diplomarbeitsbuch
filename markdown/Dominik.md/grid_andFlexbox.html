@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> CSS-Grid und Flexbox Beispiel</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            font-family: Arial;
+            background-color: #f2f2f2;
+            color: white;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            height: 100%;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 50px 1fr 50px;
+            grid-gap: 1em;
+            padding: 1em;
+        }
+
+        header {
+            grid-column: span 12;
+            display: flex;
+        }
+
+        header>div {
+            padding-right: 1em;
+        }
+
+        header>div:nth-child(3) {
+            margin-left: auto;
+            padding-right: 0;
+        }
+
+        aside {
+            grid-column: span 2;
+        }
+
+        main {
+            grid-column: span 10;
+        }
+
+        footer {
+            grid-column: span 12;
+        }
+
+        header,
+        aside,
+        main,
+        footer {
+            background-color: #29374F;
+            padding: 1em;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div>Über Uns</div>
+            <div>Das Team</div>
+            <div>Ausloggen</div>
+        </header>
+        <aside>Menü</aside>
+        <main>Inhalt</main>
+        <footer>Fußzeile</footer>
+    </div>
+</body>
+
+</html>
