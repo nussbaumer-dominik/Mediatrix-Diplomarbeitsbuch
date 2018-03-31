@@ -1,25 +1,25 @@
-## Gegenüberstellung von CSS Grid und Flexbox
+## Gegenüberstellung von CSS-Grid und Flexbox
 
-Vor ein paar Jahren wurde Flexbox eingeführt. Es ist speziell für anpassungsfähige Webseiten entwickelt worden. Flexbox macht das Ausrichten von Elementen und deren Inhalt einfacher, so dass flüssige, flexible und dynamische Seiten erstellt werden können. Diese funktionieren mit wenig CSS in einem breiten Katalog von Geräten. Dank Flexbox sind Webseiten, die sich an verschiedene Geräte anpassen machbarer und effizienter geworden. Ohne diese Technik würden Webseiten auch heute noch nicht perfekt auf allen Bildschirmauflösungen dargestellt werden.
+Vor ein paar Jahren wurde Flexbox eingeführt. Es ist speziell für anpassungsfähige Webseiten entwickelt worden. Flexbox macht das Ausrichten von Elementen und deren Inhalt einfacher, sodass flüssige, flexible und dynamische Seiten erstellt werden können. Diese funktionieren mit wenig CSS in einem breiten Katalog von Geräten. Dank Flexbox sind Webseiten, die sich an verschiedene Geräte anpassen müssen, machbarer und effizienter geworden. Ohne diese Technik würden Webseiten auch heute noch nicht perfekt in allen Bildschirmauflösungen dargestellt werden können.
 
-Allerdings ist ein neuer Konkurrent am Spielfeld erschienen - CSS Grid. Diese Technik hat einige ähnliche Eigenschaften wie Flexbox. Obwohl so gut wie jedes Layout sowohl mit Flexbox als auch CSS Grid umsetzbar ist, haben beide ihre Spezialgebiete. Deswegen stellt sich natürlich die Frage, welche Positionierungstechnik besser ist, beziehungsweise wann welche zum Einsatz kommen sollte. \cite{The ultimate {CSS} battle}
+Allerdings ist ein neuer Konkurrent am Spielfeld erschienen - CSS-Grid. Diese Technik hat einige ähnliche Eigenschaften wie Flexbox. Obwohl so gut wie jedes Layout sowohl mit Flexbox als auch CSS Grid umsetzbar ist, haben beide Techniken ihre Spezialgebiete. Deswegen stellt sich natürlich die Frage, welche Positionierungstechnik gerade besser ist, beziehungsweise wann welche zum Einsatz kommen sollte. \cite{borgen_ultimate_2017}
 
-### Eine Dimension versus zwei
+### Eine versus zwei Dimensionen
 
-Der wohl gravierendste Unterschied zwischen Flexbox und Grid ist die Anzahl an Richtungen die gleichzeitig von der "Rendering Engine" des Browsers beachtet werden können, siehe Abbildung 2. Beim "Flexible Box Layout" kann nur eine Richtung beachtet werden, entweder die X-Achse oder die Y-Achse. Dadurch ist es sehr gut geeignet für Situationen, wo Elemente nur auf einer Achse positioniert werden sollen. Ein übliches Beispiel hierfür wäre eine Navigationsleiste, solange diese nur in einer Richtung ausgerichtet wird. Es ist egal, ob am oberen Rand - entlang der X-Achse oder am linken Rand - entlang der Y-Achse. Flexbox macht diese Leiste flexibler bei Veränderungen, da die Elemente beliebig auf der Achse bewegt werden können. Außerdem ist weniger Code für die Umsetzung notwendig, somit ist dieses Element simpler und leichter zu warten. Wie bereits in Kapitel \kap{Flexbox} erwähnt, ist Flexbox ausgelegt für Container, wo die Anzahl an Kindelemente unbekannt ist.
-Bei CSS Grid wird hingegen eine fixe Anzahl von Reihen und Spalten definiert. Die Maße und Anordnung dieser können variieren, aber die Anzahl sollte beibehalten werden.
+Der wohl gravierendste Unterschied zwischen Flexbox und Grid ist die Anzahl an Richtungen, die gleichzeitig von der "Rendering Engine" des Browsers beachtet werden können (siehe Abbildung 5.4). Beim "Flexible Box Layout" kann nur eine Richtung beachtet werden, entweder die X-Achse oder die Y-Achse. Dadurch ist es sehr gut geeignet für Anwendungen, in denen Elemente nur auf einer Achse positioniert werden sollen. Ein häufiges Beispiel hierfür wäre eine Navigationsleiste, solange diese nur in einer Richtung ausgerichtet wird. Es ist egal, ob am oberen Rand - entlang der X-Achse oder am linken Rand - entlang der Y-Achse. Flexbox macht diese Leiste bei Veränderungen flexibler, da die Elemente beliebig auf der Achse bewegt werden können. Außerdem ist weniger Code für die Umsetzung notwendig, somit ist dieses Element simpler und leichter zu warten. Wie bereits in Kapitel 5.1.1 Flexbox erwähnt, ist Flexbox ausgelegt für Container, bei denen die Anzahl an Kindelemente unbekannt ist.
+Bei CSS Grid wird hingegen eine fixe Anzahl von Reihen und Spalten definiert. Die Maße und die Anordnung dieser können variieren, aber die Anzahl sollte beibehalten werden.
 
 ![grundlegender Unterschied zwischen CSS Grid und Flexbox](bilder/Dominik/Grid_vs_Flexbox.png){width=90%}
 
 ### Dynamisch versus statisch
 
 Da bei Flexbox im CSS für den Browser genau definiert wird, wie Elemente innerhalb eines Containers anzuordnen sind, können beliebig viele Elemente dynamisch hinzugefügt werden. Diese Eigenschaft habe ich bei der Umsetzung der Benutzeroberfläche mehrmals verwendet.
-Erstens befinden sich die Module für die Steuerung der einzelnen Geräte in einem Flex-Container. Da diese per Klick dynamisch hinzugefügt werden hat sich Flexbox angeboten. Beim Betätigen eines Knopfes, wird das entsprechende Modul an den \<div> angehängt. Wenn die Gesamtbreite der Elemente die Breite des Bildschirms übersteigt, wird eine Scrollbar auf der X-Achse eingeblendet.
-Weiters habe ich Flexbox bei der Darstellung der vordefinierten Presets verwendet. Obwohl diese Elemente in Form eines Rasters angeordnet sind, war CSS Grid nicht geeignet. Denn bei diesem werden fixe Reihen und Spalten festgelegt. Allerdings hat mir das Probleme bereitet, da die Anzahl der Presets nicht bekannt ist.
+Erstens befinden sich die Module für die Steuerung der einzelnen Geräte in einem Flex-Container. Da diese per Klick dynamisch hinzugefügt werdenkönnen, hat sich hier Flexbox angeboten. Beim Betätigen eines Knopfes wird das entsprechende Modul an den \<div> angehängt. Wenn die Gesamtbreite der Elemente die Breite des Bildschirms übersteigt, wird eine Scrollbar auf der X-Achse eingeblendet.
+Weiters habe ich Flexbox bei der Darstellung der vordefinierten Presets verwendet. Obwohl diese Elemente in Form eines Rasters angeordnet sind, war CSS Grid nicht geeignet. Denn bei diesem werden fixe Reihen und Spalten festgelegt. Allerdings hat mir das Probleme bereitet, da die Anzahl der Presets zum Zeitpunkt der Entwicklung nicht bekannt war.
 
 ### Erklärung der Unterschiede anhand eines Beispiels
 
-Ein weiterer Unterschied zwischen Flexbox und CSS Grid ist, dass die Basis von Flexbox der Inhalt der Seite ist im Gegensatz zu Grid, wo die Basis das Layout ist. Um dies genauer zu erläutern habe ich ein Beispiel vorbereitet.
+Ein weiterer Unterschied zwischen Flexbox und CSS-Grid ist, dass die Basis von Flexbox der Inhalt der Seite ist, aber bei Grid die Basis das Layout ist. Um dies genauer zu erläutern, habe ich ein Beispiel vorbereitet.
 
 ```html
 <header>
@@ -29,15 +29,15 @@ Ein weiterer Unterschied zwischen Flexbox und CSS Grid ist, dass die Basis von F
 </header>
 ```
 
-Bevor das \<header> Element durch das Attribut `"display: flex"` zu einem Flex-Container wird würde das derzeitige Markup aussehen wie in der Abbildung 3.
+Bevor das \<header> Element durch das Attribut `"display: flex"` zu einem Flex-Container wird, sieht das derzeitige Markup aus wie in Abbildung 5.5.
 
-Bild
+![derzeitige Darstellung ohne Flexbox](bilder/Dominik/Flexbox_example1.png){width=90%}
 
-Damit der "Ausloggen" Knopf auf der rechten Seite positioniert ist, wird dieser mit einem Css-Selektor ausgewählt und durch das Setzen von `"margin-left: auto"` auf das Ende des Containers geschoben, \ref {Abbildung 3}
+Damit der Ausloggen-Knopf auf der rechten Seite des Bildschirms positioniert ist, wird dieser mit einem CSS-Selektor ausgewählt und durch das Setzen von `"margin-left: auto"` an das Ende des Containers geschoben. \ref {Abbildung 5.6}
 
-Bild
+![Layout mit `"display: flex"`](bilder/Dominik/Flexbox_example2.png){width=90%}
 
-Bei diesem Beispiel ist zu erwähnen, dass der Browser selber entscheidet, wie die Elemente zu positionieren sind. Es wurde lediglich das Kommando erteilt, Flexbox als Positionierungstechnik zu verwenden. Das ist einer der Kernunterschiede zwischen Flexbox und CSS Grid. Obwohl Grid nicht für ein-dimensionale Layouts wie einen Header gedacht ist, werde ich dieses Element nun mit Grid nachbauen. Der HTML Code kann beibehalten werden. Im Css sind mehrere Änderungen notwendig.
+Bei diesem Beispiel ist zu erwähnen, dass der Browser selber entscheidet, wie die Elemente zu positionieren sind. Es wurde lediglich das Kommando erteilt, Flexbox als Positionierungstechnik zu verwenden. Das ist einer der Kernunterschiede zwischen Flexbox und CSS-Grid. Obwohl Grid nicht für eindimensionale Layouts wie einen Header gedacht ist, werde ich dieses Element nun mit Grid nachbauen. Der HTML-Code kann beibehalten werden. Im CSS wären dafür mehrere Änderungen notwendig.
 
 ```css
 header {
@@ -55,4 +55,51 @@ div:nth-child(3) {
 }
 ```
 
-Durch das Setzen von `"display: grid"` wird das \<header> Element zu einem CSS Grid. Die Anzahl der Spalten wird mit dem Attribut `"grid-template-columns"` definiert. In diesem Fall erstellen wir 10 Spalten zu je einer "fraction", also einen Bruchteil der Seite. Diese Einheit signalisiert dem Browser, das er den verfügbaren Platz auf alle Spalten gleich aufteilen soll. Nun weisen wir jedem einzelnen \<div> Element eine Spalte zu. Damit der "Ausloggen" Knopf am rechten Rand ist wird er explizit in die zehnte Spalte mit `"grid-column: 10 / 11"` positioniert.
+Durch das Setzen von `"display: grid"` wird das \<header> Element zu einem CSS-Grid. Die Anzahl der Spalten wird mit dem Attribut `"grid-template-columns"` definiert. Der Hauptunterschied mit diesem Ansatz ist, dass die Spalten, also das Layout, zuerst definiert werden mussten. Man benötigt Spalten um Inhalt dort zu platzieren. In diesem Fall erstellt man zehn Spalten zu je einem fr, also einem Bruchteil der Seite. Diese Einheit signalisiert dem Browser, das er den verfügbaren Platz auf alle Spalten gleich aufteilen soll. Nun weisen wir jedem einzelnen \<div> Element eine Spalte zu. Damit der Ausloggen-Knopf am rechten Rand positioniert ist, wird er explizit in die zehnte Spalte mit `"grid-column: 10 / 11"` geschoben. Dieser Ansatz zwingt uns die Anzahl der Spalten festzulegen. Sofern der Grid nicht verändert wird, hat er zehn Spalten. Eine eindeutige Begrenzung, die in Flexbox nicht vorhanden wäre.
+
+### Kombination von CSS-Grid mit Flexbox
+
+Wie bereits erwähnt, haben beide dieser Technologien ihre Vor- und Nachteile. Demnach gibt es verschiedene Anwendungsfälle für sie. Allerdings sollten diese Module zusammen verwendet werden. Mithilfe von CSS-Grid kann ein Raster-System für das Layout der gesamten Webseite erstellt werden. Innerhalb der einzelnen Inhaltselemente hat man mit Flexbox mehr Möglichkeiten, wie zum Beispiel das dynamische Hinzufügen von Elementen. Um zu zeigen, wie so ein Anwendungsfall aussehen könnte, habe ich die beiden obigen Beispiele verbunden.
+
+```html
+<div class="container">
+  <header>Kopfzeile</header>
+  <aside>Menü</aside>
+  <main>Inhalt</main>
+  <footer>Fußzeile</footer>
+</div>
+```
+
+Das HTML-Markup ist weiterhin sehr simpel. Die Kopfzeile soll die gesamte Breite der Seite einnehmen und am oberen Rand platziert sein. Das Menü ist schmal und am linken Rand der Seite. Der Inhalt soll den restlichen horizontalen Platz einnehmen. Am unteren Rand soll es noch eine Fußzeile geben. Das Layout ist in Abbildung 5.7 zu sehen.
+
+```css
+.container {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 50px 350px 50px;
+}
+header {
+	grid-column: span 12;
+	display: flex;
+}
+header > div:nth-child(3) {
+	margin-left: auto;
+}
+aside {
+	grid-column: span 2;
+}
+main {
+	grid-column: span 10;
+}
+footer {
+	grid-column: span 12;
+}
+```
+
+![Layout-Kombination von Flexbox und CSS-Grid](bilder/Dominik/Flexbox_and_grid_example.png){width=90%}
+
+In diesem CSS-Code passiert eine Menge. Das Elternelement wird zu einem Grid-Container gemacht. Weiters werden zwölf Spalten mit einem gleichgroßen Anteil der verfügbaren Platzes. Außerdem gibt es drei Reihen mit unterschiedlichen Höhen. Die Kopfzeile streckt sich wegen der Eigenschaft `"grid-column: span 12"` über alle zwölf Spalten. Wegen des Attributes `"display: flex"` ist der Header ein Flex-Container. Dieser ist aufgebaut wie im obigen Beispiel zu Flexbox erläutert. Das Menü nimmt nur zwei Spalten ein wegen `"grid-column: span 2"`. Dem Inhalt wird der restlichen Platz zugewiesen. Die Fußzeile ist aufgebaut wie die Kopfzeile und ist ebenfalls so breit wie der Bildschirm.
+
+### Flexbox oder CSS-Grid
+
+Welches dieser beiden Module besser ist, ist die falsche Frage. sie sollte eher lauten, wann verwende ich Flexbox und wann CSS-Grid. Am besten werden sie zusammen eingesetzt. Man kann die Vorteile von Flexbox, wie zum Beispiel Dynamik oder Flexibilität, mit den Vorteilen von CSS-Grid, wie zum Beispiel explizite Positionierung und Layout-Unabhängigkeit, miteinander verbinden.

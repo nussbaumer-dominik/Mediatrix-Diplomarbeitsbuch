@@ -1,22 +1,23 @@
 ## Was ist Normalize.css?
-Jeder Browser wendet standardmäßig bestimmte Stile auf jede Seite an. Dadurch werden Elemente wie Formulare oder Scrollbars auf jedem Browser anders dargestellt. Damit die Erfahrung auf Webseiten konsistenter wird, hat Nicolas Gallagher Normalize.css entwickelt. Diese Datei überschreibt einige Stile auf allen Browser, um die voreingestellten Stile gewissermaßen zurückzusetzen.
 
-Nicolas Gallagher zufolge ist der Zweck von Normalize.css:
+Jeder Browser wendet standardmäßig bestimmte Stile auf jede Seite an. Dadurch werden Elemente wie Formulare oder Scrollbars auf jedem Browser anders dargestellt. Damit das Verhalten und die Darstellung von Webseiten konsistenter wird, hat Nicolas Gallagher Normalize.css entwickelt. Diese Datei überschreibt einige Stile auf allen Browsern, um die voreingestellten Stile gewissermaßen zurückzusetzen.
 
-* sinnvolle Browsereigenschaften zu bewahren
-* Stile für eine breite Auswahl an HTML Elemente zurückzusetzen
-* Bekannte Fehler und Browser Inkonsistenzen zu beheben
-* die Benutzerfreundlichkeit verbessern
-* die Änderungen simpel mit Kommentaren zu erklären.
+Nicolas Gallagher zufolge ist die Aufgabe von Normalize.css:
 
-\cite {about_normalize}
+*   sinnvolle Browsereigenschaften zu bewahren
+*   Stile für eine breite Auswahl an HTML Elementen zurückzusetzen
+*   Bekannte Fehler und Browser-Inkonsistenzen zu beheben
+*   die Benutzerfreundlichkeit zu verbessern
+*   die Änderungen simpel mithilfe von Kommentaren zu erklären
 
-### technische Spezifikation
+\cite{about_normalize}
 
-Im Gegensatz zu anderen CSS reset Dateien überschreibt Normalize nicht alle Standardstile der Browser. Sonst müssten alle Typographischen Elemente wie Überschriften und Listen neu definiert werden. Allerdings werden Elemente je nach Browser eine andere Erscheinung haben, versucht normalize diese so konsistent wie möglich zu gestalten.
+### Technische Spezifikation
 
-Bekannte Fehler von Browsern werden auch behoben. Diese beinhalten unter anderem SVG Darstellung in Internet Explorer, Positionierungs Eigenschaften von HTML5 Elementen, Schriftgröße bei bereits formatierten Texten und viele Probleme im Bezug auf Formulare.
+Im Gegensatz zu anderen CSS Reset Dateien überschreibt Normalize.css nicht alle Standardstile der Browser, da sonst alle typographischen Elemente wie Überschriften und Listen neu definiert werden müssten. Allerdings werden Elemente je nach Browser eine andere Erscheinung haben, deshalb versucht Normalize.css diese so konsistent wie möglich zu gestalten.
 
-Außerdem ist normalize.css modular. Somit können nur die benötigten Module importiert werden, um die Ladegeschwindigkeit weiter zu beschleunigen. \cite {aboutnormalize}
+Auch bekannte Fehler von Browsern werden behoben. Diese beinhalten unter anderem die Darstellung von SVGs im Internet Explorer, Positionierungs-Eigenschaften von HTML5-Elementen, Schriftgröße bei bereits formatierten Texten und viele weitere Probleme im Bezug auf Formulare.
 
-Zusammenfassend kann man sagen, dass durch die Verwendung von normalize.css das Arbeiten mit verschiedenen Browsern und Versionen angenehmer wird. Man kann auf eine einheitliche Basis aufbauen und garantiert eine konsistente Darstellung quer über alle gängigen Browser.
+Außerdem ist Normalize.css modular. Somit können nur die benötigten Module importiert werden, um die Ladegeschwindigkeit weiter zu beschleunigen. \cite{about_normalize}
+
+Zusammenfassend kann man sagen, dass durch die Verwendung von Normalize.css das Arbeiten mit verschiedenen Browsern und Versionen angenehmer wird. Man kann auf eine vereinheitliche Basis aufbauen und garantiert eine konsistente Darstellung quer über alle gängigen Browser.
