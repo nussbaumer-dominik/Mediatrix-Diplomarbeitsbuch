@@ -45,4 +45,4 @@ Ufw ist ein Programm das die Verwendung der IPTables unter Lunix vereinfacht.\ci
 
 Es wurden Regel für die Verwendung von HTTPS, SSH nd HTTP erstellt, alle anderen Ports wurden geblockt. (siehe \abb{ufw})
 
-![Dei Konfigurierten UFW-Regeln\label{ufw}](bilder/Clemens/ufw.png){width=90%}
+![Die konfigurierten UFW-Regeln\label{ufw}](bilder/Clemens/ufw.png){width=90%}

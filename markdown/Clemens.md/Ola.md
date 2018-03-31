@@ -45,8 +45,10 @@ In diesem Projekt werden über die PHP-Extension (\siehe{PHP-Extension}) mehrere
 Diese werden dann im Buffer fest geschrieben und mit der SendDmx-Methode an das DMX-Universum gesendet.\cite{noauthor_open_nodate-3}  
 
 ```c++
+//Create new DmxBuffer
 ola::DmxBuffer buffer;
 
+//set all channels which are not 0 in buffer
 for(unsigned int i = 0; i < sizeof(channels)/sizeof(channels[0]); i++){
     if(channels[i] > 0){
         buffer.SetChannel(i,channels[i]);
