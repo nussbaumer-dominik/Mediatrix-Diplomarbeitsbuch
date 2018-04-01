@@ -30,4 +30,8 @@ Sobald eine Verbindung zum Server erfolgreich aufgebaut wurde, kann der Client s
 
 ### Kommunikation mit dem Mischpult - Nuss
 
-### Ratchet - Clemens
+### Ratchet
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+\input{markdown/Clemens.md/ratchet.md}
