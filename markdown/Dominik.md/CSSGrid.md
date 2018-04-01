@@ -1,6 +1,6 @@
 ## CSS-Grid
 
-CSS Grid Layout, offiziell "Grid Layout Module Level 1", ist ein zweidimensionales Raster-System und wurde vom World Wide Web Consortium(W3C) entwickelt, um die Art, Webseiten zu schreiben, komplett zu verändern. Mittlerweile sind viele verschiedene Bildschirmauflösungen und Geräte im Umlauf. Die Anforderungen an Webseiten sind gestiegen und Webapplikationen werden zunehmend komplexer und umfangreicher. Derartige Seiten müssen plattformunabhängig auf jedem Gerät und Browser funktionieren. Diese Vielfaltwurde mit CSS immer schwerer umzusetzen. Zuerst wurden Tabellen für Layouts verwendet, danach stieg man auf "floats" um, anschließend folgten "inline-block" und "positioning", doch all diese Methoden waren in Wirklichkeit nichts anderes als Hacks, denen wichtige Funktionen fehlten, wie zum Beispiel die vertikale Zentrierung. Wie bereits in Kapitel 5.1.1 Flexbox erwähnt, wurde mit Flexbox eine neue Methode eingeführt, um moderne, anpassungsfähige Webseiten umzusetzen. Allerdings ist diese Anwendung nur für simple, eindimensionale Layouts gedacht. Für komplexe zweidimensionale Layouts ist Flexbox umständlich und ineffizient. CSS-Grid hingegen ist das erste CSS-Modul, das einzig und allein für die Lösung jeglicher Layout-Probleme entwickelt wurde. Den Fokus haben die Entwickler auf grafische Benutzeroberflächen und Webapplikationen gelegt. \cite{CSS_Grid_Official}
+CSS Grid Layout, offiziell "Grid Layout Module Level 1", ist ein zweidimensionales Raster-System und wurde vom World Wide Web Consortium(W3C) entwickelt, um die Art, Webseiten zu schreiben, komplett zu verändern. Mittlerweile sind viele verschiedene Bildschirmauflösungen und Geräte im Umlauf. Die Anforderungen an Webseiten sind gestiegen und Webapplikationen werden zunehmend komplexer und umfangreicher. Derartige Seiten müssen plattformunabhängig auf jedem Gerät und Browser funktionieren. Diese Vielfalt wurde mit CSS immer schwerer umzusetzen. Zuerst wurden Tabellen für Layouts verwendet, danach stieg man auf "floats" um, anschließend folgten "inline-block" und "positioning", doch all diese Methoden waren in Wirklichkeit nichts anderes als Hacks, denen wichtige Funktionen fehlten, wie zum Beispiel die vertikale Zentrierung. Wie bereits in Kapitel 5.1.1 Flexbox erwähnt, wurde mit Flexbox eine neue Methode eingeführt, um moderne, anpassungsfähige Webseiten umzusetzen. Allerdings ist diese Anwendung nur für simple, eindimensionale Layouts gedacht. Für komplexe zweidimensionale Layouts ist Flexbox umständlich und ineffizient. CSS-Grid hingegen ist das erste CSS-Modul, das einzig und allein für die Lösung jeglicher Layout-Probleme entwickelt wurde. Den Fokus haben die Entwickler auf grafische Benutzeroberflächen und Webapplikationen gelegt. \cite{CSS_Grid_Official}
 
 ### Das Konzept
 
@@ -63,7 +63,7 @@ Damit das Layout auf mobilen Geräten optimal angezeigt wird, können Media-Quer
 }
 ```
 
-Diese Media-Query wird aktiviert, wenn die Breite des Bildschirms unter 576 Pixel beträgt. Diese Ansicht wird somit nur auf Smartphones verwendet. \cite{responsive_design}
+Diese Media-Query wird aktiviert, wenn die Breite des Bildschirms unter 576 Pixel beträgt. Diese Ansicht wird somit nur auf Smartphones verwendet. \cite[S.21]{responsive_design}
 
 ### Weitere Möglichkeiten von CSS-Grid
 
