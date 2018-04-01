@@ -20,7 +20,7 @@ Die Aufgabenstellung: Auf der Seite soll eine seitliche Navigation angezeigt wer
 Mithilfe von Flexbox ist dieses Verhalten einfach zu erzielen. Wie bereits erwähnt, gibt es bei Flexbox Elternelemente und Kindelemente. Die Elternelemente, auch "Container" genannt, agieren als Rahmen, in denen die Kindelemente, auch items genannt, enthalten sind.
 Für das aktuelle Beispiel erstelle ich zunächst einen Container mit den Eigenschaften `"display:flex"`. Dadurch weiß der Browser, dass dieses Element mit Flexbox positioniert werden soll. \cite{basic_concepts_flexbox}
 
-Die Kindelemente dieses Flex-Containers werden standardmäßig auf der horizontalen X-Achse ausgerichtet. Wenn der Inhalt eines Elements mehr Platz einnimmt als vorhanden, dann läuft er über die Grenzen hinaus. Damit dieser Zustand nicht eintritt, wird der Überlauf des Flex-Containers mit `"overflow: hidden"` auf der X- und Y- Achse ausgeblendet. Die Navigation auf der Seite ist in folgendem Code-Block beschrieben.
+Die Kindelemente dieses Flex-Containers werden standardmäßig auf der horizontalen X-Achse ausgerichtet. Wenn der Inhalt eines Elements mehr Platz einnimmt als vorhanden, dann läuft er über die Grenzen hinaus. Damit dieser Zustand nicht eintritt, wird der Überlauf des Flex-Containers mit `"overflow: hidden"` auf der X- und Y- Achse ausgeblendet. Die Navigation auf der Seite ist in folgendem Code-Block beschrieben. \cite{flexbox_official}
 
 ```css
 .parent {
@@ -29,7 +29,7 @@ Die Kindelemente dieses Flex-Containers werden standardmäßig auf der horizonta
 }
 ```
 
-Dieses Element ist durch `"order: 1"` das erste Element in der Flexbox, allerdings muss es nicht das Erste im HTML-Markup sein. Mit Flexbox ist es möglich, die Reihenfolge unabhängig vom HTML-Code zu verändern. Damit die seitliche Navigationsleiste eine fixe Position behält, wird ein Hack angewendet. Denn durch das Setzen des Attributs `"overflow-y: hidden"` scrollt die Seite nur den restlichen Teil der Flexbox und nicht die Navigationsleiste. Weiters werden die Elemente innerhalb des Containers mit `"justify-content: center"` und `"align-items: center"` horizontal und vertikal zentriert und sind durch `"flex-direction: column"` entlang der Y-Achse positioniert.
+Dieses Element ist durch `"order: 1"` das erste Element in der Flexbox, allerdings muss es nicht das Erste im HTML-Markup sein. Mit Flexbox ist es möglich, die Reihenfolge unabhängig vom HTML-Code zu verändern. Damit die seitliche Navigationsleiste eine fixe Position behält, wird ein Hack angewendet. Denn durch das Setzen des Attributs `"overflow-y: hidden"` scrollt die Seite nur den restlichen Teil der Flexbox und nicht die Navigationsleiste. Weiters werden die Elemente innerhalb des Containers mit `"justify-content: center"` und `"align-items: center"` horizontal und vertikal zentriert und sind durch `"flex-direction: column"` entlang der Y-Achse positioniert. \cite{flexbox_official}
 
 ```css
 .side-nav {
@@ -42,7 +42,7 @@ Dieses Element ist durch `"order: 1"` das erste Element in der Flexbox, allerdin
 ```
 
 Das Inhaltselement wird wegen des Attributes `"order: 2"` neben dem ersten Element auf der X-Achse positioniert.
-Weiters wird innerhalb dieses Elements auch mit Flexbox positioniert, wobei der Kontext ein anderer ist. Alle Kindelemente des Inhaltselements werden horizontal mit `"justify-content: center"` zentriert. In diesem Rahmen ist die Y-Achse die Hauptachse, das heißt, die Elemente werden vertikal verteilt.
+Weiters wird innerhalb dieses Elements auch mit Flexbox positioniert, wobei der Kontext ein anderer ist. Alle Kindelemente des Inhaltselements werden horizontal mit `"justify-content: center"` zentriert. In diesem Rahmen ist die Y-Achse die Hauptachse, das heißt, die Elemente werden vertikal verteilt. \cite{flexbox_official}
 
 ```css
 .content {
@@ -54,7 +54,7 @@ Weiters wird innerhalb dieses Elements auch mit Flexbox positioniert, wobei der 
 }
 ```
 
-Damit die Navigation auf mobilen Geräten am unteren Rand positioniert ist, benötigen wir eine Media Query, also eine Abfrage von bestimmten Eigenschaften. Mithilfe dieser können CSS-Stile anhand von verschiedenen Eigenschaften, wie z.B. Bildschirmauflösung oder Seitenverhältnis, manipuliert werden. Im untenstehenden Code-Block wird dies veranschaulicht. Indem wir die Y-Achse des Flexbox-Elternelements mit dem Attribut `"flex-direction: column"` zur Hauptachse machen, werden die beiden Kindelemente vertikal verteilt. Damit nun auch die Navigation unter dem Inhalt positioniert ist, ändern wir die Reihenfolge mit dem Attribut `"order: 2"`. Dadurch ist dieses Element das zweite in dem Container, obwohl es im HTML-Markup das erste ist. Weiters müssen Höhe und Breite angepasst werden, damit das Element die gesamte Breite des Bildschirms einnimmt und nicht mehr die gesamte Höhe, wie bei der Desktopversion.
+Damit die Navigation auf mobilen Geräten am unteren Rand positioniert ist, benötigen wir eine Media Query, also eine Abfrage von bestimmten Eigenschaften. Mithilfe dieser können CSS-Stile anhand von verschiedenen Eigenschaften, wie z.B. Bildschirmauflösung oder Seitenverhältnis, manipuliert werden. Im untenstehenden Code-Block wird dies veranschaulicht. Indem wir die Y-Achse des Flexbox-Elternelements mit dem Attribut `"flex-direction: column"` zur Hauptachse machen, werden die beiden Kindelemente vertikal verteilt. Damit nun auch die Navigation unter dem Inhalt positioniert ist, ändern wir die Reihenfolge mit dem Attribut `"order: 2"`. Dadurch ist dieses Element das zweite in dem Container, obwohl es im HTML-Markup das erste ist. Weiters müssen Höhe und Breite angepasst werden, damit das Element die gesamte Breite des Bildschirms einnimmt und nicht mehr die gesamte Höhe, wie bei der Desktopversion. \cite{flexbox_official, responsive_design}
 
 ```css
 @media (max-width: 576px) {
