@@ -1,3 +1,6 @@
-## Responsive Design
+Mit dem Anstieg an Smartphones und anderen mobilen Geräten ist die Zahl der Benutzer von mobilen Seiten stark gestiegen. Webseiten müssen quer über alle Browser, Bildschirmauflösungen und Seitenverhältnisse funktionieren. Der grafische Aufbau einer Seite, insbesondere die Anordnung der einzelnen Elemente, muss angepasst werden, um auf weniger Platz zu funktionieren. Weiters müssen andere Eingabemöglichkeiten wie Touchscreens beachtet werden.
 
-Mit dem Anstieg an Smartphones und anderen mobilen Geräten ist die Zahl der Benutzer einer mobilen Seite stark gestiegen.
+Modernes responsives Design wurde erst durch die Einführung von Media Queries ermöglicht.
+
+Media queries represent the glue that joins a lot of other responsive concepts and tools together. They’re a simple but powerful concept, allowing you to detect device properties, de ne rules, and load different CSS properties based on them. For example, you can optimize a navigation menu for different devices, converting a full horizontal menu on desktop browsers to the “hamburger” menu often encountered on mobile devices.
+Viewports are less complex, allowing you to de ne the size and scaling factor of a web page appropriately, no matter what the size of the device being used to view the page is. Without them, media queries would only be partially useful.

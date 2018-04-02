@@ -4,7 +4,7 @@ CSS Grid Layout, offiziell "Grid Layout Module Level 1", ist ein zweidimensional
 
 ### Das Konzept
 
-CSS-Grid kontrolliert die Größe und Position der Elemente und hält dabei vordefinierte Regeln ein. Im Gegensatz zu Flexbox positioniert das Elternelement die Kindelemente auf zwei Achsen anstatt auf einer. Dadurch kann die Position der Elemente genauer bestimmt werden. Dies trägt dazu bei, dass Grid besser für komplette Layouts von Webseiten geeignet ist. Weiters sind große Veränderungen, je nach Bildschirmauflösung, ohne Adaptierung des Markups möglich, da Objekten eine explizite Position zugewiesen werden kann. Man kann somit die gesamte Seite für mobile Geräte umbauen, ohne das HTML-Markup zu berühren. Alles passiert ausschließlich mit den Cascading Stylesheets(CSS). \cite{CSS_Grid_Mozilla}
+CSS-Grid kontrolliert die Größe und Position der Elemente und hält dabei vordefinierte Regeln ein. Im Gegensatz zu Flexbox positioniert das Elternelement die Kindelemente auf zwei Achsen anstatt auf einer. Dadurch kann die Position der Elemente genauer bestimmt werden. Dies trägt dazu bei, dass Grid besser für komplette Layouts von Webseiten geeignet ist. Weiters sind große Veränderungen, je nach Bildschirmauflösung, ohne Adaptierung des Markups möglich, da Objekten eine explizite Position zugewiesen werden kann. Man kann somit die gesamte Seite für mobile Geräte umbauen, ohne das HTML-Markup zu berühren. Alles passiert ausschließlich mit den Cascading Style Sheets(CSS). \cite{CSS_Grid_Mozilla}
 
 ### Technische Spezifikation
 
@@ -36,7 +36,7 @@ Das HTML-Markup ist recht simpel, was auch einer der Vorteile von CSS-Grid ist. 
 
 Zuallererst wird das \<div> Element mit der Klasse ".twitter" selektiert und mit dem Attribut `"display: grid"` als ein Grid-Container definiert. Die Grid-Eigenschaft legt außerdem einen neuen Kontext für das Grid-Layout fest. Dieser wird benötigt, um mit Grid ein Layout aufzubauen. Dieses Elternelement unterteilt den verfügbaren Raum mit dem Befehl `"grid-template-columns: 1fr 1fr 1fr"` auf drei gleich große Spalten. `"1 fr"` bedeutet, dass jedes Kindelement einen Teil des verfügbaren Platzes zugewiesen bekommt. Da drei Spalten definiert sind, ist jede Spalte 33.33% breit. Zuletzt müssen die Reihen definiert werden. Da unsere Spalten die gesamte Höhe des Browsers einnehmen sollen, muss mit `"grid-template-rows"` eine Zeile mit 100% der Höhe definiert werden. \cite{CSS_Grid_Official}
 
-![Ein dreispaltiges CSS Grid Layout](bilder/Dominik/CSS_Grid_example_1.png){width=90%}
+![Ein dreispaltiges CSS-Grid Layout mit einer Zeile](bilder/Dominik/CSS_Grid_example_1.png){width=90%}
 
 Dieses Layout kann mit Grid sehr einfach verändert werden, um es in zu einem einspaltiges zu verändern.
 
@@ -50,7 +50,7 @@ Dieses Layout kann mit Grid sehr einfach verändert werden, um es in zu einem ei
 
 Man muss lediglich die Anzahl der Spalten auf eine ändern. Weiters fügt man zwei weitere Zeilen hinzu. Der vorhandene Platz soll gleichmäßig aufgeteilt werden(siehe Abbildung 5.3).
 
-![Ein einspaltiges CSS Grid Layout mit einer Zeilen](bilder/Dominik/CSS_Grid_example_2.png){width=90%}
+![Ein einspaltiges CSS-Grid Layout mit drei Zeilen](bilder/Dominik/CSS_Grid_example_2.png){width=90%}
 
 Damit das Layout auf mobilen Geräten optimal angezeigt wird, können Media-Queries verwendet werden.
 

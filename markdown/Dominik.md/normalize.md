@@ -1,4 +1,4 @@
-## Was ist Normalize.css?
+## Normalize.css
 
 Jeder Browser wendet standardmäßig bestimmte Stile auf jede Seite an. Dadurch werden Elemente wie Formulare oder Scrollbars auf jedem Browser anders dargestellt. Damit das Verhalten und die Darstellung von Webseiten konsistenter wird, hat Nicolas Gallagher Normalize.css entwickelt. Diese Datei überschreibt einige Stile auf allen Browsern, um die voreingestellten Stile gewissermaßen zurückzusetzen.
 

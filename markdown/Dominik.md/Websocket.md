@@ -22,13 +22,17 @@ verbindung.onmessage = nachricht => {
 };
 ```
 
-Eine WebSocket-Verbindung wird geöffnet, indem man den WebSocket-Konstruktor aufruft um ein neues Objekt zu erstellen. \cite{websockets_official}
+Eine WebSocket-Verbindung wird geöffnet, indem man den WebSocket-Konstruktor aufruft um ein neues Objekt zu erstellen. \cite{websocket_official}
 
 Das URL-Schema fängt im Gegensatz zu herkömmlichen URLs nicht mit `"http://"` sondern mit `"ws://"` an. Allerdings gibt es auch bei WebSockets eine verschlüsselte Variante mit dem Schema `"wss://"`. Damit können sichere Verbindungen zwischen Browsern und Servern aufgebaut werden. Weiters stehen verschiedene Ereignis-Handler zur Verfügung, um auf das Eintreten bestimmter Ereignisse reagieren zu können. Dadurch weiß der Client zum Beispiel, ob die Verbindung erfolgreich geöffnet werden konnte oder ob eine Nachricht eingegangen ist. \cite{websocket_events}
 
 Sobald eine Verbindung zum Server erfolgreich aufgebaut wurde, kann der Client sofort anfangen mit der `".send()"` Methode Nachrichten an den Server zu übermitteln. Bisher konnten nur Strings versendet werden, aber seit der neuesten Spezifikation ist es auch möglich binäre Daten zu senden. Der Server hat ebenfalls die Möglichkeit jederzeit Mitteilungen zu senden. Tritt dieser Fall ein, wird das `".onmessage"`-Event ausgelöst. Dieses Ereignis übergibt ein Ereignisobjekt, mit dem auf die Nachricht zugegriffen werden kann. \cite{websocket_spec}
 
 ### Kommunikation mit dem Mischpult - Nuss
+
+Im LIZ wird ein Soundcraft Ui16 als Mischpult für die Mikrofone und den Audio-Eingang verwendet. Dieses verfügt über eine proprietäre Benutzeroberfläche. Der Hersteller hat sich sehr viel Mühe gegeben, dieses System abzusichern, sodass es nur mit der hauseigenen Software bedient werden kann.
+
+Ich habe den Aufbau und die Verhaltensweise des Mischpults analysiert, um herauszufinden, wie ich darauf zu greifen kann.
 
 ### Ratchet
 

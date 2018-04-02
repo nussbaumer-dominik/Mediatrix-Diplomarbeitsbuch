@@ -68,7 +68,7 @@ Mit der `"lighten()"` Funktion können Farben um einen Faktor aufgehellt werden.
 Mithilfe von `"grayscale()"` können Farben in Graustufen konvertiert werden.
 Eine weitere hilfreiche Funktion ist `"complement()"`. Diese gibt die Komplementärfarbe zurück. \cite{SASS_REFERENCE}
 
-### Nachteile von CSS Präprozessoren
+### Nachteile von CSS-Präprozessoren
 
 Wie beim Lernen jeder anderen Technologie werden Designer auch bei SASS mit einigen Hürden konfrontiert.
 
