@@ -1,6 +1,6 @@
 ## Flexbox
 
-Flexbox, offiziell "CSS Flexible Box Layout Module Level 1", ist eine neue Art und ein neues Konzept um eindimensionale Layouts auf Webseiten umzusetzen. Früher hat man allen Elementen mit dem Klassen-Selektor fixe Positionen, Maße und Eigenschaften zugewiesen. Mit Id-Selektoren wurden einzelne Elemente weiter modifiziert.
+Flexbox, offiziell "CSS Flexible Box Layout Module Level 1", ist eine neue Art und ein neues Konzept, um eindimensionale Layouts auf Webseiten umzusetzen. Früher hat man allen Elementen mit dem Klassen-Selektor fixe Positionen, Maße und Eigenschaften zugewiesen. Mit Id-Selektoren wurden einzelne Elemente weiter modifiziert.
 Doch bei Flexbox werden grundlegende Regeln festgelegt, wie sich Elemente innerhalb eines Containers zu verhalten haben. Dies macht das Verhalten der Seite auch bei einer Änderung der Bildschirmauflösung vorhersagbar. Anschließend ist es dem Browser überlassen, die Breite, Höhe, Position und Anordnung, entsprechend den vordefinierten Regeln, zu wählen. Damit wird die Implementierung von Webseiten, die ihr Design an verschiedene Bildschirmauflösungen anpassen müssen, plattformübergreifender und effizienter. \cite{flexbox_official}
 
 ### Das Konzept
@@ -13,11 +13,11 @@ Innerhalb eines \<div> Tags können die einzelnen Elemente ihre Größe "flexibe
 
 ### Erklärung anhand eines realen Beispiels
 
-Die Aufgabenstellung: Auf der Seite soll eine seitliche Navigation angezeigt werden, die auf mobilen Geräten an den unteren Rand des Bildschirms wandert(siehe Abbildung 5.1). Bei diesem Layout ist entscheidend, dass die Reihenfolge der Elemente unabhängig vom Markup geändert werden kann.
+Die Aufgabenstellung: auf der Webseite soll eine Navigation auf der linken Seite angezeigt werden, die auf mobilen Geräten an den unteren Rand des Bildschirms wandert (siehe Abbildung 5.1). Bei diesem Layout ist entscheidend, dass die Reihenfolge der Elemente unabhängig vom Markup geändert werden kann.
 
 ![Flexbox Beispiel Funktionalität](bilder/Dominik/Flexbox_Illustration_1.png){width=90%}
 
-Mithilfe von Flexbox ist dieses Verhalten einfach zu erzielen. Wie bereits erwähnt, gibt es bei Flexbox Elternelemente und Kindelemente. Die Elternelemente, auch "Container" genannt, agieren als Rahmen, in denen die Kindelemente, auch items genannt, enthalten sind.
+Mithilfe von Flexbox ist dieses Verhalten einfach zu erzielen. Wie bereits erwähnt, gibt es bei Flexbox Elternelemente und Kindelemente. Die Elternelemente, auch "Container" genannt, agieren als Rahmen, in dem die Kindelemente, auch items genannt, enthalten sind.
 Für das aktuelle Beispiel erstelle ich zunächst einen Container mit den Eigenschaften `"display:flex"`. Dadurch weiß der Browser, dass dieses Element mit Flexbox positioniert werden soll. \cite{basic_concepts_flexbox}
 
 Die Kindelemente dieses Flex-Containers werden standardmäßig auf der horizontalen X-Achse ausgerichtet. Wenn der Inhalt eines Elements mehr Platz einnimmt als vorhanden, dann läuft er über die Grenzen hinaus. Damit dieser Zustand nicht eintritt, wird der Überlauf des Flex-Containers mit `"overflow: hidden"` auf der X- und Y- Achse ausgeblendet. Die Navigation auf der Seite ist in folgendem Code-Block beschrieben. \cite{flexbox_official}
