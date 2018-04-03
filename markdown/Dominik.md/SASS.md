@@ -18,7 +18,7 @@ Aufgrund der ständig komplexer werdenden Frontend-Entwicklung werden CSS-Dateie
 
 Die `"@import"`-Regel ist schon sehr lange ein Teil von CSS. Allerdings ist sie nicht besonders beliebt, da jeder Import eine eigene HTTP-Anfrage ausführt, was zu einer langsamen Webseite führt. Was passiert, wenn man diese Funktion mit SASS verwendet? Hoffentlich haben Sie nie damit aufgehört, über den Namen "Präprozessor" nachzudenken. \cite{SASS_REFERENCE}
 
-> "Ein Präprozessor ist ein Computerprogramm, das Eingabedaten vorbereitet und zur weiteren Bearbeitung an ein anderes Programm weitergibt.” — Wikipedia \cite{Präprozessor}
+> "Ein Präprozessor ist ein Computerprogramm, das Eingabedaten vorbereitet und zur weiteren Bearbeitung an ein anderes Programm weitergibt.” — Wikipedia \cite{preprocessor_wiki}
 
 Wenn man dieses Konzept nun auf die `"@import"`-Regel anwendet, fällt einem auf, dass der Import von SASS damit erledigt wird. Die CSS- und SASS-Dateien werden zusammengefasst und am Ende bleibt nur eine Datei über. Der Browser des Benutzers muss nur eine Anfrage ausführen und bloß eine Datei hinunterladen. Das Projekt könnte aus einer Vielzahl an CSS-Dateien zusammengesetzt sein. \cite{SASS_REFERENCE}
 
