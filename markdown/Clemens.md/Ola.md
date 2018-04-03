@@ -1,14 +1,14 @@
 OLA (Open Lighting Architecture) ist Teil des Open Lighting Projects, 
 welches von Simon Newton 2004 gegründet wurde. 
-Das Ziel des Projekts ist es, qualitativ hochwärtige 
+Das Ziel des Projekts ist es, qualitativ hochwertige 
 Open-Source Software für die Licht- und Unterhaltungsindustrie zu entwickeln.
 OLA vereint verschieden DMX-Interfaces und kümmert sich um die Kommunikation mit diesen. 
 Weiters werden einen Vielzahl von DMX- und DMX-over-IP-Protokollen unterstützt.
 Ein Vorteil der Software ist, dass sie auch auf dem im Raspberry Pi verbauten ARM-Prozessor läuft.
-Des Weiteren bietet OLA auch eine C++-Schittstelle, diese wird nachfolgend beschrieben.\cite{noauthor_open_nodate-2}
+Des Weiteren bietet OLA auch eine C++-Schittstelle, diese wird im folgenden Kapitel beschrieben.\cite{noauthor_open_nodate-2}
 
 ## C++-Schnittstelle
-In diesem Projekt wurde das DMX-Signals über die C++-Schnittstelle der OLA gesteuert.
+In diesem Projekt wurde das DMX-Signal über die C++-Schnittstelle der OLA gesteuert.
 Um OLA über C++ zu steuern werden zwei Klassen benötigt.
 Einerseits der *StreamingClient* und andererseits der *DmxBuffer*.
 

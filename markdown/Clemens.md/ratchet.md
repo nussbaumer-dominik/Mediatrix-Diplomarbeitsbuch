@@ -18,7 +18,7 @@ $server = IoServer::factory(
 
 Wie der obige Code zeigt, muss zuerst ein *IoServer* erstellt werden, welcher einen *HttpServer* benötigt.
 Der *HttpServer* wiederum benötigt einen *WSServer*, welchem die Application-Klasse übergeben wird.\cite{noauthor_ratchet_nodate}
-Diese Server-Klassen werden nachfolgen Kurz beschrieben:
+Diese Server-Klassen werden nachfolgen kurz beschrieben:
 
 * **IoServer:** Diese Klasse stellt die Basis dar. 
 Sie kümmert sich um den Verbindungsaufbau und -abbau und um alle Fehler, die im Programm auftreten.
@@ -31,8 +31,8 @@ Sie wartet bis ein kompletter Request übertragen wurde und gibt ihn dann erst w
 
 #### Application-Klasse \label{application}
 Diese Klasse beinhaltet die eigentliche Logik des Websocket-Servers.
-Das MessageComponentInterface gibt hier die vier Methoden, die von Ratchet verlangt werden, vor und muss implementiert werden.\cite{noauthor_ratchet_nodate}
-Diese viert Methoden sind:
+Das *MessageComponentInterface* gibt hier die vier Methoden, die von Ratchet verlangt werden, vor und muss implementiert werden.\cite{noauthor_ratchet_nodate}
+Diese vier Methoden sind:
 
 * **onClose:** Diese Methode wird von Ratchet aufgerufen, wenn eine Websocket-Verbindung geschlossen wird.
 Als Argument wird die Websocket-Verbindung übergeben.\cite{noauthor_ratchet_nodate}
@@ -46,7 +46,7 @@ Hier wird zusätzlich auch die aufgetretene Exception mit übergeben.\cite{noaut
 * **onMessage:** Immer wenn eine Nachricht über Websocket von einem Client an den Server übermittelt wird, wird diese Methode aufgerufen.
 Als Argumente werden die Websocket-Verbindung, von der die Nachricht kommt, und die Nachricht übergeben.\cite{noauthor_ratchet_nodate}
 
-Nachstehend ist ein Beispiel für eine Application-Klasse, 
+Nachstehend folgt ein Beispiel für eine Application-Klasse, 
 nach deren Prinzip auch die Application-Klasse in diesem Projekt gestaltet ist.
 
 ```php
