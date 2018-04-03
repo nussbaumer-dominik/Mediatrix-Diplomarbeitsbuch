@@ -16,7 +16,7 @@ Bei CSS-Grid wird hingegen eine fixe Anzahl von Reihen und Spalten definiert. Di
 
 Da bei Flexbox im CSS für den Browser genau definiert wird, wie Elemente innerhalb eines Containers anzuordnen sind, können beliebig viele Elemente dynamisch hinzugefügt werden. Diese Eigenschaft habe ich bei der Umsetzung der Benutzeroberfläche mehrmals verwendet.
 Erstens befinden sich die Module für die Steuerung der einzelnen Geräte in einem Flex-Container. Da diese per Klick dynamisch hinzugefügt werdenkönnen, hat sich hier Flexbox angeboten. Beim Betätigen eines Knopfes wird das entsprechende Modul an den \<div> angehängt. Wenn die Gesamtbreite der Elemente die Breite des Bildschirms übersteigt, wird eine Scrollbar auf der X-Achse eingeblendet.
-Weiters habe ich Flexbox bei der Darstellung der vordefinierten Presets verwendet. Obwohl diese Elemente in Form eines Rasters angeordnet sind, war CSS-Grid nicht geeignet. Denn bei diesem werden fixe Reihen und Spalten festgelegt. Allerdings hat mir das Probleme bereitet, da die Anzahl der Presets zum Zeitpunkt der Entwicklung nicht bekannt war. /cite{flexbox_vs_grid}
+Weiters habe ich Flexbox bei der Darstellung der vordefinierten Presets verwendet. Obwohl diese Elemente in Form eines Rasters angeordnet sind, war CSS-Grid nicht geeignet. Denn bei diesem werden fixe Reihen und Spalten festgelegt. Allerdings hat mir das Probleme bereitet, da die Anzahl der Presets zum Zeitpunkt der Entwicklung nicht bekannt war. \cite{flexbox_vs_grid}
 
 ### Erklärung der Unterschiede anhand eines Beispiels
 
