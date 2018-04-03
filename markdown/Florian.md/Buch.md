@@ -1074,90 +1074,91 @@ Preiswert Semi-Professionell Professionell
 
 ### Scheinwerfer:
 
-  Profiler          Variante 1          Variante 2               Variante 3
-  ----------------- ------------------- ------------------------ ----------------------------------------
-  Produkt           ADJ Saber Spot WW   ADJ Ikon Profile Pearl   Eurolite LED PFE-100 RGBW Profile Spot
-  Lichtquelle       LED                 LED                      LED
-  Leistung          15W                 32W                      100W
-  Farbtemperatur    WW 3000K            CW 7200K                 CW
-  Multi-Color       Nein                Nein                     RGBW
-  Farbfolie         Nein                Ja                       Nein
-  Gobo              Nein                Ja                       Nein
-  Zoom              Nein                Ja (manuell)             Ja (manuell)
-  Abstrahlwinkel    4°, 10°, 45°        15°- 30°                 14°- 41°
-  Framing-Shutter   Nein                Ja                       Ja
-  DMX               Ja                  Ja                       Ja
-  Stromversorgung   PowerCon            Kaltgeräte               PowerCon
-  Farbe             Schwarz             Weiß                     Schwarz
-  Gewicht           1,2kg               2,7kg                    10kg
-  Größe LBH         88 x 170 x 87 mm    448 x 150 x 127 mm       615 x 280 x 420 mm
-  Händler           Thomann.at          Thomann.at               Thomann.at
-  Preis/Stück       105€                248€                     579€
+\begin{table}[]
+\centering
+\caption{Profiler}
+\label{profilerTable}
+\begin{tabular}{llll}
+Profiler        & Variante 1        & Variante 2             & Variante 3                \\
+Produkt         & ADJ Saber Spot WW & ADJ Ikon Profile Pearl & Eurolite LED PFE-100 RGBW \\
+Lichtquelle     & LED               & LED                    & LED                       \\
+Leistung        & 15W               & 32W                    & 100W                      \\
+Farbtemperatur  & WW 3000K          & CW 7200K               & CW                        \\
+Multi-Color     & Nein              & Nein                   & RGBW                      \\
+Farbfolie       & Nein              & Ja                     & Nein                      \\
+Gobo            & Nein              & Ja                     & Nein                      \\
+Zoom            & Nein              & Ja (manuell)           & Ja (manuell)              \\
+Abstrahlwinkel  & 4°, 10°, 45°      & 15°- 30°               & 14°- 41°                  \\
+Framing-Shutter & Nein              & Ja                     & Ja                        \\
+DMX             & Ja                & Ja                     & Ja                        \\
+Stromversorgung & PowerCon          & Kaltgeräte             & PowerCon                  \\
+Farbe           & Schwarz           & Weiß                   & Schwarz                   \\
+Gewicht         & 1,2kg             & 2,7kg                  & 10kg                      \\
+Größe LBH       & 88 x 170 x 87 mm  & 448 x 150 x 127 mm     & 615 x 280 x 420 mm        \\
+Händler         & Thomann.at        & Thomann.at             & Thomann.at                \\
+Preis/Stück     & 105€              & 248€                   & 579€                     
+\end{tabular}
+\end{table}
 
-+-----------------+-----------------+-----------------+-----------------+
-| Fluter          | Variante 1      | Variante 2      | Variante 3      |
-+=================+=================+=================+=================+
-| Produkt         | Stairville Mini | Stairville      | ADJ Encore      |
-|                 | Stage PAR       | Revueled 120    | FR150z          |
-|                 | CW/WW/A         | Cob 3200k Dmx   |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| Lichtquelle     | LED             | LED             | LED             |
-+-----------------+-----------------+-----------------+-----------------+
-| Leistung        | 42W             | 120W            | 130W            |
-+-----------------+-----------------+-----------------+-----------------+
-| Farbtemperatur  | CW/WW/A         | WW 3200K        | WW 3000K        |
-|                 |                 |                 |                 |
-|                 | 2800K-6000K     |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| Multi-Color     | Nein            | Nein            | Nein            |
-+-----------------+-----------------+-----------------+-----------------+
-| Farbfolie       | Nein            | Nein            | Nein            |
-+-----------------+-----------------+-----------------+-----------------+
-| Gobo            | Nein            | Nein            | Nein            |
-+-----------------+-----------------+-----------------+-----------------+
-| Zoom            | Nein            | Nein            | Ja              |
-+-----------------+-----------------+-----------------+-----------------+
-| Abstrahlwinkel  | 30°             | 50°             | 8°-50°          |
-+-----------------+-----------------+-----------------+-----------------+
-| Framing-Shutter | Nein            | Torblenden      | Torblenden      |
-+-----------------+-----------------+-----------------+-----------------+
-| DMX             | Ja              | Ja              | Ja              |
-+-----------------+-----------------+-----------------+-----------------+
-| Stromversorgung | Schuko          | PowerCon        | PowerCon        |
-+-----------------+-----------------+-----------------+-----------------+
-| Farbe           | Schwarz         | Schwarz         | Schwarz         |
-+-----------------+-----------------+-----------------+-----------------+
-| Gewicht         | 1,7kg           | 5,5kg           | 6,9kg           |
-+-----------------+-----------------+-----------------+-----------------+
-| Größe LBH       | 140 x 140 x 225 | 557 x 258 x 164 | 376 x 298 x 294 |
-|                 | mm              | mm              | mm              |
-+-----------------+-----------------+-----------------+-----------------+
-| Händler         | Thomann.at      | Thomann.at      | Thomann.at      |
-+-----------------+-----------------+-----------------+-----------------+
-| Preis/Stück     | 98€             | 277€            | 488€            |
-+-----------------+-----------------+-----------------+-----------------+
+\begin{table}[]
+\centering
+\caption{Fluter}
+\label{fluterTable}
+\begin{tabular}{llll}
+Fluter          & Variante 1                        & Variante 2                            & Variante 3         \\
+Produkt         & Stairville Mini Stage PAR CW/WW/A & Stairville Revueled 120 Cob 3200k Dmx & ADJ Encore FR150z  \\
+Lichtquelle     & LED                               & LED                                   & LED                \\
+Leistung        & 42W                               & 120W                                  & 130W               \\
+Farbtemperatur  & CW/WW/A 2800K-6000K               & WW 3200K                              & WW 3000K           \\
+Multi-Color     & Nein                              & Nein                                  & Nein               \\
+Farbfolie       & Nein                              & Nein                                  & Nein               \\
+Gobo            & Nein                              & Nein                                  & Nein               \\
+Zoom            & Nein                              & Nein                                  & Ja                 \\
+Abstrahlwinkel  & 30°                               & 50°                                   & 8°-50°             \\
+Framing-Shutter & Nein                              & Torblenden                            & Torblenden         \\
+DMX             & Ja                                & Ja                                    & Ja                 \\
+Stromversorgung & Schuko                            & PowerCon                              & PowerCon           \\
+Farbe           & Schwarz                           & Schwarz                               & Schwarz            \\
+Gewicht         & 1,7kg                             & 5,5kg                                 & 6,9kg              \\
+Größe LBH       & 140 x 140 x 225 mm                & 557 x 258 x 164 mm                    & 376 x 298 x 294 mm \\
+Händler         & Thomann.at                        & Thomann.at                            & Thomann.at         \\
+Preis/Stück     & 98€                               & 277€                                  & 488€              
+\end{tabular}
+\end{table}
 
 ### Mögliche Konfigurationen:
 
-  Preisoptimiert    Klein               Mittel                              Groß
-  ----------------- ------------------- ----------------------------------- -----------------------------------
-  Profiler          ADJ Saber Spot WW   ADJ Ikon Profile Pearl              ADJ Ikon Profile Pearl
-  Anzahl            4                   2                                   4
-  Fluter            /                   Stairville Mini Stage PAR CW/WW/A   Stairville Mini Stage PAR CW/WW/A
-  Anzahl            /                   2                                   4
-  Gesamtgewicht     4,8kg               8,8kg                               17,6kg
-  Gesamtleistung    60W                 148W                                296W
-  **Gesamtpreis**   **420€**            **692€**                            **1384€**
+\begin{table}[]
+\centering
+\caption{Preisoptimiert}
+\label{preisTable}
+\begin{tabular}{llll}
+Preisoptimiert & Klein             & Mittel                            & Groß                              \\
+Profiler       & ADJ Saber Spot WW & ADJ Ikon Profile Pearl            & ADJ Ikon Profile Pearl            \\
+Anzahl         & 4                 & 2                                 & 4                                 \\
+Fluter         & /                 & Stairville Mini Stage PAR CW/WW/A & Stairville Mini Stage PAR CW/WW/A \\
+Anzahl         & /                 & 2                                 & 4                                 \\
+Gesamtgewicht  & 4,8kg             & 8,8kg                             & 17,6kg                            \\
+Gesamtleistung & 60W               & 148W                              & 296W                              \\
+Gesamtpreis    & 420€              & 692€                              & 1384€                            
+\end{tabular}
+\end{table}
 
-  Leistungsoptimiert   Klein                                   Mittel                   Groß
-  -------------------- --------------------------------------- ------------------------ ----------------------------------------
-  Profiler             ADJ Ikon Profile Pearl                  ADJ Ikon Profile Pearl   Eurolite LED PFE-100 RGBW Profile Spot
-  Anzahl               4                                       4                        2
-  Fluter               Stairville Revueled 120 Cob 3200k Dmx   ADJ Encore FR150z        ADJ Encore FR150z
-  Anzahl               2                                       2                        2
-  Gesamtgewicht        21,8kg                                  24,6kg                   33,8kg
-  Gesamtleistung       368W                                    388W                     460W
-  **Gesamtpreis**      **1546€**                               **1968€**                **2164€**
+\begin{table}[]
+\centering
+\caption{Leistungsoptimiert}
+\label{leistungTable}
+\begin{tabular}{llll}
+Leistungsoptimiert & Klein                                 & Mittel                 & Groß                                   \\
+Profiler           & ADJ Ikon Profile Pearl                & ADJ Ikon Profile Pearl & Eurolite LED PFE-100 RGBW Profile Spot \\
+Anzahl             & 4                                     & 4                      & 2                                      \\
+Fluter             & Stairville Revueled 120 Cob 3200k Dmx & ADJ Encore FR150z      & ADJ Encore FR150z                      \\
+Anzahl             & 2                                     & 2                      & 2                                      \\
+Gesamtgewicht      & 21,8kg                                & 24,6kg                 & 33,8kg                                 \\
+Gesamtleistung     & 368W                                  & 388W                   & 460W                                   \\
+Gesamtpreis        & 1546€                                 & 1968€                  & 2164€                                 
+\end{tabular}
+\end{table}
 
 ### Aufhängung:
 
@@ -1167,16 +1168,22 @@ Benötigte Gesamtlänge: 4m
 
 Die Aufbauanleitung kann von der EUTRAC-Website heruntergeladen werden.
 
-  **Montage: Preisoptimiert**       Preis/Stück   Klein         Mittel        Groß
-  --------------------------------- ------------- ------------- ------------- -------------
-  3-Phasen Aufbau Stromschiene 2m   36,70€        2             2             2
-  Pendelabhängung 60cm              20,93€        4             4             4
-  Schienenadapter                   14,90€        4             4             8
-  Befestigungsklammer               5,59€         4             4             4
-  Einspeiser                        10,43€        1             1             1
-  Längsverbinder                    10,43€        1             1             1
-  Endkappe                          2,09€         1             1             1
-  **Gesamtpreis**                                 **262,03€**   **262,03€**   **321,63€**
+\begin{table}[]
+\centering
+\caption{Eutrac}
+\label{eutracTable}
+\begin{tabular}{lllll}
+Montage: Preisoptimiert         & Preis/Stück & Klein   & Mittel  & Groß    \\
+3-Phasen Aufbau Stromschiene 2m & 36,70€      & 2       & 2       & 2       \\
+Pendelabhängung 60cm            & 20,93€      & 4       & 4       & 4       \\
+Schienenadapter                 & 14,90€      & 4       & 4       & 8       \\
+Befestigungsklammer             & 5,59€       & 4       & 4       & 4       \\
+Einspeiser                      & 10,43€      & 1       & 1       & 1       \\
+Längsverbinder                  & 10,43€      & 1       & 1       & 1       \\
+Endkappe                        & 2,09€       & 1       & 1       & 1       \\
+Gesamtpreis                     &             & 262,03€ & 262,03€ & 321,63€
+\end{tabular}
+\end{table}
 
 Alle Produkte und Preise sind am 03.04.2018 von amazon.at entnommen
 worden.
@@ -1200,16 +1207,22 @@ Befestigung können Half-Coupler und Stahlseile verwendet werden. Die
 230V-Schutzkontaktleitung zur Traverse notwendig. Eine Serienschaltung
 von Geräten mit Power In und Out ist mit geeigneten Patchkabeln möglich.
 
-  **Montage: Leistungsoptimiert**                         Preis/Stück   Klein         Mittel        Groß
-  ------------------------------------------------------- ------------- ------------- ------------- -------------
-  Global Truss F31200 Traverse 2,0 m                      44€           2             2             2
-  Global Truss 812 Halbschelle (Geräte)                   5,90€         4             4             8
-  Global Truss 81702 Half Coupler Small Eye               5,90€         4             4             4
-  Global Truss Konischer Verbinder für F31-F34 Traverse   7,40€         1             1             1
-  Stairville Mirror Ball Chain 100cm DIN                  5,90€         4             4             4
-  Stairville Locking Carabina 6mm                         1,49€         8             8             8
-  the box Flugöse M8 x 30mm                               4,88€         4             4             4
-  **Gesamtpreis**                                                       **197,64€**   **197,64€**   **221,24€**
+\begin{table}[]
+\centering
+\caption{Traverse}
+\label{traverseTable}
+\begin{tabular}{lllll}
+Montage: Leistungsoptimiert                           & Preis/Stück & Klein   & Mittel  & Groß    \\
+Global Truss F31200 Traverse 2,0 m                    & 44€         & 2       & 2       & 2       \\
+Global Truss 812 Halbschelle (Geräte)                 & 5,90€       & 4       & 4       & 8       \\
+Global Truss 81702 Half Coupler Small Eye             & 5,90€       & 4       & 4       & 4       \\
+Global Truss Konischer Verbinder für F31-F34 Traverse & 7,40€       & 1       & 1       & 1       \\
+Stairville Mirror Ball Chain 100cm DIN                & 5,90€       & 4       & 4       & 4       \\
+Stairville Locking Carabina 6mm                       & 1,49€       & 8       & 8       & 8       \\
+the box Flugöse M8 x 30mm                             & 4,88€       & 4       & 4       & 4       \\
+Gesamtpreis                                           &             & 197,64€ & 197,64€ & 221,24€
+\end{tabular}
+\end{table}
 
 Alle Produkte und Preise sind am 03.04.2018 von thomann.at entnommen
 worden.
@@ -1218,27 +1231,36 @@ worden.
 
 ![1-Punkttravere Montage](bilder/Florian/TrussMontage){width=90%}
 
-**Anmerkung: **
+Anmerkung:
 
 Die Konstruktion muss nach dem Einbau von befugten Personen geprüft und
 abgenommen werden.
 
 ### Gesamtpreise der Konfigurationen:
 
-  Preisoptimiert     Klein         Mittel        Groß
-  ------------------ ------------- ------------- --------------
-  Preis Geräte       420€          692€          1384€
-  Preis Aufhängung   262,03€       262,03€       321,63€
-  **Gesamtpreis**    **682,03€**   **954,03€**   **1705,63€**
+\begin{table}[]
+\centering
+\caption{PreisPreisoptimiert}
+\label{preisTable}
+\begin{tabular}{llll}
+Preisoptimiert   & Klein   & Mittel  & Groß     \\
+Preis Geräte     & 420€    & 692€    & 1384€    \\
+Preis Aufhängung & 262,03€ & 262,03€ & 321,63€  \\
+Gesamtpreis      & 682,03€ & 954,03€ & 1705,63€
+\end{tabular}
+\end{table}
 
-  Leistungsoptimiert   Klein          Mittel         Groß
-  -------------------- -------------- -------------- --------------
-  Preis Geräte         1546€          1968€          2164€
-  Preis Aufhängung     197,64€        197,64€        221,24€
-  **Gesamtpreis**      **1743,64€**   **2165,64€**   **2385,24€**
-
-
--
+\begin{table}[]
+\centering
+\caption{PreisLeistungoptimiert}
+\label{preisLeistungTable}
+\begin{tabular}{llll}
+Leistungsoptimiert & Klein    & Mittel   & Groß     \\
+Preis Geräte       & 1546€    & 1968€    & 2164€    \\
+Preis Aufhängung   & 197,64€  & 197,64€  & 221,24€  \\
+Gesamtpreis        & 1743,64€ & 2165,64€ & 2385,24€
+\end{tabular}
+\end{table}
 
 Status-Erkennung der Geräte
 ---------------------------
