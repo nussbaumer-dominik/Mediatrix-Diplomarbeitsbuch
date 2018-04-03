@@ -3,14 +3,14 @@ Dafür wurde auf Ebene des Betriebssystems der Fokus auf verschlüsselte Verbind
 
 ## SSL und TLS
 SSL \bzw TLS (im weiteren als SSL bezeichnet) wurde in diesem Projekt durch 
-HTTPS (Hypertext Transfer Protokoll Secure) und WSS (Websocket Secure)integriert.
+HTTPS (Hypertext Transfer Protokoll Secure) und WSS (Websocket Secure) integriert.
 
-SSL(Secure Sockets Layer) beschreibt ein Verfahren,
-bei dem unsichere Protokolle wie HTTP und WS in eine verschlüsselte Kommunikation eingebettete werden 
+SSL (Secure Sockets Layer) beschreibt ein Verfahren,
+bei dem unsichere Protokolle wie HTTP  (Hypertext Transfer Protokoll) und WS (Websocket) in eine verschlüsselte Kommunikation eingebettete werden 
 und weiters auch eine Authentifizierung von Server und Client möglich ist. Das Verfahren arbeitet mit 
 öffentlichen und privaten Schlüsseln. Das Prinzip der Schlüsselpaare funktioniert folgendermaßen:
 Wollen zwei oder mehrere Geräte miteinander über ein öffentliches Netz verschlüsselt kommunizieren, 
-erstellt sich jeder Teilnehmer ein Schlüsselpaar, bestehend aus privaten und öffentlichem Schlüssel.
+erstellt sich jeder Teilnehmer ein Schlüsselpaar, bestehend aus privatem und öffentlichem Schlüssel.
 Will nun ein Gerät mit dem Server verschlüssselt kommunizieren, wird ihm vom Server sein öffentlicher Schlüssel zugeschickt. 
 Alle weiteren Nachrichten werden mit diesem öffentlchen Schlüssel verschlüsselt.
 Die Nachrichten, die gesendet werden, sind nun nicht mehr lesbar und 
@@ -26,7 +26,7 @@ offiziellen Stelle beglaubigt werden.\cite[S. 675 und f.]{wenz_php_2017}
 \end{quote}
 
 In Linux wird bereits eine Firewall namens Netfilter/IPTables mit ausgeliefert. 
-Währen Netfilter die Kernel-Komponente, die die Filterung vornimmt darstsellt, 
+Während Netfilter die Kernel-Komponente, die die Filterung vornimmt darstsellt, 
 ist IPTables das Programm, das diese steuert.
 
 Die Konfiguration von IPTables gliedert sich in Tabellen und Listen. Generell können die Tabellen *filter*, 
@@ -34,15 +34,15 @@ Die Konfiguration von IPTables gliedert sich in Tabellen und Listen. Generell k�
 Die beiden Letzteren sind für die Grundfunktion der Firewall nicht notwendig 
 und werden deshalb auch nicht weiter ausgeführt.
 Jede Tabelle enthält Listen, in denen Regel stehen, wie Pakete behandelt werden sollen.
-Die Regeln werden nacheinander abgearbeitet und sobald eine Regel zutrifft wird keinen weitere mehr angewandt.
+Die Regeln werden nacheinander abgearbeitet und sobald eine Regel zutrifft wird keine weitere mehr angewandt.
 Die *filter*-Tabelle gliedert sich in 3 vordefinierte Listen: INPUT, OUTPUT und FORWARD.
 
 * INPUT ist einen Liste von Regeln, die bei ankommenden Paketen angewandt werden. 
-* Die Regeln der Liste OUTPUT werden bei ausgehenden Paketen angewandt
-* FORWARD wird nur angewandt wenn der Server als Router fungiert. 
+* Die Regeln der Liste OUTPUT werden bei ausgehenden Paketen verwendet.
+* FORWARD wird zusätzlich angewandt, wenn der Server als Router fungiert. 
 
-Um das verwalten der Firewall zu vereinfache wurde in diessem Projekt ufw (Uncomplicated Firewall) verendet.
-Ufw ist ein Programm, das die Verwendung der IPTables unter Lunix vereinfacht.\cite{noauthor_uncomplicated_nodate}
+Um das Verwalten der Firewall zu vereinfachen, wurde in diessem Projekt ufw (Uncomplicated Firewall) verwendet.
+Ufw ist ein Programm, das ein Kommandozeilen-Programm für die Erstellung von Regeln für IPTables bereitstellt.\cite{noauthor_uncomplicated_nodate}
 
 Es wurden Regel für die Verwendung von HTTPS, SSH und HTTP erstellt, alle anderen Ports wurden geblockt. (siehe \abb{ufw})
 

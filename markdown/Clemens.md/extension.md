@@ -1,14 +1,14 @@
-Um die in C++ programmierte Steuerung der DMX-Schnittstelle, sowie dem Infrarot-Modul in PHP verwenden zu können, 
+Um die in C++ programmierte Steuerung der DMX-Schnittstelle, sowie das Infrarot-Modul in PHP verwenden zu können, 
 wurde in diesem Projekt je eine PHP-Extension für DMX und Infrarot entwickelt.
 PHP bietet die Möglichkeit Erweiterungen (Extensions) zu entwickeln und einzubinden.
 Bei Extensions müssen zwei Typen unterschieden werden PEAR- und PECL-Pakete.
-PEAR steht für "PHP Extension and Application Repository" und enthält Extension, die in PHP geschrieben wurden.
-Hingegen steht PECL für "PHP Extension Community Library", deren Extensions in C geschrieben sind.
+PEAR steht für "PHP Extension and Application Repository" und enthält Extension, die in PHP programmiert wurden.
+Hingegen steht PECL für "PHP Extension Community Library", deren Extensions in C programmiert sind.
 PECL-Erweiterungen müssen auf dem Server vor der Verwendung kompiliert und 
 in der Konfigurationsdatei von PHP eingebunden werden.\cite[S. 74]{wenz_php_2017}
-Da die Steuerung der DMX-Schnittstelle und des Infrarot-Modules in C++ programmiert ist, war bei diesem Projekt einen 
+Da die Steuerung der DMX-Schnittstelle und des Infrarot-Moduls in C++ programmiert ist, war bei diesem Projekt eine 
 PECL-Extension notwendig.
-Diese wurde mit Hilfe der Library PHP-CPP erstellt, da diese den Aufwand ein Erweiterung zu entwickeln stark verringert.
+Diese wurde mit Hilfe der Library PHP-CPP erstellt, da diese den Aufwand eine Erweiterung zu entwickeln stark verringert.
 
 ## PHP-CPP
 PHP-CPP bieten den Vorteil, dass Extensions entwickelt werden können,
@@ -20,7 +20,7 @@ Hierbei sind drei Dateien essentiell: die *C++-Datei*, die *INI-Datei* und das *
 Diese Datei enthält die C++-Klasse und die *get_module*-Methode, die jede PHP-Extension besitzen muss.
 Durch das Einbinden der Library wird die Klasse *Php* verfügbar.
 Diese stellt Methoden, sowie zusätzliche Datentypen zur Verfügung.
-Wen nun einen C++-Klasse für eine PHP-Extension verwendet werden soll, 
+Wenn nun eine C++-Klasse für eine PHP-Extension verwendet werden soll, 
 muss diese von der Klasse *Php::Base* abgeleitet werden.
 So werden einer Methode immer Parameter des Typen Php::Parameters übergeben und
 als Rückgabewert wird *Php::Value* erwartet.
@@ -32,7 +32,7 @@ Der *Php::Class* werden nun der Reihe nach die Methoden der C++-Klasse zugewiese
 Weiters wird auch spezifiziert, wie diese Methode in PHP heißen soll und 
 welche Parameter von welchem Datentyp sie haben soll.
 Am Ende wird die *Php::Class* an die *Php::Extension* angehängt und die Php::Extension an die Library zurück geliefert.\cite{noauthor_php-cpp_nodate}
-Nachstehend ist ein Code-Beispiel für eine C++-Extension für PHP, wie sie auch in diesem Projekt integriert ist.
+Nachstehend ist ein Code-Beispiel für eine C++-Extension für PHP dargestellt, wie sie auch in diesem Projekt integriert ist.
 
 ```cpp
 #include <phpcpp.h>
@@ -90,10 +90,10 @@ extern "C" {
 ```
 
 ### INI-Datei und Makefile
-Die INI-Datei enthält eine Zeile in der, wie in der php.ini, die Extension geladen wird.
+Die INI-Datei enthält eine Zeile, in der wie in der php.ini die Extension geladen wird.
 Hierfür wird der im Makefile definierte Name verwendet.
 Diese Datei wird dann in das Konfigurationsverzeichnis von PHP geladen und bei jedem Start von PHP aufgerufen.
-Nachstehend ist der Inhalt der INI-Datei, wie er in diesem Projekt verwendet wurde.\cite{noauthor_php-cpp_nodate}
+Nachstehend ist der Inhalt der INI-Datei dargestellt, wie er in diesem Projekt verwendet wurde.\cite{noauthor_php-cpp_nodate}
 
 ```ìni
 extension=DMX.so
@@ -102,6 +102,6 @@ extension=DMX.so
 Das Makefile enthält alle Anweisungen, die für den Kompiliervorgang wichtig sind.
 Hier kann der Name der Extension, sowie das Konfigurationsverzeichnis von PHP eingestellt werden.
 Weiters können auch noch Optionen, wie die Verwendung von anderen Libraries,
-wie Ola (\siehe{ola}) oder WiringPi (\siehe{WiringPi}), fürs Kompilieren, hinzugefügt werden.
+wie Ola (\siehe{ola}) oder WiringPi (\siehe{WiringPi}), fürs Kompilieren hinzugefügt werden.
 Dieses Makefile wird dann verwendet, um die C++-Datei zu kompilieren und 
 die so entstandenen Dateien, sowie die INI-Datei, an die richtigen Stellen in der PHP-Konfiguration zu kopieren.\cite{noauthor_php-cpp_nodate}
