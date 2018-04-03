@@ -32,7 +32,9 @@ Sobald eine Verbindung zum Server erfolgreich aufgebaut wurde, kann der Client s
 
 Im Lern- und Informationszentrum wird ein Soundcraft Ui16 als Mischpult für die Mikrofone und den Audio-Eingang verwendet. Dieses verfügt über eine proprietäre Benutzeroberfläche. Der Hersteller hat sich sehr viel Mühe gegeben, dieses System abzusichern, sodass es nur mit der hauseigenen Software bedient werden kann.
 
-Ich habe den Aufbau und die Verhaltensweise des Mischpults analysiert, um herauszufinden, wie ich darauf zugreifen kann. Dabei habe ich erkannt, dass auf dem Mischpult ein socket.io-Server läuft. Socket-io ist eine Bibliothek für WebSocket-Kommunikation
+Ich habe den Aufbau und die Verhaltensweise des Mischpults analysiert, um herauszufinden, wie ich darauf zugreifen kann. Dabei habe ich erkannt, dass auf dem Mischpult ein Socket.io-Server läuft. Socket-io ist eine JavaScript Bibliothek für Echtzeit-Webapplikationen. Das Mischpult verwendet die von Socket-io implementierte Funktion zur Generierung von Session-Ids. Eine Session.Id ist eine einzigartige Kennzahl, die der Server benötigt, um zu wissen von welchem Client eine Anfrage kommt. Dadurch ist es möglich, dass mehrere Clients gleichzeitig eine Verbindung zum Server aufbauen können. Genauso funktioniert das Soundcraft Ui16.
+
+Um eine Verbindung aufzubauen, muss zuerst eine Session-Id angefragt werden. Sobald der Server eine bereitstellt, kann die Verbindung geöffnet werden.
 
 ### Ratchet
 
