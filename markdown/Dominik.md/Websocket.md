@@ -40,7 +40,7 @@ Bevor ich damit anfangen konnte, Befehle an das Mischpult zu senden, musste ich 
 
 Zuerst habe ich mit JavaScript einen Prototypen entwickelt um die Befehle auszuprobieren. Allerdings sollten alle Geräte über den Raspberry Pi gesteuert werden, deswegen musste die Kommunikation mit dem Mischpult am Server umgesetzt werden. Dieser Server baut eine Client-Verbindung zum Socket.io-Server auf. Zuerst wird eine Session-Id mit der cURL-Funktion von PHP angefragt. Mit cURL können HTTP-Anfragen in PHP gemacht werden. Der Server sendet eine Session-Id zurück und die WebSocket-Verbindung auf das Mischpult kann geöffnet werden. Wenn nun auf der Benutzeroberfläche zum Beispiel ein Regler eines Mikrofons betätigt wird, sendet der Client dem Server die Daten und dieser generiert das passende Kommando, um sie weiter an den Server zu senden. \cite{curl_official}
 
-Dank WebSockets ist die Latenz minimal, obwohl die Befehle über zwei Verbindungen geschickt werden müssen.
+Dank WebSockets ist die Latenz minimal, obwohl die Befehle über zwei Verbindungen geschickt werden müssen. Mit herkömmlichen HTTP-Anfragen wäre die gesamte Kommunikation wesentlich langsamer.
 
 ### Ratchet
 
