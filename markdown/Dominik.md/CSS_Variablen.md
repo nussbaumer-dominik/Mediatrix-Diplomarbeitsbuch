@@ -25,13 +25,13 @@ h1  {
 }
 ```
 
-In diesem CSS-Block haben wir eine Variable mit dem Namen `"Primär-Farbe"` und dem Hexwert `"#ED4E53"` erstellt. Wichtig ist hier, dass diese Farbe im `"root"` Kontext definiert wurde. Deswegen ist sie im ganzen Dokument verfügbar. Weiters ist anzumerken, dass der Name einer Variable zwei Bindestrichen am Anfang haben muss. \cite{css_variables}
+In diesem CSS-Block haben wir eine Variable mit dem Namen `"Primär-Farbe"` und dem Hexwert `"#ED4E53"` erstellt. Wichtig ist hier, dass diese Farbe im `"root"`-Kontext definiert wurde. Deswegen ist sie im ganzen Dokument verfügbar. Weiters ist anzumerken, dass der Name einer Variablen am Anfang zwei Bindestriche haben muss. \cite{css_variables}
 
-Mithilfe der `"var()"` Funktion wird der Wert ausgelesen und eingesetzt. Im Beispiel wird die Schriftfarbe einer Überschrift dementsprechend gesetzt. \cite{css_variables}
+Mithilfe der `"var()"`-Funktion wird der Wert ausgelesen und eingesetzt. Im Beispiel wird die Schriftfarbe einer Überschrift dementsprechend gesetzt. \cite{css_variables}
 
-Bei Mediatrix habe ich CSS-Variablen verwendet, um verschiedene Designs des Dashboards anzubieten. Der Benutzer kann zwischen verschiedenen Farbpaletten wechseln, je nach dem, welche ihm besser gefällt. Ohne diese Spezifikation, wäre die Umsetzung dieser Funktion sehr umständlich gewesen.
+Bei Mediatrix habe ich CSS-Variablen verwendet, um verschiedene Designs des Dashboards anzubieten. Der Benutzer kann zwischen verschiedenen Farbpaletten wechseln, je nachdem, welche ihm besser gefällt. Ohne diese Spezifikation wäre die Umsetzung dieser Funktion sehr umständlich gewesen.
 
-Auf die CSS-Variablen kann im Javascript zugegriffen werden. Sie können ausgelesen und gesetzt werden. Der Benutzer kann aus mehreren Farbpaletten auswählen. Beim Klick auf eine der Paletten werden alle Variablen der Seite überschrieben.
+Auf die CSS-Variablen kann mit Javascript zugegriffen werden. Sie können ausgelesen und gesetzt werden. Der Benutzer kann aus mehreren Farbpaletten wählen. Beim Klick auf eine der Paletten werden alle Variablen der Seite überschrieben.
 
 ```javascript
 let root = document.querySelector(":root");
@@ -41,4 +41,4 @@ root.style.setProperty("--Primär-Farbe", "#000000");
 
 Man muss zuerst alle Farben des Root Elements laden. Anschließend können alle Variablen neu gesetzt werden.
 
-CSS-Variablen sind bereits in den aktuellen Versionen der gängigen Browsern verfügbar. \cite{browser_support_variables}
+CSS-Variablen sind bereits in den aktuellen Versionen der gängigen Browser verfügbar. \cite{browser_support_variables}

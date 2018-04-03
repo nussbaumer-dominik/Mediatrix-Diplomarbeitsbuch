@@ -1,6 +1,6 @@
 ## CSS-Grid
 
-CSS Grid Layout, offiziell "Grid Layout Module Level 1", ist ein zweidimensionales Raster-System und wurde vom World Wide Web Consortium(W3C) entwickelt, um die Art, Webseiten zu schreiben, komplett zu verändern. Mittlerweile sind viele verschiedene Bildschirmauflösungen und Geräte im Umlauf. Die Anforderungen an Webseiten sind gestiegen und Webapplikationen werden zunehmend komplexer und umfangreicher. Derartige Seiten müssen plattformunabhängig auf jedem Gerät und Browser funktionieren. Diese Vielfalt wurde mit CSS immer schwerer umzusetzen. Zuerst wurden Tabellen für Layouts verwendet, danach stieg man auf "floats" um, anschließend folgten "inline-block" und "positioning", doch all diese Methoden waren in Wirklichkeit nichts anderes als Hacks, denen wichtige Funktionen fehlten, wie zum Beispiel die vertikale Zentrierung. Wie bereits in Kapitel 5.1.1 Flexbox erwähnt, wurde mit Flexbox eine neue Methode eingeführt, um moderne, anpassungsfähige Webseiten umzusetzen. Allerdings ist diese Anwendung nur für simple, eindimensionale Layouts gedacht. Für komplexe zweidimensionale Layouts ist Flexbox umständlich und ineffizient. CSS-Grid hingegen ist das erste CSS-Modul, das einzig und allein für die Lösung jeglicher Layout-Probleme entwickelt wurde. Den Fokus haben die Entwickler auf grafische Benutzeroberflächen und Webapplikationen gelegt. \cite{CSS_Grid_Official}
+CSS-Grid-Layout, offiziell "Grid Layout Module Level 1", ist ein zweidimensionales Raster-System und wurde vom World Wide Web Consortium(W3C) entwickelt, um die Art, Webseiten zu schreiben, komplett zu verändern. Mittlerweile sind viele verschiedene Bildschirmauflösungen und Geräte im Umlauf. Die Anforderungen an Webseiten sind gestiegen und Webapplikationen werden zunehmend komplexer und umfangreicher. Derartige Seiten müssen plattformunabhängig auf jedem Gerät und Browser funktionieren. Diese Vielfalt wurde mit CSS immer schwerer umzusetzen. Zuerst wurden Tabellen für Layouts verwendet, danach stieg man auf "floats" um, anschließend folgten "inline-block" und "positioning", doch all diese Methoden waren in Wirklichkeit nichts anderes als Hacks, denen wichtige Funktionen fehlten, wie zum Beispiel die vertikale Zentrierung. Wie bereits in Kapitel 5.2.1 Flexbox erwähnt, wurde mit Flexbox eine neue Methode eingeführt, um moderne, anpassungsfähige Webseiten umzusetzen. Allerdings ist diese Anwendung nur für simple, eindimensionale Layouts gedacht. Für komplexe zweidimensionale Layouts ist Flexbox umständlich und ineffizient. CSS-Grid hingegen ist das erste CSS-Modul, das einzig und allein für die Lösung jeglicher Layout-Probleme entwickelt wurde. Den Fokus haben die Entwickler auf grafische Benutzeroberflächen und Webapplikationen gelegt. \cite{CSS_Grid_Official}
 
 ### Das Konzept
 
@@ -8,9 +8,9 @@ CSS-Grid kontrolliert die Größe und Position der Elemente und hält dabei vord
 
 ### Technische Spezifikation
 
-Für einen CSS-Grid muss zuallererst ein Elternelement mit dem Attribut "display: grid" erstellt werden. Anschließend wird die Anzahl an Reihen mit `"grid-template-rows"` und die Anzahl an Spalten mit `"grid-template-columns"` festgelegt. Ähnlich zu Flexbox ist, dass die Reihenfolge der Elemente im HTML-Code egal ist. Mit CSS kann diese Anordnung beliebig geändert werden. Dadurch ist es sehr einfach, Elemente mithilfe von Media-Queries neu anzuordnen. Deswegen können gesamte Layouts mit minimalem CSS vollkommen umgestaltet werden, um den verfügbaren Platz so effizient wie möglich auszunutzen. Dies macht Grid zu einem der mächtigsten Werkzeuge aller Zeiten von CSS. \cite{CSS_Grid_Official}
+Für einen CSS-Grid muss zuallererst ein Elternelement mit dem Attribut "display: grid" erstellt werden. Anschließend wird die Anzahl an Reihen mit `"grid-template-rows"` und die Anzahl an Spalten mit `"grid-template-columns"` festgelegt. Ähnlich zu Flexbox ist, dass die Reihenfolge der Elemente im HTML-Code egal ist. Mit CSS kann diese Anordnung beliebig geändert werden. Dadurch ist es sehr einfach, Elemente mithilfe von Media-Queries neu anzuordnen. Deswegen können gesamte Layouts mit minimalem CSS vollkommen umgestaltet werden, um den verfügbaren Platz so effizient wie möglich auszunutzen. Dies macht Grid zu einem der mächtigsten CSS-Werkzeuge aller Zeiten. \cite{CSS_Grid_Official}
 
-CSS Grid ist in den meisten Browsern nativ unterstützt und hat bereits eine globale Kompatibilität von über 87% erreicht. \cite{browser_support_grid}
+CSS-Grid ist in den meisten Browsern nativ unterstützt und hat bereits eine globale Kompatibilität von über 87% erreicht. \cite{browser_support_grid}
 
 ### Erklärung anhand eines Beispiels
 
@@ -34,11 +34,11 @@ Das HTML-Markup ist recht simpel, was auch einer der Vorteile von CSS-Grid ist. 
 }
 ```
 
-Zuallererst wird das \<div> Element mit der Klasse ".twitter" selektiert und mit dem Attribut `"display: grid"` als ein Grid-Container definiert. Die Grid-Eigenschaft legt außerdem einen neuen Kontext für das Grid-Layout fest. Dieser wird benötigt, um mit Grid ein Layout aufzubauen. Dieses Elternelement unterteilt den verfügbaren Raum mit dem Befehl `"grid-template-columns: 1fr 1fr 1fr"` auf drei gleich große Spalten. `"1 fr"` bedeutet, dass jedes Kindelement einen Teil des verfügbaren Platzes zugewiesen bekommt. Da drei Spalten definiert sind, ist jede Spalte 33.33% breit. Zuletzt müssen die Reihen definiert werden. Da unsere Spalten die gesamte Höhe des Browsers einnehmen sollen, muss mit `"grid-template-rows"` eine Zeile mit 100% der Höhe definiert werden. \cite{CSS_Grid_Official}
+Zuallererst wird das \<div>-Element mit der Klasse ".twitter" selektiert und mit dem Attribut `"display: grid"` als ein Grid-Container definiert. Die Grid-Eigenschaft legt außerdem einen neuen Kontext für das Grid-Layout fest. Dieser wird benötigt, um mit Grid ein Layout aufzubauen. Dieses Elternelement unterteilt den verfügbaren Raum mit dem Befehl `"grid-template-columns: 1fr 1fr 1fr"` auf drei gleich große Spalten. `"1 fr"` bedeutet, dass jedes Kindelement einen Teil des verfügbaren Platzes zugewiesen bekommt. Da drei Spalten definiert sind, ist jede Spalte 33.33% breit. Zuletzt müssen die Reihen definiert werden. Da unsere Spalten die gesamte Höhe des Browsers einnehmen sollen, muss mit `"grid-template-rows"` eine Zeile mit 100% der Höhe definiert werden. \cite{CSS_Grid_Official}
 
 ![Ein dreispaltiges CSS-Grid-Layout mit einer Zeile](bilder/Dominik/CSS_Grid_example_1.png){width=90%}
 
-Dieses Layout kann mit Grid sehr einfach verändert werden, um es in zu einem einspaltiges zu verändern.
+Dieses Layout kann mit Grid sehr einfach verändert werden, zum Beispiel in ein einspaltiges.
 
 ```css
 .twitter {
@@ -67,6 +67,6 @@ Diese Media-Query wird aktiviert, wenn die Breite des Bildschirms unter 576 Pixe
 
 ### Weitere Möglichkeiten von CSS-Grid
 
-Die größte Stärke von CSS Grid ist die explizite Positionierung auf zwei Achsen. Deswegen eignet sich dieses Modul hervorragend für komplette Webseitenlayouts. Die Grundstruktur einer Seite sollte mit CSS-Grid aufgebaut sein. Solange die Anzahl der Elemente statisch ist, funktioniert das Raster-System sehr gut. Die Kindelemente können bei einer Änderung der Bildschirmauflösung vollkommen neu angeordnet werden. Innerhalb der einzelnen Elemente kann man Flexbox verwenden, da es sehr gut für die Umsetzung von Komponenten eingesetzt werden kann. \cite{CSS_Grid_Official}
+Die größte Stärke von CSS-Grid ist die explizite Positionierung auf zwei Achsen. Deswegen eignet sich dieses Modul hervorragend für komplette Webseitenlayouts. Die Grundstruktur einer Seite sollte mit CSS-Grid aufgebaut sein. Solange die Anzahl der Elemente statisch ist, funktioniert das Raster-System sehr gut. Die Kindelemente können bei einer Änderung der Bildschirmauflösung vollkommen neu angeordnet werden. Innerhalb der einzelnen Elemente kann man Flexbox verwenden, da es sehr gut für die Umsetzung von Komponenten eingesetzt werden kann. \cite{CSS_Grid_Official}
 
-Im Großen und Ganzen ist CSS-Grid eines der spannendsten und mächtigsten Module, das CSS derzeit zu bieten hat. Das W3C hat sich hohe Ziele für diese neue Positionierungsart gesetzt und ich glaube, dass CSS Grid diese übertreffen kann.
+Im Großen und Ganzen ist CSS-Grid eines der spannendsten und mächtigsten Module, das CSS derzeit zu bieten hat. Das W3C hat sich hohe Ziele für diese neue Positionierungsart gesetzt und ich glaube, dass CSS-Grid diese übertreffen kann.
