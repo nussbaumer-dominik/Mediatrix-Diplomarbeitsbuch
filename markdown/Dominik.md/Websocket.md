@@ -30,7 +30,7 @@ Sobald eine Verbindung zum Server erfolgreich aufgebaut wurde, kann der Client s
 
 ### Kommunikation mit dem Mischpult - Nuss
 
-Im Lern- und Informatinszenrum wird ein Soundcraft Ui16 als Mischpult für die Mikrofone und den Audio-Eingang verwendet. Dieses verfügt über eine proprietäre Benutzeroberfläche. Der Hersteller hat sich sehr viel Mühe gegeben, dieses System abzusichern, sodass es nur mit der hauseigenen Software bedient werden kann.
+Im Lern- und Informationszentrum wird ein Soundcraft Ui16 als Mischpult für die Mikrofone und den Audio-Eingang verwendet. Dieses verfügt über eine proprietäre Benutzeroberfläche. Der Hersteller hat sich sehr viel Mühe gegeben, dieses System abzusichern, sodass es nur mit der hauseigenen Software bedient werden kann.
 
 Ich habe den Aufbau und die Verhaltensweise des Mischpults analysiert, um herauszufinden, wie ich darauf zugreifen kann. Dabei habe ich erkannt, dass auf dem Mischpult ein socket.io-Server läuft. Socket-io ist eine Bibliothek für WebSocket-Kommunikation
 
