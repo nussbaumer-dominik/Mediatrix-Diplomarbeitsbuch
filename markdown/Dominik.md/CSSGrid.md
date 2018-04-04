@@ -36,7 +36,7 @@ Das HTML-Markup ist recht simpel, was auch einer der Vorteile von CSS-Grid ist. 
 
 Zuallererst wird das \<div>-Element mit der Klasse ".facebook" selektiert und mit dem Attribut _display: grid_ als ein Grid-Container definiert. Die Grid-Eigenschaft legt außerdem einen neuen Kontext für das Grid-Layout fest. Dieser wird benötigt, um mit Grid ein Layout aufzubauen. Dieses Elternelement unterteilt den verfügbaren Raum mit dem Befehl _grid-template-columns: 1fr 1fr 1fr_ auf drei gleich große Spalten. _1 fr_ bedeutet, dass jedes Kindelement einen Teil des verfügbaren Platzes zugewiesen bekommt. Da drei Spalten definiert sind, ist jede Spalte 33.33% breit. Zuletzt müssen die Reihen definiert werden. Da unsere Spalten die gesamte Höhe des Browsers einnehmen sollen, muss mit _grid-template-rows_ eine Zeile mit 100% der Höhe definiert werden. \cite{CSS_Grid_Official}
 
-![Ein dreispaltiges CSS-Grid-Layout mit einer Zeile \label{css-grid_eineSpalte}](bilder/Dominik/CSS_Grid_example_1.png){width=90%}
+![Ein dreispaltiges CSS-Grid-Layout mit einer Zeile \label{css-grid_eineSpalte}](bilder/Dominik/CSS_Grid_example_1.pdf){width=90%}
 
 Dieses Layout kann mit Grid sehr einfach verändert werden, zum Beispiel in ein einspaltiges.
 
@@ -50,7 +50,7 @@ Dieses Layout kann mit Grid sehr einfach verändert werden, zum Beispiel in ein 
 
 Man muss lediglich die Anzahl der Spalten auf eine ändern. Weiters fügt man zwei weitere Zeilen hinzu. Der vorhandene Platz soll gleichmäßig aufgeteilt werden(siehe \abb{einspaltiges-Layout}).
 
-![Ein einspaltiges CSS-Grid-Layout mit drei Zeilen \label{einspaltiges-Layout}](bilder/Dominik/CSS_Grid_example_2.png){width=90%}
+![Ein einspaltiges CSS-Grid-Layout mit drei Zeilen \label{einspaltiges-Layout}](bilder/Dominik/CSS_Grid_example_2.pdf){width=90%}
 
 Damit das Layout auf mobilen Geräten optimal angezeigt wird, können Media-Queries verwendet werden.
 

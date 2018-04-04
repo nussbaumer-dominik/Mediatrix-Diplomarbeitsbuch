@@ -97,7 +97,7 @@ footer {
 }
 ```
 
-![Layout-Kombination von Flexbox und CSS-Grid \label{Kombination}](bilder/Dominik/Flexbox_and_grid_example.png){width=90%}
+![Layout-Kombination von Flexbox und CSS-Grid \label{Kombination}](bilder/Dominik/Flexbox_and_grid_example.pdf){width=90%}
 
 In diesem CSS-Code passiert eine Menge. Das Elternelement wird zu einem Grid-Container gemacht. Weiters werden zwölf Spalten mit einem gleich großen Anteil des verfügbaren Platzes erstellt. Außerdem gibt es drei Reihen mit unterschiedlichen Höhen. Die Kopfzeile erstreckt sich wegen der Eigenschaft _grid-column: span 12_ über alle zwölf Spalten. Wegen des Attributes _display: flex_ ist der Header ein Flex-Container. Dieser ist aufgebaut wie im obigen Beispiel zu Flexbox erläutert. Durch _grid-column: span 2_ nimmt das Menü nur zwei Spalten ein. Dem Inhalt wird der restliche Platz zugewiesen. Die Fußzeile ist aufgebaut wie die Kopfzeile und ist ebenfalls so breit wie der Bildschirm. \cite{CSS_Grid_Official}
 
