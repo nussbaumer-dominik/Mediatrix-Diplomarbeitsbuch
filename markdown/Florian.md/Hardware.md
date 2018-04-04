@@ -67,7 +67,8 @@ einfachen Einbau oder Austausch von 19"- konformen Geräten.
 Der horizontale Abstand zwischen zwei Montageleisten beträgt genau 19
 Zoll (= 48,26 Zentimeter).
 
-![Abstände bei 19-Zoll-Schienen](bilder/Florian/19zoll.png){width="1.2125in"}
+![Abstände bei 19-Zoll-Schienen](bilder/Florian/19zoll.svg){width="1.2125in"}
+
 Die minimale Höhe eines 19"- konformen Geräts beträgt 1,75" oder 44,45mm.
 Dieser Abstand wird als eine Höheneinheit (1HE) bezeichnet. Darum werden
 bei Geräten aus den Bereichen Tontechnik oder Großrechner und Server die
@@ -123,16 +124,17 @@ gegenüber der Erde galvanisch getrennt. Durch die Gegenphasigkeit wird
 bei der symmetrischen Kopplung eine hohe Störsicherheit erreicht. Bei
 idealen Voraussetzungen, d.h. bei vollkommener Symmetrie und gleicher
 Einwirkung eines Störfeldes auf die beiden Adern wird die Störspannung
-durch Kompensation aufgehoben." \end{quote} \cite[S.100\]{wirsum_praktische_1991} Die Kompensation, oder
+durch Kompensation aufgehoben."\end{quote}\cite[S.100\]{wirsum_praktische_1991}
+Die Kompensation, oder
 Auslöschung ergibt sich aus der 180° Phasenverschiebung zwischen den
-beiden Tonadern. \cite{henle_tonstudio_1993}
+beiden Tonadern.\cite{henle_tonstudio_1993}
 
 Für diese Art der Übertragung ist also eine Leitung mit zwei
 Signalleitern notwendig. Masse und Schirm sind voneinander getrennt.
 Nicht so bei der asymmetrischen Übertragung: „Bei der asymmetrischen,
 meist übertragerlosen Kopplung ist eine Ader geerdet, so daß Fremdfelder
 Störspannungen erzeugen und bei nicht einwandfreien Erdungsverhältnissen
-Brummschleifen entstehen können." \cite[S.100]{wirsum_praktische_1991}
+Brummschleifen entstehen können."\cite[S.100]{wirsum_praktische_1991}
 Bei kurzen
 Leitungslängen treten solche Störspannungen selten auf. Allerdings
 sollte bei langen Strecken eine symmetrische Verbindung verwendet
@@ -219,8 +221,6 @@ Klinkenbuchse verwendet worden. Da der Beamer über keinen Trigger-Output
 verfügt, wird die Induktionsspannung an einem PowerCon-Ausgang
 überwacht.
 
-###
-
 ### Anschlüsse für Stromversorgung
 
 Das Mediatrix-Modul wird mittels PowerCon-Kabel mit 230V versorgt. Diese
@@ -253,7 +253,7 @@ Steckverbindung von der Platine separiert werden.
 
 Der Großteil der Elektronik befindet sich im Mediatrix-Modul. Aus
 Platzgründen sind der Raspberry Pi und die Infrarotplatine an den
-Seitenteilen des Gehäuses montiert.\
+Seitenteilen des Gehäuses montiert.
 Am Boden befinden sich zwei Relais-Platinen mit jeweils acht Relais.
 Eine Platine für die Lautsprecherleitungen, die andere für die
 Stromverteilung. Weiters sind auf einer Lochrasterplatine alle
@@ -270,7 +270,6 @@ Schaltungen wurden als Prototypen bereits auf Laborsteckbrettern
 aufgebaut und getestet. Schließlich wurden alle auf die
 Lochrasterplatine übertragen und verlötet.
 
-
 **Steckverbindungen**
 
 Um die Platine oder andere angeschlossene Komponenten möglichst einfach
@@ -280,13 +279,11 @@ mit einem IDE-Kabel an eine Stiftleiste auf der Platine angeschlossen.
 Das System kann somit je nach Bedarf um zusätzliche Funktionen erweitert
 werden.
 
-
 **Vorteile**
 
 Im Gegensatz zu einer geätzten Platine kann eine Lochrasterplatine
 nachträglich um Bauteile erweitert werden. Weiters ist das Anfertigen
 nicht so zeitaufwendig wie das Ätzen einer Platine.
-
 
 ### Anschluss der Relais-Platine
 
@@ -599,7 +596,7 @@ Metall-Oxid-Halbleiter-Feldeffekttransistor.
 \begin{quote}„Ein Transistor ist ein Halbleiter-Bauelement aus drei
 aufeinanderfolgenden Halbleiterschichten, also npn- oder pnp-Schichten.
 Er hat somit zwei pn-Übergänge, in deren Grenzgebieten sich
-Sperrschichten ausbilden."\end{quote} \cite[S. 372]{krikava_grundlagen_1981
+Sperrschichten ausbilden."\end{quote}\cite[S. 372]{krikava_grundlagen_1981
 
 Der MOSFET verfügt über drei Pins:
 
@@ -752,7 +749,7 @@ Entscheidung bei der Wahl der Programmiersprache auf PYTHON:
 \begin{quote}„Raspberry Pi" steht für „Raspberry Python Interpreter", d.h. der
 „Raspberry Pi" verfügt über einen integrierten Interpreter für die
 Programmiersprache Python. Das spart zusätzlichen Aufwand, wie das
-Kompilieren von „C"-Programmen.\end{quote} \cite{hoerandl_august}
+Kompilieren von „C"-Programmen.\end{quote}\cite{hoerandl_august}
 
 Weiters gibt es im Internet zahlreiche Anleitungen, wie ein Programm für
 diesen Anwendungsfall aussehen kann. Als Grundlage wurde das
@@ -799,8 +796,8 @@ Dieser Prozentwert wird an die PWM-Methode weitergegeben.
 ```python
 def pwm():
 
-    import RPi.GPIO as GPIO\
-    from time import sleep\
+    import RPi.GPIO as GPIO
+    from time import sleep
 
     PWMpin = 33 # PWM pin zum Anschluss des Luefters (PWM1 33,35)
     GPIO.setwarnings(False)
@@ -876,10 +873,10 @@ PWM, oder auch Pulsweitenmodulation, ist ein Verfahren, bei dem
 
 \begin{quote}„[...] das Verhältnis zwischen der Einschaltzeit und Periodendauer
 eines Rechtecksignals bei fester Grundfrequenz variiert wird. Das
-Verhältnis zwischen der Einschaltzeit \(t_{ein}\) und der Periodendauer \(T =\t_{ein}\t_{aus}\) wird
+Verhältnis zwischen der Einschaltzeit $\(t_{ein}\)$ und der Periodendauer $\(T =\t_{ein}\t_{aus}\)$ wird
 als das Tastverhältnis **p** bezeichnet. (laut DIN IEC 60469-1:
 Tastgrad) (engl. Duty Cycle, meist abgekürzt DC, nicht zu verwechseln
-mit Direct Current = Gleichstrom). "\end{quote} \cite{noauthor_pulsweitenmodulation_nodate}
+mit Direct Current = Gleichstrom). "\end{quote}\cite{noauthor_pulsweitenmodulation_nodate}
 
 ![Pulsweite](bilder/Florian/PWM1.png){width=90%}
 
