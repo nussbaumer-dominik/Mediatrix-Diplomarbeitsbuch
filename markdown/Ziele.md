@@ -1,6 +1,3 @@
-Ziele der Arbeit:
------------------
-
 Mediatrix soll die Bedienung der AV-Installation im Multimediasaal
 unserer Schule vereinfachen und so jedem Schüler und jedem Lehrer
 ermöglichen. Der User benötigt ausschließlich ein WLAN-fähiges Gerät und

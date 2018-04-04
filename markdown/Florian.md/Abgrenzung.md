@@ -1,6 +1,3 @@
-Abgrenzung und Voraussetzungen:
--------------------------------
-
 An der Schule war bereits eine AV-Installation vorhanden, auf die dieses
 Projekt aufgebaut hat. Folgende Komponenten müssen vorhanden sein, um
 das Mediatrix-System einzurichten:
