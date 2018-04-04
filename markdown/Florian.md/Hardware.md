@@ -1,78 +1,11 @@
- Abgrenzung und Voraussetzungen:
---------------------------------
-
-Da das Projekt auf die bereits vorhandenen Geräte aufgebaut wurde, sind
-diese zusätzlich notwendig. Folgende Komponenten müssen vorhanden sein
-um das Mediatrix-System einzurichten:
-
--   AV-Receiver
-
--   Digitalmischpult
-
--   Beamer
-
--   Lautsprecher
-
--   Verstärker
-
--   Funkmikrofone
-
--   Server-Rack
-
-Weiters werden diverse Werkzeuge und ein Budget von 300€ benötigt.
-
-In dem Projekt wurden Schnittstellen zwischen der vorhandenen
-Infrastruktur entwickelt. Diese wurden sowohl hardware- als auch
-softwareseitig umgesetzt. Die Webapplikation beinhaltet nur die
-notwendigsten Funktionen der Geräte. Um alle Funktionen des jeweiligen
-Geräts steuern zu können, muss nach wie vor die dazugehörige
-Fernbedienung verwendet werden.
-
-Das System kann nur schulintern verwendet werden, da der Webserver ist
-nur innerhalb des Schulnetzwerks erreichbar ist. Zur Vermeidung von
-Konflikten kann immer nur ein Gerät mit dem System verbunden sein.
-
-Aufbau:
--------
-
-Die Hauptkomponenten des Systems sind zum einen der Webserver mit der
-darauf laufenden Webapplikation und zum anderen die Elektronik. Als
-Schnittstelle zwischen Software und Hardware ist ein Raspberry Pi
-zuständig.
-
-Ziele der Arbeit:
------------------
-
-Mediatrix soll die Bedienung der AV-Installation im Multimediasaal
-unserer Schule vereinfachen und jedem ermöglichen. Der User benötigt
-ausschließlich ein WLAN-fähiges Gerät und muss im Schulnetz eingeloggt
-sein. Nach Anmeldung in der Webapplikation hat der User die Möglichkeit,
-grundlegende Funktionen der Installation, die für eine Präsentation
-wichtig sind einzustellen. Die Bedienoberfläche ist so angelegt, dass
-sie selbst während einer Präsentation unauffällig bedient werden kann.
-
-Auch außerhalb der Webapplikation soll sich der User gut zurechtfinden.
-Bedienfehlern soll durch verschiedene Schutzmechanismen vorgebeugt
-werden.
-
-Änderungen der Infrastruktur sollen leicht zu bewerkstelligen sein. Aus
-diesem Grund wurde im Zuge der Konzeption darauf geachtet, eine
-möglichst hohe Kompatibilität des Systems mit verschiedenen Geräten zu
-erzielen. Beispielsweise wurden Branchenstandards wie Infrarot und DMX
-zur Steuerung von AV-Geräten, beziehungsweise lichttechnischer Geräte
-implementiert.
-
-
 Gehäuse
 -------
-
-### Bestandteile des Systems
 
 Das „Mediatrix-System" besteht aus folgenden Komponenten:
 
 -   Soundcraft UI16 Digitales Tonmischpult
 
-> dient dem abmischen von verschiedensten Audioquellen, wie Mikrofonen
+> dient dem Abmischen von verschiedensten Audioquellen, wie Mikrofonen
 > oder Line-Signalen.
 
 -   AKG SR420 Funkmikrofone
@@ -82,7 +15,7 @@ Das „Mediatrix-System" besteht aus folgenden Komponenten:
 
 -   Denon AV-Receiver
 
-> verteilt, die über HDMI ankommende Signale auf Lautsprecher und
+> Verteilt, die über HDMI ankommenden Signale auf Lautsprecher und
 > Beamer.
 
 -   Behringer PA-Endstufe
@@ -99,19 +32,19 @@ Das „Mediatrix-System" besteht aus folgenden Komponenten:
 > dient zum Abspielen von Präsentationen und Multimediainhalten
 > jeglicher Art.
 
-Weiter Komponenten:
+Weitere Komponenten:
 
 -   Raspberry Pi 2 Mikrocontroller
 
 > ist der Mittelpunkt des Systems. Er fungiert als Webserver der
 > Webapplikation und ist für die Steuerung der Elektronik zuständig.
 
--   12V -- Relais-Platinen
+-   12V-Relais-Platinen
 
 > dienen zur Unterbrechung der Lautsprecherleitungen und der
 > Stromversorgung der Geräte.
 
--   12V - Netzteil
+-   12V-Netzteil
 
 > wandelt 230V AC in 12V DC um.
 
@@ -124,18 +57,19 @@ Weiter Komponenten:
 > bietet die Schnittstelle zwischen Raspberry Pi und den Scheinwerfern.
 
 Um das System möglichst kompakt und modular zu gestalten, bietet sich
-ein Rack-Schrank mit Montageschienen nach 19"- Standard an. Die
+ein Rack-Schrank mit Montageschienen nach 19" - Standard an. Die
 Abstände zwischen den Bohrungen an Gerät und Schiene sind genormt,
 ebenso wie der Abstand zwischen den Schienen. Das ermöglicht den
 einfachen Einbau oder Austausch von 19"- konformen Geräten.
 
-#### 19" Racks
+### 19" Racks
 
 Der horizontale Abstand zwischen zwei Montageleisten beträgt genau 19
 Zoll (= 48,26 Zentimeter).
 
-![Abstände bei 19-Zoll-Schienen](bilder/Florian/19zoll.png){width="1.2125in"}Die
-minimale Höhe eines 19"- konformen Geräts beträgt 1,75" oder 44,45mm.
+![Abstände bei 19-Zoll-Schienen](bilder/Florian/19zoll.svg){width="1.2125in"}
+
+Die minimale Höhe eines 19"- konformen Geräts beträgt 1,75" oder 44,45mm.
 Dieser Abstand wird als eine Höheneinheit (1HE) bezeichnet. Darum werden
 bei Geräten aus den Bereichen Tontechnik oder Großrechner und Server die
 Maße der Geräte oftmals in 19" und Anzahl der Höheneinheiten angegeben.
@@ -147,14 +81,15 @@ Endstufe konforme Maße, um in ein 19"- Rack eingebaut zu werden. Der
 AV-Receiver ist mittels Rack-Wanne im Rack platziert.
 \cite[S.101]{wirsum_praktische_1991}
 
-### Mediatrix-Modul
+Mediatrix-Modul
+---------------
 
 Die elektronischen Komponenten, wie der Raspberry Pi, die Relais und das
 12V-Netzteil, galt es ebenfalls sicher und kompakt in dem Rack zu
-platzieren. Dazu fiel die Entscheidung ist auf ein 19"- Gehäuse mit drei
+platzieren. Dazu fiel die Entscheidung auf ein 19"- Gehäuse mit drei
 Höheneinheiten. Es wurde ein Leergehäuse angeschafft und mit allen
 notwendigen Buchsen bestückt. An der Rückseite des Gehäuses sind alle
-benötigten Anschlüsse herausgeführt.
+benötigten Anschlüsse ausgeführt.
 
 Innerhalb des Gehäuses sind alle Komponenten befestigt, um sie gegen
 Verrutschen und sich daraus ergebende Beschädigungen, zu schützen. Die
@@ -163,11 +98,11 @@ Kurzschlüsse zu vermeiden.
 
 ![Innenansicht des Mediatrix-Moduls](bilder/Florian/Innenansicht.jpg){width=90%}
 
-#### Das Anschlusspanel
+### Das Anschlusspanel
 
 Da alle Lautsprecherleitungen mittels Relais unterbrochen werden können
 sollen, müssen alle Ausgänge des AV-Receivers mit dem Mediatrix-Modul
-verbunden sein. Um das vom AV-Receiver bereitgestellte 7.2. -- Signal
+verbunden sein. Um das vom AV-Receiver bereitgestellte 7.2.- Signal
 auch ausgeben zu können, sind insgesamt sieben, bereits verstärkte
 Lautsprecherausgänge vorhanden.
 
@@ -180,8 +115,7 @@ Die DI-Box symmetriert das asymmetrische Signal und gibt dieses mittels
 XLR-Leitungen an die Subwoofer weiter. Durch die Symmetrierung des
 Signals werden Einstreuungen abgeschwächt.
 
-##### Symmetrierung von Audiosignalen
-
+**Symmetrierung von Audiosignalen**
 
 \begin{quote}„Bei der symmetrischen Kopplung führen beide Adern einer
 Verbindungsleitung eine amplitudengleiche, jedoch aber gegenphasige
@@ -190,30 +124,32 @@ gegenüber der Erde galvanisch getrennt. Durch die Gegenphasigkeit wird
 bei der symmetrischen Kopplung eine hohe Störsicherheit erreicht. Bei
 idealen Voraussetzungen, d.h. bei vollkommener Symmetrie und gleicher
 Einwirkung eines Störfeldes auf die beiden Adern wird die Störspannung
-durch Kompensation aufgehoben."\end{quote} \cite[S.100\]{wirsum_praktische_1991} Die Kompensation, oder
+durch Kompensation aufgehoben."\end{quote}\cite[S.100\]{wirsum_praktische_1991}
+Die Kompensation, oder
 Auslöschung ergibt sich aus der 180° Phasenverschiebung zwischen den
-beiden Tonadern. \cite{henle_tonstudio_1993}
+beiden Tonadern.\cite{henle_tonstudio_1993}
 
 Für diese Art der Übertragung ist also eine Leitung mit zwei
 Signalleitern notwendig. Masse und Schirm sind voneinander getrennt.
 Nicht so bei der asymmetrischen Übertragung: „Bei der asymmetrischen,
 meist übertragerlosen Kopplung ist eine Ader geerdet, so daß Fremdfelder
 Störspannungen erzeugen und bei nicht einwandfreien Erdungsverhältnissen
-Brummschleifen entstehen können." \cite[S. 100]{wirsum_praktische_1991} Bei kurzen
+Brummschleifen entstehen können."\cite[S.100]{wirsum_praktische_1991}
+Bei kurzen
 Leitungslängen treten solche Störspannungen selten auf. Allerdings
 sollte bei langen Strecken eine symmetrische Verbindung verwendet
 werden.
 
 Die Leitungen zu den Subwoofern sind zwar in diesem Fall nicht lang,
-jedoch parallel zu Stromleitungen, die Einstreuungen verursachen können
-verlegt. Aus diesem Grund ist die Entscheidung auf symmetrische
-Signalübertragung gefallen.
+jedoch parallel zu Stromleitungen, die Einstreuungen verursachen können,
+verlegt. Aus diesem Grund fieldie Entscheidung symmetrische
+Signalübertragung zu verwenden.
 
 Ein weiterer Vorteil von symmetrischen XLR-Leitungen, gegenüber
 asymmetrischer Cinch-Leitungen ist die Möglichkeit, Kabel ohne jeglichen
 Adapter zusammenzustecken und somit die Leitung zu verlängern.
 
-#### Anschlüsse für Lautsprecher
+### Anschlüsse für Lautsprecher
 
 In diesem Fall sind als Ein- und Ausgangsschnittstelle der
 Lautsprecherleitungen Bananenbuchsen im Mediatrix-Modul verbaut. Diese
@@ -234,11 +170,12 @@ Side und Back" unterteilt.
 Ein separater Power-Ausgang ermöglicht die Anwendung der
 Lautsprecherschutzschaltung auf die Aktiv-Subwoofer. Das Unterbrechen
 des unverstärkten Signals würde zu Störgeräuschen führen. Aus diesem
-Grund wird die Stromversorgung der Subwoofer geschalten. Die Verbindung
-ist zudem eindeutig von üblichen Schutzkontaktsteckern zu unterscheiden,
-was das korrekte Anschließen erheblich erleichtert und Fehlern vorbeugt.
+Grund wird die Stromversorgung der Subwoofer mittels Relais geschalten.
+Die Verbindung ist zudem eindeutig von üblichen Schutzkontaktsteckern zu
+unterscheiden, was das korrekte Anschließen erheblich erleichtert und
+Fehlern vorbeugt.
 
-#### Anschlüsse für Gehäuseelektronik
+### Anschlüsse für Gehäuseelektronik
 
 Zur Verbindung von Lüfter, Power-Taster und Öffnungskontakten mit dem
 Raspberry Pi ist eine DIN-Buchse verbaut. Die Anschlusskabel dieser
@@ -246,7 +183,7 @@ Komponenten laufen in einen DIN-Stecker zusammen und können somit alle
 gleichzeitig an- und abgesteckt werden. Vertauschen von Anschlüssen ist
 folglich unmöglich.
 
-#### Anschlüsse für Netzwerkschnittstellen
+### Anschlüsse für Netzwerkschnittstellen
 
 Der Raspberry Pi stellt den Webserver des Systems zur Verfügung und muss
 darum über eine Netzwerkverbindung verfügen. Zudem führt eine
@@ -255,26 +192,28 @@ Kommunikation gegen böswillige Einwirkungen durch Hacker zu schützen.
 Diese beiden Leitungen sind als RJ-45 Buchsen aus dem Mediatrix-Modul
 herausgeführt.
 
-#### Anschlüsse für Lichtsteuerung
+### Anschlüsse für Lichtsteuerung
 
-Bei der Lichtsteuerung ist auf den Branchenstandard, das DMX-Protokoll
-gesetzt worden. Dieses wird mittels drei- oder fünfpoliger XLR-Steckern
+Bei der Lichtsteuerung wurde auf den Branchenstandard, das DMX-Protokoll
+gesetzt. Dieses wird mittels drei- oder fünfpoliger XLR-Steckern
 übertragen. Im semiprofessionellen Sektor sind dreipolige Anschlüsse
 üblicher, darum ist ein solcher eingebaut. Intern ist diese Buchse mit
 dem ENTTEC DMX-Interface verbunden.
 
-#### Anschlüsse für Infrarotsteuerung
+###
+
+### Anschlüsse für Infrarotsteuerung
 
 Um die Richtung des Infrarotsignals gezielt auf die zu steuernden Geräte
 ausrichten zu können, kann eine IR-Diode mittels BNC-Connector
 angeschlossen und außerhalb des Racks platziert werden. Eine weitere
-IR-Diode ist in das Frontpanel des Mediatrix-Moduls eingebaut, um
-Rack-internen Infrarotgeräte, wie den AV-Receiver ansteuern zu können.
-Oberhalb von ihr befinden sich zudem noch eine Status LED, die blinkt,
-wenn Signale gesendet werden und eine Diode zum einlesen von neuen
-IR-Befehlen.
+IR-Diode ist in das Frontpanel des Mediatrix-Moduls eingebaut, um die im
+Rack eingebauten Infrarotgeräte, wie den AV-Receiver ansteuern zu
+können. Oberhalb von ihr befinden sich zudem noch eine Status LED, die
+blinkt, wenn Signale gesendet werden und eine Diode zum Einlesen von
+neuen IR-Befehlen.
 
-#### Anschlüsse für Zustandserkennung
+### Anschlüsse für Zustandserkennung
 
 Der Einschaltzustand des AV-Receivers wird über den Trigger-Output
 überprüft. Für den Anschluss an das Mediatrix-Modul ist eine 3,5mm
@@ -282,23 +221,23 @@ Klinkenbuchse verwendet worden. Da der Beamer über keinen Trigger-Output
 verfügt, wird die Induktionsspannung an einem PowerCon-Ausgang
 überwacht.
 
-#### Anschlüsse für Stromversorgung
+### Anschlüsse für Stromversorgung
 
 Das Mediatrix-Modul wird mittels PowerCon-Kabel mit 230V versorgt. Diese
 werden im Gehäuse intern verteilt und an z.B. den steuerbaren
 PowerCon-Ausgang an die Geräte im Rack weitergegeben.
 
-#### Anfertigung des Anschlusspanels
+### Anfertigung des Anschlusspanels
 
 Um zu garantieren, dass es keine Verwechslungen beim Anschließen der
-Geräte an das Mediatrix-Modul gibt sind verschiedene Typen von Buchsen
+Geräte an das Mediatrix-Modul gibt, sind verschiedene Typen von Buchsen
 verwendet worden. Zur Bohrung der Löcher in das Stahlblech des Gehäuses
 wurde ein Stufenbohrer verwendet. Anschließend wurden alle Buchsen
 eingebaut. Die BNC und die Klinkenbuchse verfügen über Muttern und
 Gewinde, mit denen sie befestigt wurden. Die restlichen Anschlüsse
 wurden mit Blindnieten vernietet.
 
-#### Das Frontpanel
+### Das Frontpanel
 
 Das Frontpanel ist sehr schlicht gehalten. Es beinhaltet einen Schalter,
 der die Stromversorgung des Mediatrix-Moduls unterbricht und Infrarot
@@ -310,29 +249,28 @@ Kabel zum Schalter sind durch Öffnen zweier Federklemmen vom
 Mediatrix-Modul trennbar. Die Status LEDs können durch Lösen der
 Steckverbindung von der Platine separiert werden.
 
-#### Einbau der Geräte in das Mediatrix-Modul
+### Einbau der Geräte in das Mediatrix-Modul
 
 Der Großteil der Elektronik befindet sich im Mediatrix-Modul. Aus
 Platzgründen sind der Raspberry Pi und die Infrarotplatine an den
-Seitenteilen des Gehäuses montiert.\
+Seitenteilen des Gehäuses montiert.
 Am Boden befinden sich zwei Relais-Platinen mit jeweils acht Relais.
-Eine Platine für die Lautsprecherleitungen, die Andere für die
-Stromverteilung. Weiters sind auf einer Lochrasterplatine sind alle
-notwendigen Schaltungen und Verbindungen zum Raspberry Pi aufgebaut. So
-wie auch das Netzteil und der Stepdown-Converter sind alle bereits
-genannten Komponenten fest mit der Bodenplatte verschraubt. Das
-DMX-Interface ist mit doppelseitigem Klebeband befestigt, da es nahezu
-kein Gewicht hat und so platziert ist, dass nichts beschädigt werden
-kann.
+Eine Platine für die Lautsprecherleitungen, die andere für die
+Stromverteilung. Weiters sind auf einer Lochrasterplatine alle
+notwendigen Schaltungen und Verbindungen zum Raspberry Pi aufgebaut. Das
+Netzteil und der Stepdown-Converter, so wie auch alle bereits genannten
+Komponenten sind fest mit der Bodenplatte verschraubt. Das DMX-Interface
+ist mit doppelseitigem Klebeband befestigt, da es nahezu kein Gewicht
+hat und so platziert ist, dass nichts beschädigt werden kann.
 
-#### Anfertigung der Hauptplatine
+### Anfertigung der Hauptplatine
 
 Für die Hauptplatine wurde eine Lochrasterplatine verwendet. Die
 Schaltungen wurden als Prototypen bereits auf Laborsteckbrettern
 aufgebaut und getestet. Schließlich wurden alle auf die
 Lochrasterplatine übertragen und verlötet.
 
-##### Steckverbindungen
+**Steckverbindungen**
 
 Um die Platine oder andere angeschlossene Komponenten möglichst einfach
 ausbauen oder austauschen zu können, sind die Verbindungen als
@@ -341,13 +279,13 @@ mit einem IDE-Kabel an eine Stiftleiste auf der Platine angeschlossen.
 Das System kann somit je nach Bedarf um zusätzliche Funktionen erweitert
 werden.
 
-##### Vorteile
+**Vorteile**
 
 Im Gegensatz zu einer geätzten Platine kann eine Lochrasterplatine
-nachträglich um Bauteile erweitert werden. Weiters ist das Anfertigung
-nicht so zeitaufwendig wie beim Ätzen.
+nachträglich um Bauteile erweitert werden. Weiters ist das Anfertigen
+nicht so zeitaufwendig wie das Ätzen einer Platine.
 
-#### Anschluss der Relais-Platine
+### Anschluss der Relais-Platine
 
 Da die Relais eine Schaltspannung von 12V DC benötigen, erfolgt die
 Versorgung über ein 12V-Netzteil. Diese sind mit JD-VCC und GND
@@ -373,7 +311,6 @@ Zugang zur digitalen Welt zu ermöglichen. Der Mikroprozessor ist für
 nahezu jeden leistbar, verfügt aber über alle Funktionen eines
 vollwertigen PCs. Zusätzlich sind Dokumentationen und Anleitungen zum
 Raspberry Pi gratis online verfügbar.
-
 \cite{noauthor_raspberry_nodate-5}
 
 Mittlerweile finden sich im Internet verschiedenste Blogs und Videos zu
@@ -423,14 +360,14 @@ angeschlossen werden. Die restliche Elektronik lassen sich mit den
 „General-Input-Output-Pins" (GPIO-Pins) verbinden. Da eine vollwertige
 CPU verbaut ist, können auch komplexere Programme ausgeführt werden.
 
-### mögliche Alternativen
+### Mögliche Alternativen
 
 Am Markt gibt es zahlreiche Mikroprozessoren mit verschiedensten Vor-
 und Nachteilen. Der „Banana Pi M2" oder der „Odroid C1+" verfügen
 beispielsweise über eine Gigabit-Ethernet-Schnittstelle. Das
 „Cubieboard" ist dem Raspberry Pi leistungsmäßig deutlich überlegen,
 kostet allerdings dreimal so viel. Für dieses Projekt passt das
-Preis/Leistungsverhältnis des Raspberry Pis am besten.\
+Preis/Leistungsverhältnis des Raspberry Pis am besten.
 \cite{wolski_besten_2016}
 
 Anschlüsse für Anwender
@@ -441,15 +378,16 @@ Anschlüsse für Anwender
 Der Hauptanwendungszweck des Systems sind Präsentationen von
 Schülerinnen und Schülern und Lehrerinnen und Lehrern. Deren Anforderung
 ist es, mit geringstem Aufwand, alle technischen Geräte, die für die
-Präsentation benötigt werden, verwenden zu können.\
+Präsentation benötigt werden, verwenden zu können.
 Im Regelfall wird ein Anschluss für Bildübertragung von Laptops auf den
 Beamer, ein Audioanschluss und in manchen Fällen auch ein Mikrofon
-benötigt.\
+benötigt.
 Für die bestmögliche Kompatibilität mit gängigen Laptops und anderen
 Abspielgeräten, sind eine HDMI-Buchse, zwei Cinchbuchsen und eine
 XLR-Female-Buchse verbaut. Zusätzlich sind eine Schutzkontaktsteckdose,
-für mitgebrachte Geräte und eine USB -- Buchse für den, im Rack
-verbauten Kleinrechner vorhanden.\
+für mitgebrachte Geräte und eine USB-Buchse für den, im Rack
+verbauten Kleinrechner vorhanden.
+
 Die Variante, Buchsen statt Kabeln zu verbauen, hat sich als
 praktikabler erwiesen als die temporäre Lösung mit Kabeln, die sich
 nicht bewährt hat.
@@ -483,7 +421,7 @@ Damit der Seitenteil für Wartungsarbeiten vollständig ausgebaut werden
 kann, sind alle Elemente durch Steckverbindungen vom Rest des Racks
 trennbar.
 
-### technische Umsetzung
+### Technische Umsetzung
 
 Der Reedkontakt in der Abdeckung ist mit dem zweiten Kontakt in der
 Rack-Tür seriell verbunden. Via GPIO-Pin werden beide vom Raspberry Pi
@@ -493,7 +431,7 @@ Relais ein Signal und die Lautsprecherleitungen werden unterbrochen.
 Der Signalaustausch zwischen Mediatrix-Modul und Anschlussfeld erfolgt
 über eine fünfpolige Leitung mit DIN-Steckverbindern an beiden Enden. An
 der Innenseite des Anschlussfeldes befindet sich ein DIN-Female-Stecker.
-Das, durch diesen Stecker ankommende Signal, wird auf einer
+Das durch diesen Stecker ankommende Signal wird auf einer
 Lochrasterplatine in einem Kunststoffgehäuse auf die verschiedenen
 Komponenten verteilt.
 
@@ -506,8 +444,8 @@ Musik tragen oftmals zum Erfolg einer Präsentation bei. Das darf durch
 Störgeräusche beim Einschalten von Audiogeräten in keinem Fall
 zunichtegemacht werden. Aus diesem Grund ist ein Lautsprecherschutz
 implementiert. Dieser unterbindet solche Geräusche, durch Unterbrechung
-der Lautsprecherleitungen.\
-\
+der Lautsprecherleitungen.
+
 Beim Einschalten von Verstärkern und Mischpulten kommt es zu knackenden
 Geräuschen, die auf die Lautsprecher übertragen werden. Diese können
 dadurch beschädigt werden. Zudem ist es für Zuhörende sehr unangenehm.
@@ -579,14 +517,14 @@ Stromversorgung
 
 ### Stromzufuhr zum System
 
-Die, im System verbauten Komponenten benötigen entweder 230V, 12V oder
-5V.\
-Die Stromzuleitung zum Rack erfolgt mit 230V mittels PowerCon -- Kabel
+Die im System verbauten Komponenten benötigen entweder 230V, 12V oder
+5V.
+Die Stromzuleitung zum Rack erfolgt mit 230V mittels PowerCon-Kabel
 und versorgt das Mediatrix-Modul dauerhaft mit Strom. Das Kabel ist
 durch die Kabelöffnung in der Rückwand zum Mediatrix-Modul geführt. Vom
 Mediatrix-Modul ist eine, durch den Raspberry Pi gesteuerte
 PowerCon-Buchse zu einer zu einer Steckerleiste verbunden. An dieser
-Leiste sind die Rack-internen Geräte und die Steckdose an der Seitenwand
+Leiste sind die im Rack eingebauten und die Steckdose an der Seitenwand
 des Racks angeschlossen.
 
 Die Variante, eine PowerCon-Verbindung zu verwenden bietet sich
@@ -610,7 +548,7 @@ keinen Kaltgerätestecker verfügt. Das Gehäuse ist mit einem Kabel mit
 
 Mit dem Schalter an der Front des Mediatrix-Moduls sollte der Raspberry
 Pi, im Falle eines Fehlers, durch Abschaltung des Stroms neugestartet
-werden können. Aus diesem Grund geplant, die Phase direkt nach der
+werden können. Aus diesem Grund war geplant, die Phase direkt nach der
 Sicherung über den Schalter zu leiten. Bei einem Test stellte sich
 jedoch heraus, dass das Netzteil noch für eine halbe Minute nach
 Betätigung des Schalters Spannung liefert. Diese Wartezeit wäre zu lang
@@ -618,6 +556,13 @@ gewesen. Bei einem erneuten Versuch mit angehängter Last verkürzte sich
 diese Zeit jedoch auf unter fünf Sekunden. Falls sich die Wartezeit
 trotz Last nicht verkürzt hätte, wäre der Schalter zwischen Netzteil und
 Stepdown-Converter gehängt worden.
+
+Bei erneuten Test stellte sich heraus, dass die Relais, beim Schalten so
+viel Strom benötigen, sodass der Raspberry Pi kurzzeitig unterversorgt
+ist. Das führt zu unkontrolliertem Schalten der Relais. Die Lösung für
+dieses Problem ist ein Kondensator. Dieser ist parallel zum Raspberry Pi
+mit dem Ausgang des Stepdown-Converters verbunden. Bei kurzzeitigem
+Strommangel wird der Raspberry Pi vom Kondensator versorgt.
 
 ### Spannungswandlung
 
@@ -627,12 +572,12 @@ eines Stepdown-Converters. Parallel dazu ist ein Kabel, das zur
 Hauptplatine führt an den Gleichrichter angeschlossen.
 
 Aufgrund des benötigten Stromes von mindestens 3A war eine Versorgung
-mittels Transformator geplant. Der Transformator sollte 12V
+mittels Transformators geplant. Der Transformator sollte 12V
 Wechselspannung liefern, die mittels Brückengleichrichter auf 12V
 Gleichspannung umgewandelt werden sollten. Im Zuge von Testmessungen
 stellte sich jedoch heraus, dass die Spannung nach dem Gleichrichter mit
 17V zu hoch war. In einem Versuch wurde eine Last von 0,6A
-angeschlossen, woraufhin die Spannung auf 14V zurück ging. Mit diesem
+angeschlossen, woraufhin die Spannung auf 14V zurückging. Mit diesem
 Verhalten konnte das System nicht ordnungsgemäß betrieben werden. Aus
 diesem Grund wurde schlussendlich ein getaktetes Netzteil mit 4,1A bei
 12V eingebaut.
@@ -641,17 +586,17 @@ diesem Grund wurde schlussendlich ein getaktetes Netzteil mit 4,1A bei
 
 Auf der Hauptplatine werden die 12V DC auf verschiedene Komponenten
 verteilt, beispielsweise die Relais-Platinen, Status LEDs und den
-Lüfter. Da der Raspberry Pi nur in der Lage ist, Spannungen von 3,3V zu
+Lüfter. Da der Raspberry Pi nur in der Lage ist Spannungen von 3,3V zu
 schalten, werden für die Status LEDs und der Lüfter MOSFETs verwendet.
 
-#### MOSFET
+### MOSFET
 
 Bei einem MOSFET handelt es sich um einen
-Metall-Oxid-Halbleiter-Feldeffekttransistor.\
-„Ein Transistor ist ein Halbleiter-Bauelement aus drei
+Metall-Oxid-Halbleiter-Feldeffekttransistor.
+\begin{quote}„Ein Transistor ist ein Halbleiter-Bauelement aus drei
 aufeinanderfolgenden Halbleiterschichten, also npn- oder pnp-Schichten.
 Er hat somit zwei pn-Übergänge, in deren Grenzgebieten sich
-Sperrschichten ausbilden." \cite[S. 372]{krikava_grundlagen_1981}
+Sperrschichten ausbilden."\end{quote}\cite[S. 372]{krikava_grundlagen_1981
 
 Der MOSFET verfügt über drei Pins:
 
@@ -663,15 +608,16 @@ Der MOSFET verfügt über drei Pins:
 
 Angeschlossen ist der MOSFET wie folgt:
 
-Gate ist mit dem IO-Pin des Raspberry Pis verbunden. Zwischen Drain und
-12V ist die Last angeschlossen. Weiters ist eine Freilaufdiode in
-Flussrichtung von GND zu Drain eingebaut, um den MOSFET vor
-Überspannungen zu schützen. Source ist auf GND geführt.
+Der Gate-Kontakt ist mit dem IO-Pin des Raspberry Pis verbunden.
+Zwischen Drain-Kontakt und 12V ist die Last angeschlossen. Weiters ist
+eine Freilaufdiode in Flussrichtung von GND zu Drain eingebaut, um den
+MOSFET vor Überspannungen zu schützen. Source-Kontakt ist auf GND
+geführt.
 
 ### Einschalten des Systems
 
-Per Druck auf den, am Rack angebrachten Taster, schaltet der Raspberry
-Pi ein 12V Relais, das den anderen Geräten die Stromzufuhr öffnet. Jenes
+Per Druck auf den am Rack angebrachten Taster schaltet der Raspberry Pi
+ein 12V Relais, das den anderen Geräten die Stromzufuhr öffnet. Jenes
 12V Netzteil betreibt die Relais und muss daher, wie der Raspberry Pi,
 zu jeder Zeit mit Strom versorgt werden. Wenn alle Geräte den
 Startvorgang abgeschlossen haben, gibt der Mikroprozessor auch die
@@ -696,13 +642,13 @@ Geräte im Rack weiterhin verwendbar zu sein.
 Für die Leitungen zwischen AV-Receiver, dem Mediatrix-Modul und den
 Lautsprechern sind Lautsprecherkabel mit einem Leitungsquerschnitt von
 2,5mm² verbaut. Die zwei jeweils zusammengehörigen Leitungen sind
-miteinander verschweißt.\
+miteinander verschweißt.
 Auch im Mediatrix-Modul sind alle Lautsprecherleitungen von den Buchsen
 zu den Relais und zu den Ausgangsbuchsen mit diesen Kabeln verbunden.
 
 ### Anschlüsse für User
 
-Die für den User notwendigen Anschlussbuchsen sind in der Seite des
+Die für den User notwendigen Anschlussbuchsen sind an der Seite des
 Rack-Schranks eingebaut.
 
 Die HDMI-Buchse ist an der Rückseite, wie an der Vorderseite mit einer
@@ -727,7 +673,7 @@ Gehäusebelüftung
 
 Da die im Rack verbauten Geräte im Betrieb Wärme produzieren, ist ein
 Kühlsystem vorhanden. Ein 12V Lüfter sorgt für eine Zirkulation der Luft
-im Rack. Durch eine, von der Temperatur abhängigen Drehzahlregelung
+im Rack. Durch eine von der Temperatur abhängigen Drehzahlregelung
 werden Störgeräusche durch den Lüfter minimiert. Es wird dafür gesorgt,
 dass der Lüfter nur bei Bedarf eingeschalten ist und auch nur mit einer
 angemessenen Drehzahl betrieben wird.
@@ -758,12 +704,12 @@ angeschlossen:
 Laut des Tutorials sollte eine ID angezeigt werden, die dem Format
 `28-00000XXXXXXXX` entspricht. Doch in dem Versuchsaufbau erschienen
 mehrere IDs, die das Format `00-XX00000000000` haben. Keine von diesen
-IDs beinhaltete das File "w1 -- slave". Dies hatte zur Folge, dass der
+IDs beinhaltete das File `w1_slave`. Dies hatte zur Folge, dass der
 Messwert des Temperatursensors nicht ausgelesen werden konnte.
 
 Bei einem erneuten Versuch wurde nach folgendem Tutorial gearbeitet:
 
-<https://www.raspberrypi-spy.co.uk/2013/03/raspberry-pi-1-wire-digital-thermometer-sensor/>
+\url{<https://www.raspberrypi-spy.co.uk/2013/03/raspberry-pi-1-wire-digital-thermometer-sensor/>}
 
 Zudem wurde die Schaltung neu aufgebaut, um sicherzustellen, dass diese
 kein Problem darstellt.
@@ -771,29 +717,30 @@ kein Problem darstellt.
 ![Putty-Ausgabe inkorrekt](bilder/Florian/Putty1.png){width=90%}
 
 In dieser Anleitung wird eine notwendige Konfiguration im
-/boot/config.txt beschrieben. Folgende Codezeile muss eingefügt werden:
+`/boot/config.txt` beschrieben. Folgende Codezeile musste eingefügt
+werden:
 
-dtoverlay=w1-gpio,gpiopin=4
+`dtoverlay=w1-gpio,gpiopin=4`
 
-Nach der Änderung im /boot/config.txt File und einem darauffolgenden
+Nach der Änderung im `/boot/config.txt` File und einem darauffolgenden
 reboot, schien zum ersten Mal eine plausible Seriennummer auf.
 
 ![Putty-Ausgabe korrekt](bilder/Florian/Putty2.png){width=90%}
 
-Das Wechseln in das Verzeichnis der Seriennummer hat ohne Probleme
-funktioniert und das `w1-slave` File ließ sich anzeigen. Nun kann man
-mit der Variable „t" die Temperatur in Grad Celsius ablesen. Der Wert
-t=21125 entspricht 21,125°C.
+Das Wechseln in das Verzeichnis der Seriennummer funktionierte ohne
+Probleme und das „w1\_slave" File ließ sich anzeigen. Nun konnte man mit
+der Variable „t" die Temperatur in Grad Celsius ablesen. Der Wert
+`t=21125` entspricht 21,125°C.
 
 ![Putty-Ausgabe Temperatur wird angezeigt](bilder/Florian/Putty3.png){width=90%}
 
-Auch Erwärmung durch Reiben wird erkannt und der Temperaturwert änderte
+Auch Erwärmung durch Reiben wurde erkannt und der Temperaturwert änderte
 sich auf 25,062°C.
 
-Nachdem die Temperatur nun manuell ausgelesen werden kann, gilt es dies
-auch automatisch zu bewerkstelligen. Dazu benötige ich ein Programm, das
-diese Aufgabe übernimmt und in gewissen Zeitabständen die Temperatur
-abfragt.
+Nachdem die Temperatur nun manuell ausgelesen werden konnte, galt es
+dies auch automatisch zu bewerkstelligen. Dazu benötigte ich ein
+Programm, das diese Aufgabe übernahm und in gewissen Zeitabständen die
+Temperatur abfragte.
 
 Dies kann in den Programmiersprachen „C" oder „PYTHON" gelöst werden.\
 Aufgrund des Rates von Herrn Professor August Hörandl fiel die
@@ -802,7 +749,7 @@ Entscheidung bei der Wahl der Programmiersprache auf PYTHON:
 \begin{quote}„Raspberry Pi" steht für „Raspberry Python Interpreter", d.h. der
 „Raspberry Pi" verfügt über einen integrierten Interpreter für die
 Programmiersprache Python. Das spart zusätzlichen Aufwand, wie das
-Kompilieren von „C"-Programmen.\end{quote} \cite{hoerandl_august}
+Kompilieren von „C"-Programmen.\end{quote}\cite{hoerandl_august}
 
 Weiters gibt es im Internet zahlreiche Anleitungen, wie ein Programm für
 diesen Anwendungsfall aussehen kann. Als Grundlage wurde das
@@ -811,22 +758,22 @@ und angepasst.
 
 ```python
 def gettemp(id):
-try:
-mytemp = ''
-filename = 'w1\_slave'
-f = open('/sys/bus/w1/devices/' + id + '/' + filename, 'r')
-line = f.readline() # read 1st line
-crc = line.rsplit(' ',1)
-crc = crc[1].replace('\n', '')
-if crc=='YES':
-line = f.readline() # read 2nd line
-mytemp = line.rsplit('t=',1)
-else:
-mytemp = 99999
-f.close()
-return int(mytemp[1])
-except:
-return 99999
+    try:
+        mytemp = ''
+        filename = 'w1\_slave'
+        f = open('/sys/bus/w1/devices/' + id + '/' + filename, 'r')
+        line = f.readline() # read 1st line
+        crc = line.rsplit(' ',1)
+        crc = crc[1].replace('\n', '')
+        if crc=='YES':
+            line = f.readline() # read 2nd line
+            mytemp = line.rsplit('t=',1)
+        else:
+            mytemp = 99999
+        f.close()
+        return int(mytemp[1])
+    except:
+        return 99999
 ```
 In Folge wurde die Logik für die Umwandlung von der gemessenen
 Temperatur in einen Prozentwert zur Bestimmung des PWM-Duty-Cycles
@@ -834,54 +781,52 @@ integriert.
 
 ```python
 def fanCon(mt):
-st = 35.0 #Solltemperatur in Grad Celsius (Temperaturraum 35-55 Grad)
-maxspeed = 3800 #Maximale Geschwindigkeit des Luefters in RPM
-prozent = 0
-if mt > st:
-rpm=(mt-st)*190 #Umdrehungen Pro Minute
-prozent=(mt-st)/5 #Prozent der Drehzahl
-if prozent > 100:
-prozent = 100
-
-return prozent
+    st = 35.0 #Solltemperatur in Grad Celsius (Temperaturraum 35-55 Grad)
+    maxspeed = 3800 #Maximale Geschwindigkeit des Luefters in RPM
+    prozent = 0
+    if mt > st:
+        rpm=(mt-st)*190 #Umdrehungen Pro Minute
+        prozent=(mt-st)/5 #Prozent der Drehzahl
+        if prozent > 100:
+            prozent = 100
+    return prozent
 ```
 Dieser Prozentwert wird an die PWM-Methode weitergegeben.
 
 ```python
 def pwm():
 
-import RPi.GPIO as GPIO\
-from time import sleep\
+    import RPi.GPIO as GPIO
+    from time import sleep
 
-PWMpin = 33 # PWM pin zum Anschluss des Luefters (PWM1 33,35)
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BOARD) #Pinnummerierung setzen
-GPIO.setup(PWMpin,GPIO.OUT)
-fan_pwm = GPIO.PWM(PWMpin,100) #PWM Instanz mit Frequenz von 100Hz
-erzeugen
-fan_pwm.start(0)
-while True:
+    PWMpin = 33 # PWM pin zum Anschluss des Luefters (PWM1 33,35)
+    GPIO.setwarnings(False)
+    GPIO.setmode(GPIO.BOARD) #Pinnummerierung setzen
+    GPIO.setup(PWMpin,GPIO.OUT)
+    fan_pwm = GPIO.PWM(PWMpin,100) #PWM Instanz mit Frequenz von 100Hz
+    erzeugen
+    fan_pwm.start(0)
+    while True:
 
 
-#Auslesen der Temperatur
-id = '10-000801a96106'
-mt = gettemp(id)/float(1000) #Momentantemperatur
-print "Momentantemperatur : " + '{:.3f}'.format(mt)
-prozent = fanCon(mt)
+        #Auslesen der Temperatur
+        id = '10-000801a96106'
+        mt = gettemp(id)/float(1000) #Momentantemperatur
+        print "Momentantemperatur : " + '{:.3f}'.format(mt)
+        prozent = fanCon(mt)
 
-print "Prozent: " + '{:.3f}'.format(prozent)
+        print "Prozent: " + '{:.3f}'.format(prozent)
 
-if prozent > 20:
-fan_pwm.ChangeDutyCycle(prozent)
-sleep(2)
+        if prozent > 20:
+            fan_pwm.ChangeDutyCycle(prozent)
+            sleep(2)
 
-if prozent < 20:
-fan_pwm.ChangeDutyCycle(0)
-sleep(2)
+        if prozent < 20:
+            fan_pwm.ChangeDutyCycle(0)
+            sleep(2)
 
-return
+    return
 ```
-
 
 Bei einem Duty-Cycle-Wert unter 15-20% erhält der Motor des Lüfters
 nicht genug Leistung um zu starten. Zur Vermeidung von Schäden am
@@ -898,7 +843,7 @@ eine Drehzahlregelung vorgenommen werden.
 
 Dafür gibt es im Allgemeinen zwei Möglichkeiten:
 
-1.  Regelung durch vermindern und erhöhen der Spannung am Lüfter
+1.  Regelung durch Vermindern und Erhöhen der Spannung am Lüfter
 
 2.  Pulsweitenmodulation
 
@@ -916,9 +861,9 @@ Falls der Temperaturbereich nachträglich geändert werden soll, bringt
 das einen großen Aufwand mit sich.
 
 1.  Wenn man die Versorgungsspannung allerdings mit Hilfe eines
-    digitalen Potentiometers reguliert, das aufgrund der Messung, des
+    digitalen Potentiometers reguliert, das aufgrund der Messung des
     digitalen Temperatursensors vom Raspberry Pi konfiguriert wird,
-    besteht die Möglichkeit, die oben genannten Funktionen zu
+    besteht die Möglichkeit die oben genannten Funktionen zu
     implementieren.
 
 Nachdem der verwendete Lüfter allerdings nur via PWM regelbar ist,
@@ -928,13 +873,13 @@ PWM, oder auch Pulsweitenmodulation, ist ein Verfahren, bei dem
 
 \begin{quote}„[...] das Verhältnis zwischen der Einschaltzeit und Periodendauer
 eines Rechtecksignals bei fester Grundfrequenz variiert wird. Das
-Verhältnis zwischen der Einschaltzeit
-![](bilder/Florian/Formel1.png){width="0.3333333333333333in"}und der Periodendauer ![](bilder/Florian/Formel2.png){width="1.325in"}wird
+Verhältnis zwischen der Einschaltzeit $\(t_{ein}\)$ und der Periodendauer $\(T =\t_{ein}\t_{aus}\)$ wird
 als das Tastverhältnis **p** bezeichnet. (laut DIN IEC 60469-1:
 Tastgrad) (engl. Duty Cycle, meist abgekürzt DC, nicht zu verwechseln
-mit Direct Current = Gleichstrom). "\end{quote} \cite{noauthor_pulsweitenmodulation_nodate}
+mit Direct Current = Gleichstrom). "\end{quote}\cite{noauthor_pulsweitenmodulation_nodate}
 
 ![Pulsweite](bilder/Florian/PWM1.png){width=90%}
+
 
 Das Ganze kann mit einem üblichen Taster und einem Elektromotor
 verglichen werden. Ein Druck auf den Taster sorgt dafür, dass der Motor
@@ -958,7 +903,7 @@ bestimmt werden, wieviel Prozent, der Spannung an den Motor
 weitergegeben werden (Siehe Abb.). Der Prozentwert wird als Duty-Cycle
 angegeben. 100% des Duty-Cycles entsprechen dem Betrieb mit der gesamten
 vorhandenen Spannung und somit der maximalen Drehzahl. Über den
-Mikroprozessor kann mit einer hohen Frequenz ein -- und ausgeschaltet
+Mikroprozessor kann mit einer hohen Frequenz ein- und ausgeschaltet
 werden. Somit dreht sich der Motor (fast) gleichmäßig, jedoch in der
 gewünschten Geschwindigkeit.
 
@@ -966,7 +911,8 @@ gewünschten Geschwindigkeit.
 
 ### Generieren eines PWM-Signals mit dem Raspberry Pi
 
-Mit PYTHON ist das Generieren eines PWM-Signals recht simpel.
+Mit PYTHON ist das Generieren eines PWM-Signals schnell geschehen:
+
 ```python
 GPIO.setup(PWMpin,GPIO.OUT) #Pin als Ausgang definieren
 my_pwm = GPIO.PWM(PWMpin,100) #PWM Instanz mit Frequenz von 100Hz erzeugen
@@ -974,6 +920,7 @@ my_pwm.start(0) #PWM Instanz starten
 
 my_pwm.ChangeDutyCycle(prozent) #einstellen des Duty-Cycles
 ```
+
 Nach Eingabe dieser vier Befehle wird ein PWM-Signal mit fixem
 Prozentwert erzeugt. Mit Hilfe von Schleifen kann der Wert, je nach
 Bedarf variiert werden.
@@ -1017,265 +964,20 @@ ansprechen zu können.
 
 ![Infrarotplatine](bilder/Florian/IR.jpg){width=30%}
 
-Beleuchtungskonzept für Konferenzsaal
--------------------------------------
-
-Der Konferenzsaal ist der größte Präsentationsraum unserer Schule.
-
-Dort finden hauptsächlich Präsentationen und Vorträge statt. Bei diesen
-Arten von Veranstaltungen ist eine Ausleuchtung der vortragenden
-Personen besonders wichtig, vor Allem wenn, während des Vortrags Fotos
-von diesen Personen gemacht werden.
-
-### Herausforderungen
-
-In den meisten Fällen sind Folienpräsentationen mittels Beamer Teil
-solcher Vorträge. Um bestmögliche Lesbarkeit der Folien zu
-gewährleisten, darf nahezu kein Licht von anderen Lichtquellen als dem
-Beamer auf die Leinwand treffen. Der Lichtkegel sollte demnach formbar
-sein. Dies geschieht in der Regel durch eine Zoom-Funktion,
-Framing-Shutter oder Torblenden am Scheinwerfer.
-
-Da der Raum nicht besonders hoch ist, ist die Montage eines
-Traversensystems, wie es in großen Sälen üblich ist, nicht möglich.
-Dementsprechend dürfen die verbauten Scheinwerfer auch kein hohes
-Eigengewicht haben.
-
-Die installierten Scheinwerfer müssen je nach Bedarf auch auf
-unterschiedliche Positionen eingeleuchtet werden können. Folglich ist
-eine ausreichende Lichtstärke notwendig, um weiter entfernte Positionen
-ebenfalls mit genügend Licht versorgen zu können.
-
-Grundlegend sind zwei Rednerpositionen vorgesehen.
-
-### Rednerpositionen
-
-Zur Beleuchtung der Rednerpositionen eignen sich Profiler am besten.
-Diese lassen sich genau auf Positionen einrichten und mit Funktionen wie
-Framing Shutter und Fokus kann der Lichtkegel nach Bedarf justiert
-werden. Durch die Optik im Inneren der Scheinwerfer und den geringeren
-Abstrahlwinkel ist die Lichtausbeute höher als bei Flutern mit der
-selben Leistung.
-
-### Zusätzliche Beleuchtung
-
-Falls mehr als zwei Personen präsentieren, muss auch die Fläche neben
-den Rednerpositionen beleuchtet werden. Statt weiteren Profilern bieten
-sich Fluter an. Aufgrund ihres breiten Abstrahlwinkels, decken sie große
-Flächen mit weichem Licht ab. Die Farbtemperatur ist bei Flutern
-üblicherweise eher warm.
-
-Die folgenden Geräte sind für diesen Zweck geeignet. Je nach gewünschter
-Leistung und Budget kann ein Beleuchtungssystem zusammengestellt werden.
-
-Variante 1: Variante 2: Variante 3:
-
-Preiswert Semi-Professionell Professionell
-
-### Scheinwerfer:
-
-\begin{table}[]
-\centering
-\caption{Profiler}
-\label{profilerTable}
-\begin{tabular}{llll}
-Profiler        & Variante 1        & Variante 2             & Variante 3                \\
-Produkt         & ADJ Saber Spot WW & ADJ Ikon Profile Pearl & Eurolite LED PFE-100 RGBW \\
-Lichtquelle     & LED               & LED                    & LED                       \\
-Leistung        & 15W               & 32W                    & 100W                      \\
-Farbtemperatur  & WW 3000K          & CW 7200K               & CW                        \\
-Multi-Color     & Nein              & Nein                   & RGBW                      \\
-Farbfolie       & Nein              & Ja                     & Nein                      \\
-Gobo            & Nein              & Ja                     & Nein                      \\
-Zoom            & Nein              & Ja (manuell)           & Ja (manuell)              \\
-Abstrahlwinkel  & 4°, 10°, 45°      & 15°- 30°               & 14°- 41°                  \\
-Framing-Shutter & Nein              & Ja                     & Ja                        \\
-DMX             & Ja                & Ja                     & Ja                        \\
-Stromversorgung & PowerCon          & Kaltgeräte             & PowerCon                  \\
-Farbe           & Schwarz           & Weiß                   & Schwarz                   \\
-Gewicht         & 1,2kg             & 2,7kg                  & 10kg                      \\
-Größe LBH       & 88 x 170 x 87 mm  & 448 x 150 x 127 mm     & 615 x 280 x 420 mm        \\
-Händler         & Thomann.at        & Thomann.at             & Thomann.at                \\
-Preis/Stück     & 105€              & 248€                   & 579€                     
-\end{tabular}
-\end{table}
-
-\begin{table}[]
-\centering
-\caption{Fluter}
-\label{fluterTable}
-\begin{tabular}{llll}
-Fluter          & Variante 1                        & Variante 2                            & Variante 3         \\
-Produkt         & Stairville Mini Stage PAR CW/WW/A & Stairville Revueled 120 Cob 3200k Dmx & ADJ Encore FR150z  \\
-Lichtquelle     & LED                               & LED                                   & LED                \\
-Leistung        & 42W                               & 120W                                  & 130W               \\
-Farbtemperatur  & CW/WW/A 2800K-6000K               & WW 3200K                              & WW 3000K           \\
-Multi-Color     & Nein                              & Nein                                  & Nein               \\
-Farbfolie       & Nein                              & Nein                                  & Nein               \\
-Gobo            & Nein                              & Nein                                  & Nein               \\
-Zoom            & Nein                              & Nein                                  & Ja                 \\
-Abstrahlwinkel  & 30°                               & 50°                                   & 8°-50°             \\
-Framing-Shutter & Nein                              & Torblenden                            & Torblenden         \\
-DMX             & Ja                                & Ja                                    & Ja                 \\
-Stromversorgung & Schuko                            & PowerCon                              & PowerCon           \\
-Farbe           & Schwarz                           & Schwarz                               & Schwarz            \\
-Gewicht         & 1,7kg                             & 5,5kg                                 & 6,9kg              \\
-Größe LBH       & 140 x 140 x 225 mm                & 557 x 258 x 164 mm                    & 376 x 298 x 294 mm \\
-Händler         & Thomann.at                        & Thomann.at                            & Thomann.at         \\
-Preis/Stück     & 98€                               & 277€                                  & 488€              
-\end{tabular}
-\end{table}
-
-### Mögliche Konfigurationen:
-
-\begin{table}[]
-\centering
-\caption{Preisoptimiert}
-\label{preisTable}
-\begin{tabular}{llll}
-Preisoptimiert & Klein             & Mittel                            & Groß                              \\
-Profiler       & ADJ Saber Spot WW & ADJ Ikon Profile Pearl            & ADJ Ikon Profile Pearl            \\
-Anzahl         & 4                 & 2                                 & 4                                 \\
-Fluter         & /                 & Stairville Mini Stage PAR CW/WW/A & Stairville Mini Stage PAR CW/WW/A \\
-Anzahl         & /                 & 2                                 & 4                                 \\
-Gesamtgewicht  & 4,8kg             & 8,8kg                             & 17,6kg                            \\
-Gesamtleistung & 60W               & 148W                              & 296W                              \\
-Gesamtpreis    & 420€              & 692€                              & 1384€                            
-\end{tabular}
-\end{table}
-
-\begin{table}[]
-\centering
-\caption{Leistungsoptimiert}
-\label{leistungTable}
-\begin{tabular}{llll}
-Leistungsoptimiert & Klein                                 & Mittel                 & Groß                                   \\
-Profiler           & ADJ Ikon Profile Pearl                & ADJ Ikon Profile Pearl & Eurolite LED PFE-100 RGBW Profile Spot \\
-Anzahl             & 4                                     & 4                      & 2                                      \\
-Fluter             & Stairville Revueled 120 Cob 3200k Dmx & ADJ Encore FR150z      & ADJ Encore FR150z                      \\
-Anzahl             & 2                                     & 2                      & 2                                      \\
-Gesamtgewicht      & 21,8kg                                & 24,6kg                 & 33,8kg                                 \\
-Gesamtleistung     & 368W                                  & 388W                   & 460W                                   \\
-Gesamtpreis        & 1546€                                 & 1968€                  & 2164€                                 
-\end{tabular}
-\end{table}
-
-### Aufhängung:
-
-Benötigte Gesamtlänge: 4m
-
-#### EUTRAC-Stromschiene:
-
-Die Aufbauanleitung kann von der EUTRAC-Website heruntergeladen werden.
-
-\begin{table}[]
-\centering
-\caption{Eutrac}
-\label{eutracTable}
-\begin{tabular}{lllll}
-Montage: Preisoptimiert         & Preis/Stück & Klein   & Mittel  & Groß    \\
-3-Phasen Aufbau Stromschiene 2m & 36,70€      & 2       & 2       & 2       \\
-Pendelabhängung 60cm            & 20,93€      & 4       & 4       & 4       \\
-Schienenadapter                 & 14,90€      & 4       & 4       & 8       \\
-Befestigungsklammer             & 5,59€       & 4       & 4       & 4       \\
-Einspeiser                      & 10,43€      & 1       & 1       & 1       \\
-Längsverbinder                  & 10,43€      & 1       & 1       & 1       \\
-Endkappe                        & 2,09€       & 1       & 1       & 1       \\
-Gesamtpreis                     &             & 262,03€ & 262,03€ & 321,63€
-\end{tabular}
-\end{table}
-
-Alle Produkte und Preise sind am 03.04.2018 von amazon.at entnommen
-worden.
-
-EUTRAC-Aufbauschienensystem 25.../225... 3 Phasen 230V
-
-4 Hängepunkte/Meter bei 3x 10kg Punktlast
-
-3 Hängepunkte/Meter bei 4x 5kg Punktlast
-
-2 Hängepunkte/Meter bei 4x 3kg Punktlast
-
-![EUTRAC Montage](bilder/Florian/Eutrac.png){width=90%}
-
-#### 1-Punkt Traverse:
-
-Aufgrund der höheren Last sind EUTRAC-Stromschienen nicht mehr
-verwendbar. Alternativ dazu eignet sich eine 1-Punkt Traverse. Zur
-Befestigung können Half-Coupler und Stahlseile verwendet werden. Die
-1-Punkt-Traverse verfügt über keine interne Stromführung. Es ist eine
-230V-Schutzkontaktleitung zur Traverse notwendig. Eine Serienschaltung
-von Geräten mit Power In und Out ist mit geeigneten Patchkabeln möglich.
-
-\begin{table}[]
-\centering
-\caption{Traverse}
-\label{traverseTable}
-\begin{tabular}{lllll}
-Montage: Leistungsoptimiert                           & Preis/Stück & Klein   & Mittel  & Groß    \\
-Global Truss F31200 Traverse 2,0 m                    & 44€         & 2       & 2       & 2       \\
-Global Truss 812 Halbschelle (Geräte)                 & 5,90€       & 4       & 4       & 8       \\
-Global Truss 81702 Half Coupler Small Eye             & 5,90€       & 4       & 4       & 4       \\
-Global Truss Konischer Verbinder für F31-F34 Traverse & 7,40€       & 1       & 1       & 1       \\
-Stairville Mirror Ball Chain 100cm DIN                & 5,90€       & 4       & 4       & 4       \\
-Stairville Locking Carabina 6mm                       & 1,49€       & 8       & 8       & 8       \\
-the box Flugöse M8 x 30mm                             & 4,88€       & 4       & 4       & 4       \\
-Gesamtpreis                                           &             & 197,64€ & 197,64€ & 221,24€
-\end{tabular}
-\end{table}
-
-Alle Produkte und Preise sind am 03.04.2018 von thomann.at entnommen
-worden.
-
-#### Einbau der Traverse:
-
-![1-Punkttravere Montage](bilder/Florian/TrussMontage){width=90%}
-
-Anmerkung:
-
-Die Konstruktion muss nach dem Einbau von befugten Personen geprüft und
-abgenommen werden.
-
-### Gesamtpreise der Konfigurationen:
-
-\begin{table}[]
-\centering
-\caption{PreisPreisoptimiert}
-\label{preisTable}
-\begin{tabular}{llll}
-Preisoptimiert   & Klein   & Mittel  & Groß     \\
-Preis Geräte     & 420€    & 692€    & 1384€    \\
-Preis Aufhängung & 262,03€ & 262,03€ & 321,63€  \\
-Gesamtpreis      & 682,03€ & 954,03€ & 1705,63€
-\end{tabular}
-\end{table}
-
-\begin{table}[]
-\centering
-\caption{PreisLeistungoptimiert}
-\label{preisLeistungTable}
-\begin{tabular}{llll}
-Leistungsoptimiert & Klein    & Mittel   & Groß     \\
-Preis Geräte       & 1546€    & 1968€    & 2164€    \\
-Preis Aufhängung   & 197,64€  & 197,64€  & 221,24€  \\
-Gesamtpreis        & 1743,64€ & 2165,64€ & 2385,24€
-\end{tabular}
-\end{table}
-
 Status-Erkennung der Geräte
 ---------------------------
 
 Wenn Geräte mittels Infrarot eingeschaltet werden, erhält der Sender
-keine Information, ob das Signal angekommen ist und ob das Gerät
-wirklich läuft. Um dies festzustellen verfügt das System über einen
+keine Information, ob das Signal angekommen ist, und ob das Gerät
+wirklich läuft. Um dies festzustellen, verfügt das System über einen
 Stromausgang, an dem gemessen wird, ob ein gewisser Strom fließt. Wenn
-das der Fall ist, erhält der Raspberry Pi ein Signal. Somit kann der der
-User über den Status der Geräte informiert werden.\
+das der Fall ist, erhält der Raspberry Pi ein Signal. Somit kann der
+User über den Status der Geräte informiert werden.
 In dieser Installation wird so der Einschaltzustand des Beamers
 bestimmt.
 
-Anders als der Beamer, besitzt der AV-Receiver einen „Trigger-Output".
-An jenem liegen 12V an, sobald das Gerät einsatzbereit ist. Via 3,5mm
+Anders als der Beamer besitzt der AV-Receiver einen „Trigger-Output". An
+jenem liegen 12V an, sobald das Gerät einsatzbereit ist. Via 3,5mm
 Klinkenbuchse wird diese Spannung in das Mediatrix-Modul geleitet und
 dort auf 3.3V umgewandelt. Der Raspberry Pi ist so in der Lage, die
 Spannung auszuwerten.
