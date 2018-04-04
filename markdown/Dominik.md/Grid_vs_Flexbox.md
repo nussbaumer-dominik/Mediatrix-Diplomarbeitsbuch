@@ -2,7 +2,7 @@
 
 Vor ein paar Jahren wurde Flexbox eingeführt. Es ist speziell für anpassungsfähige Webseiten entwickelt worden. Flexbox macht das Ausrichten von Elementen und deren Inhalt einfacher, sodass flüssige, flexible und dynamische Seiten erstellt werden können. Diese funktionieren mit wenig CSS-Code in einem breiten Katalog von Geräten. Dank Flexbox sind Webseiten, die sich an verschiedene Geräte anpassen müssen, machbarer und effizienter geworden. Ohne diese Technik würden Webseiten auch heute noch nicht perfekt in allen Bildschirmauflösungen dargestellt werden können.
 
-Allerdings ist ein neuer Konkurrent am Spielfeld erschienen - CSS-Grid. Diese Technik hat einige ähnliche Eigenschaften wie Flexbox. Obwohl so gut wie jedes Layout sowohl mit Flexbox als auch CSS-Grid umsetzbar ist, haben beide Techniken ihre speziellen Einsatzgebiete. Deswegen stellt sich natürlich die Frage, welche Positionierungstechnik gerade besser ist, beziehungsweise wann welche Technik zum Einsatz kommen sollte. \cite{borgen_ultimate_2017}
+Allerdings ist ein neuer Konkurrent am Spielfeld erschienen - CSS-Grid. Diese Technik hat einige ähnliche Eigenschaften wie Flexbox. Obwohl so gut wie jedes Layout sowohl mit Flexbox als auch CSS-Grid umsetzbar ist, haben beide Techniken ihre speziellen Einsatzgebiete. Deswegen stellt sich natürlich die Frage, welche Positionierungstechnik gerade besser ist, beziehungsweise wann welche Technik zum Einsatz kommen sollte. \cite{complete_guide_grid}
 
 ### Eine versus zwei Richtungen
 
@@ -15,8 +15,7 @@ Bei CSS-Grid wird hingegen eine fixe Anzahl von Reihen und Spalten definiert. Di
 ### Dynamisch versus statisch
 
 Da bei Flexbox im CSS für den Browser genau definiert wird, wie Elemente innerhalb eines Containers anzuordnen sind, können beliebig viele Elemente dynamisch hinzugefügt werden. Diese Eigenschaft habe ich bei der Umsetzung der Benutzeroberfläche mehrmals verwendet.
-Erstens befinden sich die Module für die Steuerung der einzelnen Geräte in einem Flex-Container. Da diese per Klick dynamisch hinzugefügt werden können, hat sich hier Flexbox angeboten. Beim Betätigen eines Knopfes wird das entsprechende Modul an den \<div> angehängt. Wenn die Gesamtbreite der Elemente die Breite des Bildschirms übersteigt, wird eine Scrollbar auf der X-Achse eingeblendet.
-Weiters habe ich Flexbox bei der Darstellung der vordefinierten Presets verwendet. Obwohl diese Elemente in Form eines Rasters angeordnet sind, war CSS-Grid nicht geeignet. Denn bei diesem werden fixe Reihen und Spalten festgelegt. Allerdings hat mir das Probleme bereitet, da die Anzahl der Presets zum Zeitpunkt der Entwicklung nicht bekannt war. \cite{flexbox_vs_grid}
+Erstens befinden sich die Module für die Steuerung der einzelnen Geräte in einem Flex-Container. Da diese per Klick dynamisch hinzugefügt werden können, hat sich hier Flexbox angeboten. Beim Betätigen eines Knopfes wird das entsprechende Modul an den \<div> angehängt. Wenn die Gesamtbreite der Elemente die Breite des Bildschirms übersteigt, wird eine Scrollbar auf der X-Achse eingeblendet. Weiters habe ich Flexbox bei der Darstellung der vordefinierten Presets verwendet. Obwohl diese Elemente in Form eines Rasters angeordnet sind, war CSS-Grid nicht geeignet. Denn bei diesem werden fixe Reihen und Spalten festgelegt. Allerdings hat mir das Probleme bereitet, da die Anzahl der Presets zum Zeitpunkt der Entwicklung nicht bekannt war. \cite{flexbox_vs_grid}
 
 ### Erklärung der Unterschiede anhand eines Beispiels
 
