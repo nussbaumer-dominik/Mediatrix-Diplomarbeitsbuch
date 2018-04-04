@@ -6,7 +6,7 @@ Die Steuerung über Infrarot ist in Produkten der Elektronikbranche sehr verbrei
 Die verschiedenen Standards funktionieren jedoch nach ähnlichen Prinzipien.
 Einer der verbreitetsten ist der RC-5 Standard, auf welchen im folgenden Kapitel näher eingegangen wird. \cite{noauthor_sb-projects_nodate}
 
-![Darstellung des elektromagnetischem Spektrums\label{elektroWellen}](bilder/Clemens/Optikspectrum.png){width=90%}
+![Darstellung des elektromagnetischem Spektrums\label{elektroWellen} \quelle\url{https://bit.ly/2EkbfLV}](bilder/Clemens/Optikspectrum.png){width=90%}
 
 ## Funktionsweise des Protokolls (RC-5)
 Der RC-5-Code hat eine Gesamtlänge von 14 Bit. Ursprünglich waren diese Bit folgendermaßen aufgeteilt: zwei Startbit, ein Togglebit, fünf Adressbits und sechs Kommandobits.
@@ -24,7 +24,7 @@ Anschließend wird 889 \textmu s nichts gesendet.
 Um den Wert "0" zu übertragen, wird genau das Gegenteil gesendet: Zuerst wird 889 \textmu s nicht gesendet und erst dann wird der Implus wiederholt für 889 \textmu s übertragen.
 Daraus ergibt sich für ein Bit eine Übertragungsdauer von 1,778 ms und somit einen Gesamtübertragungsdauer eines RC-5-Codes von 24,889 ms (\abb{infra}). \cite{noauthor_elektronik:_nodate-3}
 
-![Darstellung eines RC-5-Codes\label{infra}](bilder/Clemens/ir.png){width=90%}
+![Darstellung eines RC-5-Codes\label{infra} \quelle\url{http://www.sprut.de/electronic/ir/rc5.htm}](bilder/Clemens/ir.png){width=90%}
 
 ## Anwendung in diesem Projekt 
 Die Kommunikation mit dem AV-Receiver und dem Beamer wird in diesem Projekt mittels Infrarot gesteuert. 

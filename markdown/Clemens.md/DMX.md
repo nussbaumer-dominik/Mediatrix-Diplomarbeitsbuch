@@ -4,7 +4,7 @@ Das DMX (Data Multiplexed)-Protokoll wurde erstmalig durch das USITT (United Sta
 
 Die Informationen werden im DMX Protokoll digital übertragen, wobei hier zwischen einer positiven und negativen Spannung von ungefähr 2,5 Volt unterschieden wird. Ein Einser entspricht einer positiven Spannung für 4 \textmu s und ein Nuller einer negativen Spannung für die selbe Zeitspanne. DMX verwendet eine 8-bit Datenlänge. Der Wertebereich eines Kanals liegt also zwischen 0 und 255. Die jeweiligen Werte für jeden Kanal werden nacheinander gesendet. Am Anfang jedes Signals wird eine Reset-Sequenz gefolgt von einem Startbyte gesendet (\abb{dmx-signal}). \cite{noauthor_dmx_nodate-1}.
 
-![Darstellung des DMX-Signals\label{dmx-signal}](bilder/Clemens/dmx.jpg){width=90%}
+![Darstellung des DMX-Signals\label{dmx-signal} \quelle\url{https://playground.arduino.cc/DMX/Protokoll}](bilder/Clemens/dmx.jpg){width=90%}
 
 Der Vorteil dieses Protokolls ist, dass alle Empfänger nur an ein Kabel angeschlossen werden müssen und die meist schon vorhandene XLR-Verkabelung genutzt werden kann. \cite{noauthor_dmx512/1990_nodate}
 
