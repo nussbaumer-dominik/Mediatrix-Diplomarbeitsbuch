@@ -14,13 +14,13 @@ Präprozessoren haben für all diese Probleme eine Lösung parat. \cite{SASS_REF
 
 ### Partielle CSS-Dateien
 
-Aufgrund der ständig komplexer werdenden Frontend-Entwicklung werden CSS-Dateien immer größer und enthalten oft tausende Zeilen an Code. Umso länger diese Dateien sind, desto unhandlicher und verwirrender werden sie. Dafür bietet SASS bereits eine Lösung. CSS-Dateien können auf mehrere partielle Dateien aufgeteilt werden. Dadurch kann man seine Stylesheets besser organisieren und modularisieren. Es ist wesentlich einfacher, mehrere kleine Dateien zu schreiben, zu warten und zu erweitern, als eine große Datei mit tausenden Zeilen. Mithilfe der erweiterten `"@import"`-Funktion des Präprozessors können die einzelnen Dateien beim Speichern zu einer zusammengefasst werden. \cite{SASS_REFERENCE}
+Aufgrund der ständig komplexer werdenden Frontend-Entwicklung werden CSS-Dateien immer größer und enthalten oft tausende Zeilen an Code. Umso länger diese Dateien sind, desto unhandlicher und verwirrender werden sie. Dafür bietet SASS bereits eine Lösung. CSS-Dateien können auf mehrere partielle Dateien aufgeteilt werden. Dadurch kann man seine Style-Sheets besser organisieren und modularisieren. Es ist wesentlich einfacher, mehrere kleine Dateien zu schreiben, zu warten und zu erweitern, als eine große Datei mit tausenden Zeilen. Mithilfe der erweiterten _@import_-Funktion des Präprozessors können die einzelnen Dateien beim Speichern zu einer zusammengefasst werden. \cite{SASS_REFERENCE}
 
-Die `"@import"`-Regel ist schon sehr lange ein Teil von CSS. Allerdings ist sie nicht besonders beliebt, da jeder Import eine eigene HTTP-Anfrage ausführt, was zu einer langsamen Webseite führt. Was passiert, wenn man diese Funktion mit SASS verwendet? Hoffentlich haben Sie nie damit aufgehört, über den Namen "Präprozessor" nachzudenken. \cite{SASS_REFERENCE}
+Die _@import_-Regel ist schon sehr lange ein Teil von CSS. Allerdings ist sie nicht besonders beliebt, da jeder Import eine eigene HTTP-Anfrage ausführt, was zu einer langsamen Webseite führt. Was passiert, wenn man diese Funktion mit SASS verwendet? Hoffentlich haben Sie nie damit aufgehört, über den Namen "Präprozessor" nachzudenken. \cite{SASS_REFERENCE}
 
 > "Ein Präprozessor ist ein Computerprogramm, das Eingabedaten vorbereitet und zur weiteren Bearbeitung an ein anderes Programm weitergibt.” — Wikipedia \cite{preprocessor_wiki}
 
-Wenn man dieses Konzept nun auf die `"@import"`-Regel anwendet, fällt einem auf, dass der Import von SASS damit erledigt wird. Die CSS- und SASS-Dateien werden zusammengefasst und am Ende bleibt nur eine Datei über. Der Browser des Benutzers muss nur eine Anfrage ausführen und bloß eine Datei hinunterladen. Das Projekt könnte aus einer Vielzahl an CSS-Dateien zusammengesetzt sein. \cite{SASS_REFERENCE}
+Wenn man dieses Konzept nun auf die _@import_-Regel anwendet, fällt einem auf, dass der Import von SASS damit erledigt wird. Die CSS- und SASS-Dateien werden zusammengefasst und am Ende bleibt nur eine Datei über. Der Browser des Benutzers muss nur eine Anfrage ausführen und bloß eine Datei hinunterladen. Das Projekt könnte aus einer Vielzahl an CSS-Dateien zusammengesetzt sein. \cite{SASS_REFERENCE}
 
 ### Variablen in SASS
 
@@ -32,7 +32,7 @@ Verschachtelung ist wahrscheinlich die zweitbekannteste Funktion von SASS. Durch
 
 ### Wiederholungen vermeiden
 
-Beim Schreiben von CSS ist das mehrfache Definieren von Elementen fast unumgänglich. Allerdings schafft SASS auch hier Abhilfe. `"mixins"` und `"extends"` sind zwei mächtige Funktionen. Die Möglichkeiten dieser scheinen fast endlos zu sein. Mit `"mixins"` können parametrisierte CSS-Funktionen erstellt werden, die im gesamten Dokument wiederverwendbar sind. Hier ein kurzes Beispiel, um `"mixins"` genauer zu beleuchten. \cite{SASS_REFERENCE}
+Beim Schreiben von CSS ist das mehrfache Definieren von Elementen fast unumgänglich. Allerdings schafft SASS auch hier Abhilfe. _mixins_ und _extends_ sind zwei mächtige Funktionen. Die Möglichkeiten dieser scheinen fast endlos zu sein. Mit _mixins_ können parametrisierte CSS-Funktionen erstellt werden, die im gesamten Dokument wiederverwendbar sind. Hier ein kurzes Beispiel, um _mixins_ genauer zu beleuchten. \cite{SASS_REFERENCE}
 
 ```css
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
@@ -48,9 +48,9 @@ Beim Schreiben von CSS ist das mehrfache Definieren von Elementen fast unumgäng
 }
 ```
 
-Man stelle sich den Schatten eines Elements vor. So ein Schatten hat mehrere Eigenschaften, die bei jeder Verwendung gesetzt werden müssen. Hier bietet sich ein `"mixin"` an. Eine Funktion wird zuerst mit den einzelnen Eigenschaften als Parameter definiert. Diese kann nun im gesamten Dokument eingesetzt und angepasst werden. \cite{SASS_REFERENCE}
+Man stelle sich den Schatten eines Elements vor. So ein Schatten hat mehrere Eigenschaften, die bei jeder Verwendung gesetzt werden müssen. Hier bietet sich ein _mixin_ an. Eine Funktion wird zuerst mit den einzelnen Eigenschaften als Parameter definiert. Diese kann nun im gesamten Dokument eingesetzt und angepasst werden. \cite{SASS_REFERENCE}
 
-`"extends"` sind sehr ähnlich, da man mit ihnen Eigenschaften mit anderen Selektoren teilen kann. Anstatt jedoch mehrere Deklarationen auszugeben, gibt man eine Liste von Klassen aus, ohne die Eigenschaften zu wiederholen. Dadurch werden Code-Wiederholungen in der Ausgabedatei vermieden. \cite{SASS_REFERENCE}
+_extends_ sind sehr ähnlich, da man mit ihnen Eigenschaften mit anderen Selektoren teilen kann. Anstatt jedoch mehrere Deklarationen auszugeben, gibt man eine Liste von Klassen aus, ohne die Eigenschaften zu wiederholen. Dadurch werden Code-Wiederholungen in der Ausgabedatei vermieden. \cite{SASS_REFERENCE}
 
 ### Funktionen, um Farben zu modifizieren
 
@@ -64,9 +64,9 @@ complement($farbe, $alpha)
 ```
 
 In all diesen Funktionen müssen Parameter übergeben werden. Alle benötigen eine Farbe, die hexadezimal, rgb oder hsl sein kann. Weiters benötigt man einen Faktor, um die Farbe zu verändern.
-Mit der `"lighten()"`-Funktion können Farben um einen Faktor aufgehellt werden. Die `"darken()"`-Funktion macht genau das Gegenteil.
-Mithilfe von `"grayscale()"` können Farben in Graustufen konvertiert werden.
-Eine weitere hilfreiche Funktion ist `"complement()"`. Diese findet die Komplementärfarbe heraus und setzt sie ein. \cite{SASS_REFERENCE}
+Mit der _lighten()_-Funktion können Farben um einen Faktor aufgehellt werden. Die _darken()_-Funktion macht genau das Gegenteil.
+Mithilfe von _grayscale()_ können Farben in Graustufen konvertiert werden.
+Eine weitere hilfreiche Funktion ist _complement()_. Diese findet die Komplementärfarbe heraus und setzt sie ein. \cite{SASS_REFERENCE}
 
 ### Nachteile von CSS-Präprozessoren
 

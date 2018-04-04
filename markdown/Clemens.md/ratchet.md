@@ -29,7 +29,7 @@ Diese Server-Klassen werden nachfolgen kurz beschrieben:
 
 *   **WsServer:** Diese Komponente verarbeitet die WebSocket-Verbindungen mit den Browsern nach dem W3C Webscoket Standard.\cite{noauthor_ratchet_nodate}
 
-#### Application-Klasse \label{application}
+### Application-Klasse \label{application}
 
 Diese Klasse beinhaltet die eigentliche Logik des WebSocket-Servers.
 Das _MessageComponentInterface_ gibt hier die vier Methoden, die von Ratchet verlangt werden, vor und muss implementiert werden.\cite{noauthor_ratchet_nodate}

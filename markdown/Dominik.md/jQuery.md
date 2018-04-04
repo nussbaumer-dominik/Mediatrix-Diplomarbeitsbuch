@@ -16,11 +16,11 @@ Die Skriptsprache Javascript ist sehr umfangreich und enthält eine Menge an kom
 
 ### Gewappnet für die Zukunft
 
-Mit jQuery ist man zukunftssicher unterwegs. Funktionen wie `".indexOf()"` oder `".bind()"`, sind zwar bereits nativ in Javascript implementiert, allerdings noch nicht in allen Browsern verfügbar. Jedoch können die dementsprechenden jQuery-Alternativen bereits heute in allen Browsern verwendet werden. \cite{jquery.org}
+Mit jQuery ist man zukunftssicher unterwegs. Funktionen wie _.indexOf()_ oder _.bind()_, sind zwar bereits nativ in Javascript implementiert, allerdings noch nicht in allen Browsern verfügbar. Jedoch können die dementsprechenden jQuery-Alternativen bereits heute in allen Browsern verwendet werden. \cite{jquery.org}
 
 ### Potential für Zeitersparnis
 
-Um das Potential von jQuery näher zu erläutern, habe ich ein gängiges Beispiel vorbereitet. Im untenstehenden Code-Block ist eine `"Fade-In-Animation"` mit Javascript umgesetzt.
+Um das Potential von jQuery näher zu erläutern, habe ich ein gängiges Beispiel vorbereitet. Im untenstehenden Code-Block ist eine _Fade-In-Animation_ mit Javascript umgesetzt.
 
 ```javascript
 function fadeIn() {
