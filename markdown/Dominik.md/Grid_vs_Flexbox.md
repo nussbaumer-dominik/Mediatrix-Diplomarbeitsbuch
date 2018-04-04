@@ -34,11 +34,11 @@ Bevor das \<header> Element durch das Attribut _display: flex_ zu einem Flex-Con
 
 ![derzeitige Darstellung ohne Flexbox \label{ohne_flex}](bilder/Dominik/Flexbox_example_1.pdf){width=90%}
 
-Damit der Ausloggen-Knopf auf der rechten Seite des Bildschirms positioniert ist, wird dieser mit einem CSS-Selektor ausgewählt und durch das Setzen von `"margin-left: auto"` an das Ende des Containers geschoben (siehe \abb{mit_flex}).
+Damit der Ausloggen-Knopf auf der rechten Seite des Bildschirms positioniert ist, wird dieser mit einem CSS-Selektor ausgewählt und durch das Setzen von _margin-left: auto_ an das Ende des Containers geschoben (siehe \abb{mit_flex}).
 
 ![Layout mit _display: flex_ \label{mit_flex}](bilder/Dominik/Flexbox_example_2.pdf){width=90%}
 
-Bei diesem Beispiel ist zu erwähnen, dass der Browser selber entscheidet, wie die Elemente zu positionieren sind. Es wurde lediglich das Kommando erteilt, Flexbox als Positionierungstechnik zu verwenden. Das ist einer der Kernunterschiede zwischen Flexbox und CSS-Grid. Obwohl Grid nicht für eindimensionale Layouts wie einen Header gedacht ist, werde ich dieses Element nun mit Grid nachbauen. Der HTML-Code kann beibehalten werden. Im CSS wären dafür mehrere Änderungen notwendig.
+Bei diesem Beispiel ist zu erwähnen, dass der Browser selber entscheidet, wie die Elemente zu positionieren sind. Es wurde lediglich das Kommando erteilt, Flexbox als Positionierungstechnik zu verwenden. Das ist einer der Kernunterschiede zwischen Flexbox und CSS-Grid. Obwohl Grid nicht für eindimensionale Layouts wie einen Header gedacht ist, werde ich dieses Element nun mit Grid nachbauen. Der HTML-Code kann beibehalten werden. Im CSS-Code wären dafür mehrere Änderungen notwendig.
 
 ```css
 header {
