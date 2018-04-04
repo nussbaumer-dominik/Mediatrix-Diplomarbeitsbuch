@@ -10,7 +10,7 @@ Der wohl gravierendste Unterschied zwischen Flexbox und Grid ist die Anzahl an R
 
 Bei CSS-Grid wird hingegen eine fixe Anzahl von Reihen und Spalten definiert. Die Maße und die Anordnung dieser können variieren, aber die Anzahl sollte beibehalten werden. \cite{flexbox_official}
 
-![grundlegender Unterschied zwischen CSS-Grid und Flexbox \label{grundlegender_Unterschied}](bilder/Dominik/Grid_vs_Flexbox.pdf){width=90%}
+![Grundlegender Unterschied zwischen CSS-Grid und Flexbox \label{grundlegender_Unterschied}](bilder/Dominik/Grid_vs_Flexbox.pdf){width=90%}
 
 ### Dynamisch versus statisch
 
@@ -32,7 +32,7 @@ Ein weiterer Unterschied zwischen Flexbox und CSS-Grid ist, dass die Basis von F
 
 Bevor das \<header> Element durch das Attribut _display: flex_ zu einem Flex-Container wird, sieht das derzeitige Markup aus wie in \abb{ohne_flex}. \cite{flexbox_official}
 
-![derzeitige Darstellung ohne Flexbox \label{ohne_flex}](bilder/Dominik/Flexbox_example_1.pdf){width=90%}
+![Derzeitige Darstellung ohne Flexbox \label{ohne_flex}](bilder/Dominik/Flexbox_example_1.pdf){width=90%}
 
 Damit der Ausloggen-Knopf auf der rechten Seite des Bildschirms positioniert ist, wird dieser mit einem CSS-Selektor ausgewählt und durch das Setzen von _margin-left: auto_ an das Ende des Containers geschoben (siehe \abb{mit_flex}).
 
