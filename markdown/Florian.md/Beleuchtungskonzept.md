@@ -91,7 +91,7 @@ DMX             & Ja                & Ja                 & Ja                 \\
 Stromversorgung & PowerCon          & Kaltgeräte         & PowerCon           \\ \hline
 Farbe           & Schwarz           & Weiß               & Schwarz            \\ \hline
 Gewicht         & 1,2kg             & 2,7kg              & 10kg               \\ \hline
-Größe LBH       & 88 x 170 x 87 mm  & 448 x 150 x 127 mm & 615 x 280 x 420 mm \\ \hline
+Größe LBH       & 88x170x87mm       & 448x150x127mm      & 615x280x420mm      \\ \hline
 Händler         & Thomann.at        & Thomann.at         & Thomann.at         \\ \hline
 Preis/Stück     & 105€              & 248€               & 579€               \\ \hline
 \end{tabular}
@@ -214,15 +214,15 @@ von Geräten mit Power In und Out ist mit geeigneten Patchkabeln möglich.
 \centering
 \begin{tabular}{|l|l|l|l|l|}
 \hline
-Montage: Leistungsoptimiert                & Preis/Stück & Klein   & Mittel  & Groß    \\ \hline
-Global Truss F31200 Traverse 2,0 m         & 44€         & 2       & 2       & 2       \\ \hline
-Global Truss 812 Halbschelle (Geräte)      & 5,90€       & 4       & 4       & 8       \\ \hline
-Global Truss 81702 Half Coupler Small Eye  & 5,90€       & 4       & 4       & 4       \\ \hline
-Konischer Verbinder für F31-F34 Traverse   & 7,40€       & 1       & 1       & 1       \\ \hline
-Stairville Mirror Ball Chain 100cm DIN     & 5,90€       & 4       & 4       & 4       \\ \hline
-Stairville Locking Carabina 6mm            & 1,49€       & 8       & 8       & 8       \\ \hline
-the box Flugöse M8 x 30mm                  & 4,88€       & 4       & 4       & 4       \\ \hline
-Gesamtpreis                                &             & 197,64€ & 197,64€ & 221,24€ \\ \hline
+Montage: Leistungsoptimiert            & Preis/Stück & Klein   & Mittel  & Groß    \\ \hline
+GlobalTruss F31200 Traverse 2,0 m      & 44€         & 2       & 2       & 2       \\ \hline
+GlobalTruss 812 Halbschelle (Geräte)   & 5,90€       & 4       & 4       & 8       \\ \hline
+GlobalTruss 81702 HalfCoupler SmallEye & 5,90€       & 4       & 4       & 4       \\ \hline
+Konischer Verbinder F31-F34 Traverse   & 7,40€       & 1       & 1       & 1       \\ \hline
+Stairville Mirror Ball Chain 100cm     & 5,90€       & 4       & 4       & 4       \\ \hline
+Stairville Locking Carabina 6mm        & 1,49€       & 8       & 8       & 8       \\ \hline
+the box Flugöse M8 x 30mm              & 4,88€       & 4       & 4       & 4       \\ \hline
+Gesamtpreis                            &             & 197,64€ & 197,64€ & 221,24€ \\ \hline
 \end{tabular}
 \caption{Montage: Leistungsoptimierte Varianten}
 \label{monLeistTable}
@@ -241,6 +241,19 @@ Die Konstruktion muss nach dem Einbau von befugten Personen geprüft und
 abgenommen werden.
 
 ## Gesamtpreise der Konfigurationen:
+
+\begin{table}[]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+Preisoptimiert   & Klein   & Mittel  & Groß     \\ \hline
+Preis Geräte     & 420€    & 692€    & 1384€    \\ \hline
+Preis Aufhängung & 262,03€ & 262,03€ & 321,63€  \\ \hline
+Gesamtpreis      & 682,03€ & 954,03€ & 1705,63€ \\ \hline
+\end{tabular}
+\caption{Gesamtpreise der preisoptimierten Varianten}
+\label{GesPreisPreisTable}
+\end{table}
 
 \begin{table}[]
 \centering

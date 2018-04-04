@@ -67,7 +67,7 @@ einfachen Einbau oder Austausch von 19"- konformen Geräten.
 Der horizontale Abstand zwischen zwei Montageleisten beträgt genau 19
 Zoll (= 48,26 Zentimeter).
 
-![Abstände bei 19-Zoll-Schienen\quelle\url{https://bit.ly/2GZvy6y}](bilder/Florian/19zoll.png){width="1.2125in"}
+![Abstand bei 19-Zoll-Schienen\quelle\url{https://bit.ly/2GZvy6y}](bilder/Florian/19zoll.png){width="1.2125in"}
 
 Die minimale Höhe eines 19"- konformen Geräts beträgt 1,75" oder 44,45mm.
 Dieser Abstand wird als eine Höheneinheit (1HE) bezeichnet. Darum werden
