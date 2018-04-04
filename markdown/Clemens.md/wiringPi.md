@@ -1,6 +1,6 @@
 WiringPi ist eine C-Library, mit der die Pins am Raspberry Pi (auch GPIO) gesteuert werden können.
 Die Befehlsstruktur ist sehr der Programmierung eines Mikroprozessors nachempfunden und 
-macht es somit einfach aus einem C++-Programm die GPIOs zu steuern und zu lesen.
+macht es somit einfach, aus einem C++-Programm die GPIOs zu steuern und zu lesen.
 Weiters wird auch ein Kommandozeilentool mit ausgeliefert, welches ebenfalls erlaubt Pins des Raspberry Pis zu bedienen.
 Das erlaubt die Steuerung der GPIOs aus höheren Programmiersprachen wie PHP, was in diesem Projekt für die Überprüfung der 
 Leistung an AV-Receiver und Beamer notwendig ist.
@@ -74,25 +74,25 @@ while (serialDataAvail (fd))
 }
 ```
 
-## Pin Steuerung
+## Pin-Steuerung
 Um festzustellen, ob der AV-Receiver und der Beamer eingeschalten sind und nicht im Standby-Modus laufen,
 wurde eine Leistungsmessung integriert, welche über einen GPIO-Pin abgefragt werden kann.
-Liegt an einem Pin Spannung an (HIGH), dann ist das Gerät eingeschalten. Liegt keinen Spannung an (LOW), ist es im Standby-Modus.
-Vor dem Senden von Infrarotbefehlen kann somit festgestellt werden, ob das Gerät auch eingeschalten ist und diese Empfangen kann.
-Um den Status, HIGH oder LOW, eines Pins festzustellen, wird das Kommandozeilentool von WiringPi über PHP gestartet.
-Das Tool wird mit dem Befehl *gpio* aufgerufen und bietet einen sehr großen Funktionsumfang.\cite{noauthor_wiringpi_nodate}
-Die für diese Projekt wichtigen Optionen sind:
+Liegt an einem Pin Spannung an (HIGH), dann ist das Gerät eingeschaltet. Liegt keinen Spannung an (LOW), ist es im Standby-Modus.
+Vor dem Senden von Infrarotbefehlen kann somit festgestellt werden, ob das Gerät auch eingeschaltet ist und diese empfangen kann.
+Um den Status HIGH oder LOW eines Pins festzustellen, wird das Kommandozeilentool von WiringPi über PHP gestartet.
+Das Tool wird mit dem Befehl *gpio* aufgerufen und bietet einen sehr großen Funktionsumfang. \cite{noauthor_wiringpi_nodate}
+Die für dieses Projekt wichtigen Optionen sind:
 
 * gpio **-g**:
-    Die Option -g stellt die Nummerierung der Pins auf die GPIO-Nummern ein.\cite{noauthor_wiringpi_nodate}
+    Die Option -g stellt die Nummerierung der Pins auf die GPIO-Nummern ein. \cite{noauthor_wiringpi_nodate}
 
 * gpio **mode \<pin\> in/out**:
     Mit dem Befehl *mode* wird definiert, ob ein Pin ein Eingangs- (in) oder eine Ausgangspin (out) ist.
-    Einem Pin muss immer zuerst ein Mode zugewiesen werden, bevor er verwendet werden kann\cite{noauthor_wiringpi_nodate}
+    Einem Pin muss immer zuerst ein Mode zugewiesen werden, bevor er verwendet werden kann. \cite{noauthor_wiringpi_nodate}
 
 * gpio **read \<pin\>**:
     Mit dem Befehl *read* wird der aktuelle Status eines Eingangspins festgestellt. Liegt Spannung an (HIGH), wird Eins zurück geliefert.
-    Wenn keine Spannung an liegt (LOW), liefer *read* Null.
+    Wenn keine Spannung an liegt (LOW), liefet *read* Null.
 
 Der *gpio*-Befehl wird mit der Methode exec aufgerufen.
 Im nachfolgenden Codesegment wird ein Pin zuerst auf "in" gesetzt und dann der aktuelle Wert gelesen.

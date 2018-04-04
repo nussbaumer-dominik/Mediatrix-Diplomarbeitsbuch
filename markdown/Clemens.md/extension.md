@@ -1,11 +1,12 @@
 Um die in C++ programmierte Steuerung der DMX-Schnittstelle, sowie das Infrarot-Modul in PHP verwenden zu können, 
-wurde in diesem Projekt je eine PHP-Extension für DMX und Infrarot entwickelt.
+wurde in diesem Projekt je eine PHP-Extension für DMX bzw. Infrarot entwickelt.
 PHP bietet die Möglichkeit Erweiterungen (Extensions) zu entwickeln und einzubinden.
 Bei Extensions müssen zwei Typen unterschieden werden PEAR- und PECL-Pakete.
 PEAR steht für "PHP Extension and Application Repository" und enthält Extension, die in PHP programmiert wurden.
 Hingegen steht PECL für "PHP Extension Community Library", deren Extensions in C programmiert sind.
 PECL-Erweiterungen müssen auf dem Server vor der Verwendung kompiliert und 
-in der Konfigurationsdatei von PHP eingebunden werden.\cite[S. 74]{wenz_php_2017}
+in der Konfigurationsdatei von PHP eingebunden werden. \cite[S. 74]{wenz_php_2017}
+
 Da die Steuerung der DMX-Schnittstelle und des Infrarot-Moduls in C++ programmiert ist, war bei diesem Projekt eine 
 PECL-Extension notwendig.
 Diese wurde mit Hilfe der Library PHP-CPP erstellt, da diese den Aufwand eine Erweiterung zu entwickeln stark verringert.
@@ -14,7 +15,7 @@ Diese wurde mit Hilfe der Library PHP-CPP erstellt, da diese den Aufwand eine Er
 PHP-CPP bieten den Vorteil, dass Extensions entwickelt werden können,
 ohne ein detailliertes Wissen über PHP-Extensions und die Zend-Engine zu haben.
 Diese Library erlaubt es ganze C++-Klassen über Extensions auch in PHP aufrufbar zu machen.
-Hierbei sind drei Dateien essentiell: die *C++-Datei*, die *INI-Datei* und das *Makefile*\cite{noauthor_php-cpp_nodate}
+Hierbei sind drei Dateien essentiell: die *C++-Datei*, die *INI-Datei* und das *Makefile*. \cite{noauthor_php-cpp_nodate}
 
 ### C++-Datei
 Diese Datei enthält die C++-Klasse und die *get_module*-Methode, die jede PHP-Extension besitzen muss.
@@ -93,7 +94,7 @@ extern "C" {
 Die INI-Datei enthält eine Zeile, in der wie in der php.ini die Extension geladen wird.
 Hierfür wird der im Makefile definierte Name verwendet.
 Diese Datei wird dann in das Konfigurationsverzeichnis von PHP geladen und bei jedem Start von PHP aufgerufen.
-Nachstehend ist der Inhalt der INI-Datei dargestellt, wie er in diesem Projekt verwendet wurde.\cite{noauthor_php-cpp_nodate}
+Nachstehend ist der Inhalt der INI-Datei dargestellt, wie er in diesem Projekt verwendet wurde. \cite{noauthor_php-cpp_nodate}
 
 ```ìni
 extension=DMX.so
@@ -104,4 +105,4 @@ Hier kann der Name der Extension, sowie das Konfigurationsverzeichnis von PHP ei
 Weiters können auch noch Optionen, wie die Verwendung von anderen Libraries,
 wie Ola (\siehe{ola}) oder WiringPi (\siehe{WiringPi}), fürs Kompilieren hinzugefügt werden.
 Dieses Makefile wird dann verwendet, um die C++-Datei zu kompilieren und 
-die so entstandenen Dateien, sowie die INI-Datei, an die richtigen Stellen in der PHP-Konfiguration zu kopieren.\cite{noauthor_php-cpp_nodate}
+die so entstandenen Dateien, sowie die INI-Datei, an die richtigen Stellen in der PHP-Konfiguration zu kopieren. \cite{noauthor_php-cpp_nodate}
