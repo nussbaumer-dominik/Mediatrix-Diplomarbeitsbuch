@@ -67,7 +67,7 @@ einfachen Einbau oder Austausch von 19"- konformen Geräten.
 Der horizontale Abstand zwischen zwei Montageleisten beträgt genau 19
 Zoll (= 48,26 Zentimeter).
 
-![Abstand bei 19-Zoll-Schienen\quelle\url{https://bit.ly/2GZvy6y}](bilder/Florian/19zoll.png){width="1.2125in"}
+![Abstand bei 19-Zoll-Schienen \quelle\url{https://bit.ly/2GZvy6y}](bilder/Florian/19zoll.png){width="1.2125in"}
 
 Die minimale Höhe eines 19"- konformen Geräts beträgt 1,75" oder 44,45mm.
 Dieser Abstand wird als eine Höheneinheit (1HE) bezeichnet. Darum werden
@@ -704,7 +704,7 @@ dem Raspberry Pi verbunden werden. Dazu werden ein GPIO-Pin, eine 3,3V
 Versorgung und der GND folgendermaßen an die Konnektoren des DS1820
 angeschlossen:
 
-![Schaltplan DS1820 Raspberry Pi\quelle{https://bit.ly/2q76mR5}](bilder/Florian/Tempsensor.png){width="2.5in"}
+![Schaltplan DS1820 Raspberry Pi \quelle{https://bit.ly/2q76mR5}](bilder/Florian/Tempsensor.png){width="2.5in"}
 
 ## Aufgetretene Probleme:
 
@@ -887,7 +887,7 @@ Tastgrad) (engl. Duty Cycle, meist abgekürzt DC, nicht zu verwechseln
 mit Direct Current = Gleichstrom). "\cite{noauthor_pulsweitenmodulation_nodate}
 \end{quote}
 
-![Pulsweite\quelle{https://bit.ly/2w2EfVW}](bilder/Florian/PWM1.png){width=90%}
+![Pulsweite \quelle{https://bit.ly/2w2EfVW}](bilder/Florian/PWM1.png){width=90%}
 
 
 Das Ganze kann mit einem üblichen Taster und einem Elektromotor
@@ -916,7 +916,7 @@ Mikroprozessor kann mit einer hohen Frequenz ein- und ausgeschaltet
 werden. Somit dreht sich der Motor (fast) gleichmäßig, jedoch in der
 gewünschten Geschwindigkeit.
 
-![Duty-Cycle\quelle{https://bit.ly/2GUZT6w}](bilder/Florian/PWM2.png){width=90%}
+![Duty-Cycle \quelle{https://bit.ly/2GUZT6w}](bilder/Florian/PWM2.png){width=90%}
 
 ## Generieren eines PWM-Signals mit dem Raspberry Pi
 

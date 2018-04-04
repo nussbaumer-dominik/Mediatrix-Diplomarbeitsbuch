@@ -103,24 +103,24 @@ Preis/Stück     & 105€              & 248€               & 579€          
 \centering
 \begin{tabular}{|l|l|l|l|}
 \hline
-Fluter          & Variante 1          & Variante 2         & Variante 3        \\ \hline
-Produkt         & Mini Stage PAR      & Revueled 120       & Encore FR150z     \\ \hline
-Lichtquelle     & LED                 & LED                & LED               \\ \hline
-Leistung        & 42W                 & 120W               & 130W              \\ \hline
-Farbtemperatur  & 2800K-6000K         & WW 3200K           & WW 3000K          \\ \hline
-Multi-Color     & Nein                & Nein               & Nein              \\ \hline
-Farbfolie       & Nein                & Nein               & Nein              \\ \hline
-Gobo            & Nein                & Nein               & Nein              \\ \hline
-Zoom            & Nein                & Nein               & Ja                \\ \hline
-Abstrahlwinkel  & 30°                 & 50°                & 8°-50°            \\ \hline
-Framing-Shutter & Nein                & Torblenden         & Torblenden        \\ \hline
-DMX             & Ja                  & Ja                 & Ja                \\ \hline
-Stromversorgung & Schuko              & PowerCon           & PowerCon          \\ \hline
-Farbe           & Schwarz             & Schwarz            & Schwarz           \\ \hline
-Gewicht         & 1,7kg               & 5,5kg              & 6,9kg             \\ \hline
-Größe LBH       & 140 x 140 x 225 mm  & 557 x 258 x 164 mm & 376 x 298 x 294 mm\\ \hline
-Händler         & Thomann.at          & Thomann.at         & Thomann.at        \\ \hline
-Preis/Stück     & 98€                 & 277€               & 488€              \\ \hline
+Fluter          & Variante 1       & Variante 2      & Variante 3      \\ \hline
+Produkt         & Mini Stage PAR   & Revueled 120    & Encore FR150z   \\ \hline
+Lichtquelle     & LED              & LED             & LED             \\ \hline
+Leistung        & 42W              & 120W            & 130W            \\ \hline
+Farbtemperatur  & 2800K-6000K      & WW 3200K        & WW 3000K        \\ \hline
+Multi-Color     & Nein             & Nein            & Nein            \\ \hline
+Farbfolie       & Nein             & Nein            & Nein            \\ \hline
+Gobo            & Nein             & Nein            & Nein            \\ \hline
+Zoom            & Nein             & Nein            & Ja              \\ \hline
+Abstrahlwinkel  & 30°              & 50°             & 8°-50°          \\ \hline
+Framing-Shutter & Nein             & Torblenden      & Torblenden      \\ \hline
+DMX             & Ja               & Ja              & Ja              \\ \hline
+Stromversorgung & Schuko           & PowerCon        & PowerCon        \\ \hline
+Farbe           & Schwarz          & Schwarz         & Schwarz         \\ \hline
+Gewicht         & 1,7kg            & 5,5kg           & 6,9kg           \\ \hline
+Größe LBH       & 140x140x225mm    & 557x258x164mm   &376x298x294mm    \\ \hline
+Händler         & Thomann.at       & Thomann.at      & Thomann.a       \\ \hline
+Preis/Stück     & 98€              & 277€            & 488€            \\ \hline
 \end{tabular}
 \caption{Fluter}
 \label{fluterTable}
@@ -199,7 +199,7 @@ EUTRAC-Aufbauschienensystem 25.../225... 3 Phasen 230V
 
 2 Hängepunkte/Meter bei 4x 3kg Punktlast
 
-![EUTRAC Montage\quelle{https://bit.ly/2IsHc78}](bilder/Florian/Eutrac.png){width=90%}
+![EUTRAC Montage \quelle{https://bit.ly/2IsHc78}](bilder/Florian/Eutrac.png){width=90%}
 
 ### 1-Punkt Traverse:
 
@@ -214,15 +214,15 @@ von Geräten mit Power In und Out ist mit geeigneten Patchkabeln möglich.
 \centering
 \begin{tabular}{|l|l|l|l|l|}
 \hline
-Montage: Leistungsoptimiert            & Preis/Stück & Klein   & Mittel  & Groß    \\ \hline
-GlobalTruss F31200 Traverse 2,0 m      & 44€         & 2       & 2       & 2       \\ \hline
-GlobalTruss 812 Halbschelle (Geräte)   & 5,90€       & 4       & 4       & 8       \\ \hline
-GlobalTruss 81702 HalfCoupler SmallEye & 5,90€       & 4       & 4       & 4       \\ \hline
-Konischer Verbinder F31-F34 Traverse   & 7,40€       & 1       & 1       & 1       \\ \hline
-Stairville Mirror Ball Chain 100cm     & 5,90€       & 4       & 4       & 4       \\ \hline
-Stairville Locking Carabina 6mm        & 1,49€       & 8       & 8       & 8       \\ \hline
-the box Flugöse M8 x 30mm              & 4,88€       & 4       & 4       & 4       \\ \hline
-Gesamtpreis                            &             & 197,64€ & 197,64€ & 221,24€ \\ \hline
+Montage: Leistungsoptimiert        & Preis/Stück & Klein   & Mittel  & Groß    \\ \hline
+GT F31200 Traverse 2,0 m           & 44€         & 2       & 2       & 2       \\ \hline
+GT 812 Halbschelle (Geräte)        & 5,90€       & 4       & 4       & 8       \\ \hline
+GT 81702 HalfCoupler SmallEye      & 5,90€       & 4       & 4       & 4       \\ \hline
+Konischer Verbinder F31-F34        & 7,40€       & 1       & 1       & 1       \\ \hline
+Stairville Mirror Ball Chain 100cm & 5,90€       & 4       & 4       & 4       \\ \hline
+Stairville Locking Carabina 6mm    & 1,49€       & 8       & 8       & 8       \\ \hline
+the box Flugöse M8 x 30mm          & 4,88€       & 4       & 4       & 4       \\ \hline
+Gesamtpreis                        &             & 197,64€ & 197,64€ & 221,24€ \\ \hline
 \end{tabular}
 \caption{Montage: Leistungsoptimierte Varianten}
 \label{monLeistTable}
@@ -230,6 +230,7 @@ Gesamtpreis                            &             & 197,64€ & 197,64€ & 2
 
 Alle Produkte und Preise sind am 03.04.2018 von thomann.at entnommen
 worden.
+
 
 #### Einbau der Traverse:
 
@@ -241,6 +242,8 @@ Die Konstruktion muss nach dem Einbau von befugten Personen geprüft und
 abgenommen werden.
 
 ## Gesamtpreise der Konfigurationen:
+
+
 
 \begin{table}[]
 \centering
