@@ -1,4 +1,4 @@
-Das Internet wurde um das Konzept, dass ein Client Daten vom Server anfordert und ein Server diese Anfragen bearbeitet, konstruiert. Daran hat sich für lange Zeit nichts geändert, bis im Jahr 2005 Webseiten durch AJAX dynamischer wurden. Mit AJAX können Client und Server eine bidirektionale Verbindung aufbauen, das heißt, dass beide Seiten die Möglichkeit haben, gleichzeitig Daten zu senden und zu empfangen. \cite{websocket_official}
+Das Internet wurde um das Konzept, dass ein Client Daten vom Server anfordert und ein Server diese Anfragen bearbeitet, konstruiert. Daran hat sich für lange Zeit nichts geändert, bis im Jahr 2005 Webseiten durch AJAX dynamischer wurden. Mit AJAX können Client und Server Daten asynchron austauschen. Dadurch ist es möglich, Teile einer Seite zu aktualisiern, ohne die gesamte Seite neu laden zu müssen. \cite{websocket_official}
 
 Webapplikationen wurden stetig komplexer und benötigten mehr Daten als jemals zuvor. Eine herkömmliche HTTP-Anfrage hat einen sehr großen Overhead, da bei jeder Anfrage ein Header und Cookies zum Server übermittelt werden müssen. Dadurch vergrößert sich die Latenz und der Benutzer muss länger warten. Das größte Problem ist, dass die meisten Header und Cookies nicht nötig sind, um die Anfrage zu bearbeiten. \cite{einfuehrung_websockets}
 
@@ -6,7 +6,7 @@ Diese Probleme können mit WebSockets gelöst werden. \cite{einfuehrung_websocke
 
 ## Technische Spezifikation
 
-Die WebSocket-Spezifikation ermöglicht eine persistente _Socket_-Verbindung zwischen einem Webbrowser und einem Server. Beide Seiten können, wann sie wollen, mit dem Senden von Daten beginnen. Der Client baut eine Verbindung durch einen Prozess namens `"WebSocket-Handshake"` auf. Dieser Prozess beginnt mit einer normalen HTTP-Anfrage an den Server. Ein Upgrade-Header muss in der Anfrage enthalten sein, damit der Server weiß, dass der Client eine WebSocket-Verbindung aufbauen möchte. \cite{websocket_official}
+Die WebSocket-Spezifikation ermöglicht eine persistente bidirektionale _Socket_-Verbindung zwischen einem Webbrowser und einem Server. Beide Seiten können, wann sie wollen, mit dem Senden von Daten beginnen. Der Client baut eine Verbindung durch einen Prozess namens `"WebSocket-Handshake"` auf. Dieser Prozess beginnt mit einer normalen HTTP-Anfrage an den Server. Ein Upgrade-Header muss in der Anfrage enthalten sein, damit der Server weiß, dass der Client eine WebSocket-Verbindung aufbauen möchte. \cite{websocket_official}
 
 ```javascript
 var verbindung = new WebSocket("ws://mediatrix.at/ws");
