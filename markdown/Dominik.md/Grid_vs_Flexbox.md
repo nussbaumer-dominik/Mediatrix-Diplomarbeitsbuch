@@ -10,7 +10,7 @@ Der wohl gravierendste Unterschied zwischen Flexbox und Grid ist die Anzahl an R
 
 Bei CSS-Grid wird hingegen eine fixe Anzahl von Reihen und Spalten definiert. Die Maße und die Anordnung dieser können variieren, aber die Anzahl sollte beibehalten werden. \cite{flexbox_official}
 
-![grundlegender Unterschied zwischen CSS-Grid und Flexbox \label{grundlegender_Unterschied}](bilder/Dominik/Grid_vs_Flexbox.png){width=90%}
+![grundlegender Unterschied zwischen CSS-Grid und Flexbox \label{grundlegender_Unterschied}](bilder/Dominik/Grid_vs_Flexbox.pdf){width=90%}
 
 ### Dynamisch versus statisch
 
