@@ -59,7 +59,8 @@ Damit die Navigation auf mobilen Ger√§ten am unteren Rand positioniert ist, ben√
 ```css
 @media (max-width: 576px) {
 	.parent {
-		flex-direction: column; //Die Y-Achse des Elternelements wird zur Hauptachse.
+	    //Die Y-Achse des Elternelements wird zur Hauptachse.
+		flex-direction: column; 
 	}
 
 	.side-nav {

@@ -243,7 +243,7 @@ abgenommen werden.
 
 ## Gesamtpreise der Konfigurationen:
 
-
+\newpage
 
 \begin{table}[]
 \centering
