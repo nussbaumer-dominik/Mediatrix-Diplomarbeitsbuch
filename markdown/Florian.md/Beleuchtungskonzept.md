@@ -5,7 +5,7 @@ Art von Veranstaltungen ist eine Ausleuchtung der vortragenden Personen
 besonders wichtig, vor allem wenn, während des Vortrags Fotos von diesen
 Personen gemacht werden.
 
-### Herausforderungen
+## Herausforderungen
 
 In den meisten Fällen sind Folienpräsentationen mittels Beamer Teil
 solcher Vorträge. Um bestmögliche Lesbarkeit der Folien zu
@@ -53,17 +53,24 @@ Leistung und Budget kann ein Beleuchtungssystem zusammengestellt werden.
 -   Variante 3: Professionell
 
 
-### Scheinwerfer:
+## Scheinwerfer:
 
 Profiler:
--  ADJ Saber Spot WW
--  ADJ Ikon Profile Pearl
--  Eurolite LED PFE-100 RGBW Profile Snapshot
+
+-   ADJ Saber Spot WW
+
+-   ADJ Ikon Profile Pearl
+
+-   Eurolite LED PFE-100 RGBW Profile Snapshot
+
 
 Fluter:
--  Stairville Mini Stage Par CW/WW/A
--  Stairville Revueled 120 Cob 3200k DMX
--  ADJ Encore Fr150z
+
+-   Stairville Mini Stage Par CW/WW/A
+
+-   Stairville Revueled 120 Cob 3200k DMX
+
+-   ADJ Encore Fr150z
 
 \begin{table}[]
 \centering
@@ -119,7 +126,7 @@ Preis/Stück     & 98€                 & 277€               & 488€        
 \label{fluterTable}
 \end{table}
 
-### Mögliche Konfigurationen:
+## Mögliche Konfigurationen:
 
 \begin{table}[]
 \centering
@@ -155,11 +162,11 @@ Gesamtpreis        & 1546€          & 1968€            & 2164€          \\
 \label{konLeistTable}
 \end{table}
 
-### Aufhängung:
+## Aufhängung:
 
-Benötigte Gesamtlänge: 4m
+Benötigte Gesamtlänge der Aufhängung: 4m
 
-#### EUTRAC-Stromschiene:
+### EUTRAC-Stromschiene:
 
 Die Aufbauanleitung kann von der EUTRAC-Website heruntergeladen werden.
 
@@ -194,7 +201,7 @@ EUTRAC-Aufbauschienensystem 25.../225... 3 Phasen 230V
 
 ![EUTRAC Montage\quelle{https://bit.ly/2IsHc78}](bilder/Florian/Eutrac.png){width=90%}
 
-#### 1-Punkt Traverse:
+### 1-Punkt Traverse:
 
 Aufgrund der höheren Last sind EUTRAC-Stromschienen nicht mehr
 verwendbar. Alternativ dazu eignet sich eine 1-Punkt Traverse. Zur
@@ -233,7 +240,7 @@ Anmerkung:
 Die Konstruktion muss nach dem Einbau von befugten Personen geprüft und
 abgenommen werden.
 
-### Gesamtpreise der Konfigurationen:
+## Gesamtpreise der Konfigurationen:
 
 \begin{table}[]
 \centering
