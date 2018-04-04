@@ -1,5 +1,5 @@
-Gehäuse
--------
+# Gehäuse
+
 
 Das „Mediatrix-System" besteht aus folgenden Komponenten:
 
@@ -62,12 +62,12 @@ Abstände zwischen den Bohrungen an Gerät und Schiene sind genormt,
 ebenso wie der Abstand zwischen den Schienen. Das ermöglicht den
 einfachen Einbau oder Austausch von 19"- konformen Geräten.
 
-### 19" Racks
+## 19" Racks
 
 Der horizontale Abstand zwischen zwei Montageleisten beträgt genau 19
 Zoll (= 48,26 Zentimeter).
 
-![Abstände bei 19-Zoll-Schienen](bilder/Florian/19zoll.svg){width="1.2125in"}
+![Abstände bei 19-Zoll-Schienen\quelle\url{https://bit.ly/2GZvy6y}](bilder/Florian/19zoll.png){width="1.2125in"}
 
 Die minimale Höhe eines 19"- konformen Geräts beträgt 1,75" oder 44,45mm.
 Dieser Abstand wird als eine Höheneinheit (1HE) bezeichnet. Darum werden
@@ -81,8 +81,8 @@ Endstufe konforme Maße, um in ein 19"- Rack eingebaut zu werden. Der
 AV-Receiver ist mittels Rack-Wanne im Rack platziert.
 \cite[S.101]{wirsum_praktische_1991}
 
-Mediatrix-Modul
----------------
+# Mediatrix-Modul
+
 
 Die elektronischen Komponenten, wie der Raspberry Pi, die Relais und das
 12V-Netzteil, galt es ebenfalls sicher und kompakt in dem Rack zu
@@ -96,9 +96,9 @@ Verrutschen und sich daraus ergebende Beschädigungen, zu schützen. Die
 Platinen sind mit Abstandhaltern vom Gehäuseboden abgehoben, um
 Kurzschlüsse zu vermeiden.
 
-![Innenansicht des Mediatrix-Moduls](bilder/Florian/Innenansicht.jpg){width=90%}
+![Innenansicht des Mediatrix-Moduls\label{innenansicht}](bilder/Florian/Innenansicht.jpg){width=90%}
 
-### Das Anschlusspanel
+## Das Anschlusspanel
 
 Da alle Lautsprecherleitungen mittels Relais unterbrochen werden können
 sollen, müssen alle Ausgänge des AV-Receivers mit dem Mediatrix-Modul
@@ -106,7 +106,7 @@ verbunden sein. Um das vom AV-Receiver bereitgestellte 7.2.- Signal
 auch ausgeben zu können, sind insgesamt sieben, bereits verstärkte
 Lautsprecherausgänge vorhanden.
 
-![Anschlussblende des Mediatrix-Moduls](bilder/Florian/Anschlussblende.jpg){width=90%}
+![Anschlussblende des Mediatrix-Moduls\label{anschlussblende}](bilder/Florian/Anschlussblende.jpg){width=90%}
 
 Diese werden mit Patchkabeln an das Mediatrix-Modul angeschlossen. In
 diesem befindet sich die geregelte Unterbrechungsschaltung. Die beiden
@@ -117,14 +117,20 @@ Signals werden Einstreuungen abgeschwächt.
 
 **Symmetrierung von Audiosignalen**
 
-\begin{quote}„Bei der symmetrischen Kopplung führen beide Adern einer
+
+\begin{quote}
+„Bei der symmetrischen Kopplung führen beide Adern einer
 Verbindungsleitung eine amplitudengleiche, jedoch aber gegenphasige
 Signalspannung gegenüber der Erde (bzw. Masse). Beide Adern sind
 gegenüber der Erde galvanisch getrennt. Durch die Gegenphasigkeit wird
 bei der symmetrischen Kopplung eine hohe Störsicherheit erreicht. Bei
 idealen Voraussetzungen, d.h. bei vollkommener Symmetrie und gleicher
 Einwirkung eines Störfeldes auf die beiden Adern wird die Störspannung
-durch Kompensation aufgehoben."\end{quote}\cite[S.100\]{wirsum_praktische_1991}
+durch Kompensation aufgehoben."\cite[S.100]{wirsum_praktische_1991}
+\end{quote}
+
+
+
 Die Kompensation, oder
 Auslöschung ergibt sich aus der 180° Phasenverschiebung zwischen den
 beiden Tonadern.\cite{henle_tonstudio_1993}
@@ -149,7 +155,7 @@ Ein weiterer Vorteil von symmetrischen XLR-Leitungen, gegenüber
 asymmetrischer Cinch-Leitungen ist die Möglichkeit, Kabel ohne jeglichen
 Adapter zusammenzustecken und somit die Leitung zu verlängern.
 
-### Anschlüsse für Lautsprecher
+## Anschlüsse für Lautsprecher
 
 In diesem Fall sind als Ein- und Ausgangsschnittstelle der
 Lautsprecherleitungen Bananenbuchsen im Mediatrix-Modul verbaut. Diese
@@ -175,7 +181,7 @@ Die Verbindung ist zudem eindeutig von üblichen Schutzkontaktsteckern zu
 unterscheiden, was das korrekte Anschließen erheblich erleichtert und
 Fehlern vorbeugt.
 
-### Anschlüsse für Gehäuseelektronik
+## Anschlüsse für Gehäuseelektronik
 
 Zur Verbindung von Lüfter, Power-Taster und Öffnungskontakten mit dem
 Raspberry Pi ist eine DIN-Buchse verbaut. Die Anschlusskabel dieser
@@ -183,7 +189,7 @@ Komponenten laufen in einen DIN-Stecker zusammen und können somit alle
 gleichzeitig an- und abgesteckt werden. Vertauschen von Anschlüssen ist
 folglich unmöglich.
 
-### Anschlüsse für Netzwerkschnittstellen
+## Anschlüsse für Netzwerkschnittstellen
 
 Der Raspberry Pi stellt den Webserver des Systems zur Verfügung und muss
 darum über eine Netzwerkverbindung verfügen. Zudem führt eine
@@ -192,7 +198,7 @@ Kommunikation gegen böswillige Einwirkungen durch Hacker zu schützen.
 Diese beiden Leitungen sind als RJ-45 Buchsen aus dem Mediatrix-Modul
 herausgeführt.
 
-### Anschlüsse für Lichtsteuerung
+## Anschlüsse für Lichtsteuerung
 
 Bei der Lichtsteuerung wurde auf den Branchenstandard, das DMX-Protokoll
 gesetzt. Dieses wird mittels drei- oder fünfpoliger XLR-Steckern
@@ -200,9 +206,7 @@ gesetzt. Dieses wird mittels drei- oder fünfpoliger XLR-Steckern
 üblicher, darum ist ein solcher eingebaut. Intern ist diese Buchse mit
 dem ENTTEC DMX-Interface verbunden.
 
-###
-
-### Anschlüsse für Infrarotsteuerung
+## Anschlüsse für Infrarotsteuerung
 
 Um die Richtung des Infrarotsignals gezielt auf die zu steuernden Geräte
 ausrichten zu können, kann eine IR-Diode mittels BNC-Connector
@@ -213,7 +217,7 @@ können. Oberhalb von ihr befinden sich zudem noch eine Status LED, die
 blinkt, wenn Signale gesendet werden und eine Diode zum Einlesen von
 neuen IR-Befehlen.
 
-### Anschlüsse für Zustandserkennung
+## Anschlüsse für Zustandserkennung
 
 Der Einschaltzustand des AV-Receivers wird über den Trigger-Output
 überprüft. Für den Anschluss an das Mediatrix-Modul ist eine 3,5mm
@@ -221,13 +225,13 @@ Klinkenbuchse verwendet worden. Da der Beamer über keinen Trigger-Output
 verfügt, wird die Induktionsspannung an einem PowerCon-Ausgang
 überwacht.
 
-### Anschlüsse für Stromversorgung
+## Anschlüsse für Stromversorgung
 
 Das Mediatrix-Modul wird mittels PowerCon-Kabel mit 230V versorgt. Diese
 werden im Gehäuse intern verteilt und an z.B. den steuerbaren
 PowerCon-Ausgang an die Geräte im Rack weitergegeben.
 
-### Anfertigung des Anschlusspanels
+## Anfertigung des Anschlusspanels
 
 Um zu garantieren, dass es keine Verwechslungen beim Anschließen der
 Geräte an das Mediatrix-Modul gibt, sind verschiedene Typen von Buchsen
@@ -237,7 +241,7 @@ eingebaut. Die BNC und die Klinkenbuchse verfügen über Muttern und
 Gewinde, mit denen sie befestigt wurden. Die restlichen Anschlüsse
 wurden mit Blindnieten vernietet.
 
-### Das Frontpanel
+## Das Frontpanel
 
 Das Frontpanel ist sehr schlicht gehalten. Es beinhaltet einen Schalter,
 der die Stromversorgung des Mediatrix-Moduls unterbricht und Infrarot
@@ -249,7 +253,7 @@ Kabel zum Schalter sind durch Öffnen zweier Federklemmen vom
 Mediatrix-Modul trennbar. Die Status LEDs können durch Lösen der
 Steckverbindung von der Platine separiert werden.
 
-### Einbau der Geräte in das Mediatrix-Modul
+## Einbau der Geräte in das Mediatrix-Modul
 
 Der Großteil der Elektronik befindet sich im Mediatrix-Modul. Aus
 Platzgründen sind der Raspberry Pi und die Infrarotplatine an den
@@ -263,7 +267,7 @@ Komponenten sind fest mit der Bodenplatte verschraubt. Das DMX-Interface
 ist mit doppelseitigem Klebeband befestigt, da es nahezu kein Gewicht
 hat und so platziert ist, dass nichts beschädigt werden kann.
 
-### Anfertigung der Hauptplatine
+## Anfertigung der Hauptplatine
 
 Für die Hauptplatine wurde eine Lochrasterplatine verwendet. Die
 Schaltungen wurden als Prototypen bereits auf Laborsteckbrettern
@@ -285,7 +289,7 @@ Im Gegensatz zu einer geätzten Platine kann eine Lochrasterplatine
 nachträglich um Bauteile erweitert werden. Weiters ist das Anfertigen
 nicht so zeitaufwendig wie das Ätzen einer Platine.
 
-### Anschluss der Relais-Platine
+## Anschluss der Relais-Platine
 
 Da die Relais eine Schaltspannung von 12V DC benötigen, erfolgt die
 Versorgung über ein 12V-Netzteil. Diese sind mit JD-VCC und GND
@@ -302,8 +306,8 @@ wird der Strom zu den Subwoofern über zwei Relais auf der anderen
 Platine geschalten. Ein weiterer GPIO-Pin ist für die Steuerung der
 Versorgungsspannung der anderen Geräte im Rack zuständig.
 
-Raspberry Pi
-------------
+# Raspberry Pi
+
 
 Der Raspberry Pi ist ein Mikroprozessor, der von „The Raspberry Pi
 Foundation" entwickelt wurde, um Menschen auf der ganzen Welt einen
@@ -318,7 +322,7 @@ Projekten mit Raspberry Pis, die von jedem nachgebaut werden können.
 Aufgrund seines Preises und seiner geringen Größe wird der
 Mikroprozessor gerne für Internet-Of-Things verwendet.
 
-### Funktionen und Spezifikationen
+## Funktionen und Spezifikationen
 
 Je nach Modell verfügt der Raspberry Pi über verschiedene
 Spezifikationen. Grundlegend sind jedoch alle ähnlich aufgebaut.
@@ -350,7 +354,7 @@ Raspberry Pi 2 Model B:
 
 \cite{noauthor_raspberry_nodate-4}
 
-### Eignung für dieses Projekt
+## Eignung für dieses Projekt
 
 Durch den Preis, die Größe und Möglichkeit, elektronische Schaltungen
 und Komponenten anschließen zu können, ist der Raspberry Pi 2 Model B
@@ -360,7 +364,7 @@ angeschlossen werden. Die restliche Elektronik lassen sich mit den
 „General-Input-Output-Pins" (GPIO-Pins) verbinden. Da eine vollwertige
 CPU verbaut ist, können auch komplexere Programme ausgeführt werden.
 
-### Mögliche Alternativen
+## Mögliche Alternativen
 
 Am Markt gibt es zahlreiche Mikroprozessoren mit verschiedensten Vor-
 und Nachteilen. Der „Banana Pi M2" oder der „Odroid C1+" verfügen
@@ -370,10 +374,10 @@ kostet allerdings dreimal so viel. Für dieses Projekt passt das
 Preis/Leistungsverhältnis des Raspberry Pis am besten.
 \cite{wolski_besten_2016}
 
-Anschlüsse für Anwender
------------------------
+# Anschlüsse für Anwender
 
-###  Anforderungen
+
+##  Anforderungen
 
 Der Hauptanwendungszweck des Systems sind Präsentationen von
 Schülerinnen und Schülern und Lehrerinnen und Lehrern. Deren Anforderung
@@ -402,7 +406,7 @@ gut zugänglich montiert. Die benötigten Kabel befinden sich im
 Präsentationskoffer, der von den Anwendern beim Portier ausgeborgt
 werden kann.
 
-### Nutzerfreundlichkeit
+## Nutzerfreundlichkeit
 
 Zur Vermeidung von lauten Geräuschen, die beim Anstecken auf die
 Lautsprecher übertragen werden, wird mittels Reedkontakt festgestellt,
@@ -421,7 +425,7 @@ Damit der Seitenteil für Wartungsarbeiten vollständig ausgebaut werden
 kann, sind alle Elemente durch Steckverbindungen vom Rest des Racks
 trennbar.
 
-### Technische Umsetzung
+## Technische Umsetzung
 
 Der Reedkontakt in der Abdeckung ist mit dem zweiten Kontakt in der
 Rack-Tür seriell verbunden. Via GPIO-Pin werden beide vom Raspberry Pi
@@ -435,8 +439,8 @@ Das durch diesen Stecker ankommende Signal wird auf einer
 Lochrasterplatine in einem Kunststoffgehäuse auf die verschiedenen
 Komponenten verteilt.
 
-Ein- und Ausschaltverzögerung der Lautsprecher
-----------------------------------------------
+# Ein- und Ausschaltverzögerung der Lautsprecher
+
 
 Audio ist ein wesentlicher Teil von Multimedia. Darum wird es auch sehr
 gerne in Präsentationen eingebunden. Produktvideos, Soundeffekte oder
@@ -512,10 +516,10 @@ Subwoofer geöffnet.
 
     e.  Raspberry Pi schaltet Strom für Geräte ab
 
-Stromversorgung
----------------
+# Stromversorgung
 
-### Stromzufuhr zum System
+
+## Stromzufuhr zum System
 
 Die im System verbauten Komponenten benötigen entweder 230V, 12V oder
 5V.
@@ -532,7 +536,7 @@ hervorragend dafür an, da sich der Stecker nicht unbeabsichtigt lösen
 kann. Um diesen abzustecken muss ein Sicherungsschieber am Stecker nach
 hinten gezogen und der Stecker nach links gedreht werden.
 
-### Stromverteilung im Mediatrix-Modul
+## Stromverteilung im Mediatrix-Modul
 
 Die Phase der ankommenden 230V wird direkt durch eine Sicherung
 geschickt, bevor sie in eine Federklemme geleitet wird. Der Nullleiter
@@ -564,7 +568,7 @@ dieses Problem ist ein Kondensator. Dieser ist parallel zum Raspberry Pi
 mit dem Ausgang des Stepdown-Converters verbunden. Bei kurzzeitigem
 Strommangel wird der Raspberry Pi vom Kondensator versorgt.
 
-### Spannungswandlung
+## Spannungswandlung
 
 Da der Raspberry Pi allerdings eine Versorgungsspannung von 5V benötigt,
 müssen die 12V DC nochmals gewandelt werden. Dies geschieht mit Hilfe
@@ -582,7 +586,7 @@ Verhalten konnte das System nicht ordnungsgemäß betrieben werden. Aus
 diesem Grund wurde schlussendlich ein getaktetes Netzteil mit 4,1A bei
 12V eingebaut.
 
-### Die Hauptplatine
+## Die Hauptplatine
 
 Auf der Hauptplatine werden die 12V DC auf verschiedene Komponenten
 verteilt, beispielsweise die Relais-Platinen, Status LEDs und den
@@ -593,10 +597,13 @@ schalten, werden für die Status LEDs und der Lüfter MOSFETs verwendet.
 
 Bei einem MOSFET handelt es sich um einen
 Metall-Oxid-Halbleiter-Feldeffekttransistor.
-\begin{quote}„Ein Transistor ist ein Halbleiter-Bauelement aus drei
+
+\begin{quote}
+„Ein Transistor ist ein Halbleiter-Bauelement aus drei
 aufeinanderfolgenden Halbleiterschichten, also npn- oder pnp-Schichten.
 Er hat somit zwei pn-Übergänge, in deren Grenzgebieten sich
-Sperrschichten ausbilden."\end{quote}\cite[S. 372]{krikava_grundlagen_1981
+Sperrschichten ausbilden."\cite[S. 372]{krikava_grundlagen_1981}
+\end{quote}
 
 Der MOSFET verfügt über drei Pins:
 
@@ -614,7 +621,7 @@ eine Freilaufdiode in Flussrichtung von GND zu Drain eingebaut, um den
 MOSFET vor Überspannungen zu schützen. Source-Kontakt ist auf GND
 geführt.
 
-### Einschalten des Systems
+## Einschalten des Systems
 
 Per Druck auf den am Rack angebrachten Taster schaltet der Raspberry Pi
 ein 12V Relais, das den anderen Geräten die Stromzufuhr öffnet. Jenes
@@ -627,17 +634,17 @@ Die Verwendung von Relais für diese Anwendung hat sich bewährt, da der
 Raspberry Pi nicht in der Lage ist Spannungen von 230V zu schalten, aber
 mit 3,3V Steuerbefehle an ein Relais senden kann.
 
-Verkabelung
------------
+# Verkabelung
 
-### Vorgang
+
+## Vorgang
 
 Die Verkabelung innerhalb des Racks ist auf die eingebauten Geräte
 angepasst und optimiert. Alle Kabel sind etwas länger bemessen, als
 benötigt, um nach dem Austausch eines Geräts oder einer Neuanordnung der
 Geräte im Rack weiterhin verwendbar zu sein.
 
-### Lautsprecherleitungen
+## Lautsprecherleitungen
 
 Für die Leitungen zwischen AV-Receiver, dem Mediatrix-Modul und den
 Lautsprechern sind Lautsprecherkabel mit einem Leitungsquerschnitt von
@@ -646,7 +653,7 @@ miteinander verschweißt.
 Auch im Mediatrix-Modul sind alle Lautsprecherleitungen von den Buchsen
 zu den Relais und zu den Ausgangsbuchsen mit diesen Kabeln verbunden.
 
-### Anschlüsse für User
+## Anschlüsse für User
 
 Die für den User notwendigen Anschlussbuchsen sind an der Seite des
 Rack-Schranks eingebaut.
@@ -668,8 +675,8 @@ Eine Schutzkontaktsteckdose ist an den Verteiler der anderen Geräte
 angeschlossen und wird nach Einschalten des Systems mit Strom versorgt.
 Zur Verkabelung wurden handelsübliche 1,5mm² Stromkabel verwendet.
 
-Gehäusebelüftung
-----------------
+# Gehäusebelüftung
+
 
 Da die im Rack verbauten Geräte im Betrieb Wärme produzieren, ist ein
 Kühlsystem vorhanden. Ein 12V Lüfter sorgt für eine Zirkulation der Luft
@@ -683,23 +690,23 @@ im Inneren des Gehäuses und regelt demnach die Drehzahl des Lüfters. Für
 die Messung wird ein digitaler Temperatursensor mit der Bezeichnung
 „DS1820" eingesetzt.
 
-### Digitaler Temperatursensor
+## Digitaler Temperatursensor
 
 Ein digitaler Temperatursensor bietet die Möglichkeit, im Vergleich zu
 einem temperaturabhängigen Widerstand, die Temperatur direkt in Grad
 Celsius auszulesen. Somit sind keine Umrechnungen von Ohm-werten auf
 Grad Celsius mehr notwendig.
 
-### Integration
+## Integration
 
 Damit der Temperatursensor ausgelesen werden kann, muss er zunächst mit
 dem Raspberry Pi verbunden werden. Dazu werden ein GPIO-Pin, eine 3,3V
 Versorgung und der GND folgendermaßen an die Konnektoren des DS1820
 angeschlossen:
 
-![Schaltplan DS1820 Raspberry Pi](bilder/Florian/Tempsensor.png){width="2.5in"}
+![Schaltplan DS1820 Raspberry Pi\quelle{https://bit.ly/2q76mR5}](bilder/Florian/Tempsensor.png){width="2.5in"}
 
-### Aufgetretene Probleme:
+## Aufgetretene Probleme:
 
 Laut des Tutorials sollte eine ID angezeigt werden, die dem Format
 `28-00000XXXXXXXX` entspricht. Doch in dem Versuchsaufbau erschienen
@@ -749,7 +756,8 @@ Entscheidung bei der Wahl der Programmiersprache auf PYTHON:
 \begin{quote}„Raspberry Pi" steht für „Raspberry Python Interpreter", d.h. der
 „Raspberry Pi" verfügt über einen integrierten Interpreter für die
 Programmiersprache Python. Das spart zusätzlichen Aufwand, wie das
-Kompilieren von „C"-Programmen.\end{quote}\cite{hoerandl_august}
+Kompilieren von „C"-Programmen.\cite{hoerandl_august}
+\end{quote}
 
 Weiters gibt es im Internet zahlreiche Anleitungen, wie ein Programm für
 diesen Anwendungsfall aussehen kann. Als Grundlage wurde das
@@ -835,7 +843,7 @@ angesetzt. Somit startet und stoppt der Lüfter bei 20%. Die maximale
 Drehzahl wird bei 55 Grad Celsius erreicht. Bei höheren Temperaturen
 dreht der Lüfter mit dieser Drehzahl weiter.
 
-### Lüftersteuerung mit PWM
+## Lüftersteuerung mit PWM
 
 Um den Geräuschpegel möglichst gering zu halten, sollen die Lüfter nur
 so schnell laufen, wie es zu dem Zeitpunkt notwendig ist. Dafür muss
@@ -860,7 +868,7 @@ möglich:
 Falls der Temperaturbereich nachträglich geändert werden soll, bringt
 das einen großen Aufwand mit sich.
 
-1.  Wenn man die Versorgungsspannung allerdings mit Hilfe eines
+2.  Wenn man die Versorgungsspannung allerdings mit Hilfe eines
     digitalen Potentiometers reguliert, das aufgrund der Messung des
     digitalen Temperatursensors vom Raspberry Pi konfiguriert wird,
     besteht die Möglichkeit die oben genannten Funktionen zu
@@ -873,12 +881,13 @@ PWM, oder auch Pulsweitenmodulation, ist ein Verfahren, bei dem
 
 \begin{quote}„[...] das Verhältnis zwischen der Einschaltzeit und Periodendauer
 eines Rechtecksignals bei fester Grundfrequenz variiert wird. Das
-Verhältnis zwischen der Einschaltzeit $\(t_{ein}\)$ und der Periodendauer $\(T =\t_{ein}\t_{aus}\)$ wird
-als das Tastverhältnis **p** bezeichnet. (laut DIN IEC 60469-1:
+Verhältnis zwischen der Einschaltzeit $t_{ein}$ und der Periodendauer $T =t_{ein} + t_{aus}$ wird
+als das Tastverhältnis $p$ bezeichnet. (laut DIN IEC 60469-1:
 Tastgrad) (engl. Duty Cycle, meist abgekürzt DC, nicht zu verwechseln
-mit Direct Current = Gleichstrom). "\end{quote}\cite{noauthor_pulsweitenmodulation_nodate}
+mit Direct Current = Gleichstrom). "\cite{noauthor_pulsweitenmodulation_nodate}
+\end{quote}
 
-![Pulsweite](bilder/Florian/PWM1.png){width=90%}
+![Pulsweite\quelle{https://bit.ly/2w2EfVW}](bilder/Florian/PWM1.png){width=90%}
 
 
 Das Ganze kann mit einem üblichen Taster und einem Elektromotor
@@ -907,9 +916,9 @@ Mikroprozessor kann mit einer hohen Frequenz ein- und ausgeschaltet
 werden. Somit dreht sich der Motor (fast) gleichmäßig, jedoch in der
 gewünschten Geschwindigkeit.
 
-![Duty-Cycle](bilder/Florian/PWM2.png){width=90%}
+![Duty-Cycle\quelle{https://bit.ly/2GUZT6w}](bilder/Florian/PWM2.png){width=90%}
 
-### Generieren eines PWM-Signals mit dem Raspberry Pi
+## Generieren eines PWM-Signals mit dem Raspberry Pi
 
 Mit PYTHON ist das Generieren eines PWM-Signals schnell geschehen:
 
@@ -925,8 +934,8 @@ Nach Eingabe dieser vier Befehle wird ein PWM-Signal mit fixem
 Prozentwert erzeugt. Mit Hilfe von Schleifen kann der Wert, je nach
 Bedarf variiert werden.
 
-Quickstart-Guide
-----------------
+# Quickstart-Guide
+
 
 User, die das System verwenden wollen, können mit dem Handy oder
 Tablet-PC über einen QR-Code zum Login-Dialog navigieren. Für Personen,
@@ -934,8 +943,8 @@ die das System auf einem Gerät ohne QR-Code Scanner verwenden wollen,
 befindet sich zusätzlich ein Link auf dem Rack. Die ersten Schritte in
 der Anwendung werden zudem kurz beschrieben.
 
-Hardware für Infrarotfunktionalität
------------------------------------
+# Hardware für Infrarotfunktionalität
+
 
 Um wirklich alle Geräte des Systems aus einer Hand bedienen zu können
 bedarf es einer Steuerung mittels Infrarot. Infrarot ist nach wie vor
@@ -964,8 +973,8 @@ ansprechen zu können.
 
 ![Infrarotplatine](bilder/Florian/IR.jpg){width=30%}
 
-Status-Erkennung der Geräte
----------------------------
+# Status-Erkennung der Geräte
+
 
 Wenn Geräte mittels Infrarot eingeschaltet werden, erhält der Sender
 keine Information, ob das Signal angekommen ist, und ob das Gerät

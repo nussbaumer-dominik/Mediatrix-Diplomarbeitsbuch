@@ -185,7 +185,7 @@ EUTRAC-Aufbauschienensystem 25.../225... 3 Phasen 230V
 
 2 Hängepunkte/Meter bei 4x 3kg Punktlast
 
-![EUTRAC Montage](bilder/Florian/Eutrac.png){width=90%}
+![EUTRAC Montage\quelle{https://bit.ly/2IsHc78}](bilder/Florian/Eutrac.png){width=90%}
 
 #### 1-Punkt Traverse:
 
