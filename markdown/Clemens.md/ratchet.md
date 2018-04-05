@@ -30,6 +30,7 @@ Sie wartet bis ein kompletter Request übertragen wurde und gibt ihn dann erst w
 * **WsServer:** Diese Komponente verarbeitet die Websocket-Verbindungen mit den Browsern nach dem W3C Websocket Standard. \cite{noauthor_ratchet_nodate}
 
 ### *Application-Class* \label{application}
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
 Diese Klasse beinhaltet die eigentliche Logik des Websocket-Servers.
 Das *MessageComponentInterface* gibt hier die vier Methoden, die von Ratchet verlangt werden, vor und muss implementiert werden. \cite{noauthor_ratchet_nodate}
 Diese vier Methoden sind:

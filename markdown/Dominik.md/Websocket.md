@@ -1,5 +1,7 @@
 Das Internet wurde um das Konzept, dass ein Client Daten vom Server anfordert und ein Server diese Anfragen bearbeitet, konstruiert. Daran hat sich für lange Zeit nichts geändert, bis im Jahr 2005 Webseiten durch AJAX dynamischer wurden. Mit AJAX können Client und Server Daten asynchron austauschen. Dadurch ist es möglich, Teile einer Seite zu aktualisiern, ohne die gesamte Seite neu laden zu müssen. \cite{websocket_official}
 
+\renewcommand{\kapitelautor}{Autor: Dominik Nußbaumer}
+
 Webapplikationen wurden stetig komplexer und benötigten mehr Daten als jemals zuvor. Eine herkömmliche HTTP-Anfrage hat einen sehr großen Overhead, da bei jeder Anfrage ein Header und Cookies zum Server übermittelt werden müssen. Dadurch vergrößert sich die Latenz und der Benutzer muss länger warten. Das größte Problem ist, dass die meisten Header und Cookies nicht nötig sind, um die Anfrage zu bearbeiten. \cite{einfuehrung_websockets}
 
 Diese Probleme können mit WebSockets gelöst werden. \cite{einfuehrung_websockets}
@@ -42,6 +44,6 @@ Dank der WebSocket-Spezifikation ist die Latenz minimal, obwohl die Befehle übe
 
 ## Die PHP-Library Ratchet
 
-\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+\renewcommand{\kapitelautor}{Autor: Dominik Nußbaumer, Clemens Scharwitzl}
 
 \input{markdown/Clemens.md/ratchet.md}

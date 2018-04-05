@@ -29,7 +29,7 @@ Daraus ergibt sich für ein Bit eine Übertragungsdauer von 1,778 ms und somit e
 ## Anwendung in diesem Projekt 
 Die Kommunikation mit dem AV-Receiver und dem Beamer wird in diesem Projekt mittels Infrarot gesteuert. 
 Infrarot bietet die größte Kompatibilität, da sowohl bei Beamern als auch bei AV-Receivern die Bedienung mittels Infrarotfernbedienung Branchenstandard ist. 
-Zum Senden der Signale wird der bereits erwähnte Infrarotsender (\siehe{Infrarotsender}) über eine C++-Schnittstelle angesprochen.
+Zum Senden der Signale wird der Infrarotsender über eine C++-Schnittstelle angesprochen.
 Der Administrator muss bei der Installation des Systems, alle benötigten Infrarotcodes über das in PHP programmierte Konsolenprogramm einlesen.
 
 Der Vorteil von Infrarot für dieses Projekt besteht darin, dass sich die Steuerung nicht herstellerspezifisch ändert, sondern nur die verwendeten Codes und Protokolle. 

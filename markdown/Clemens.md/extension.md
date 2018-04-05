@@ -106,3 +106,6 @@ Weiters können auch noch Optionen, wie die Verwendung von anderen Libraries,
 wie Ola (\siehe{ola}) oder WiringPi (\siehe{WiringPi}), fürs Kompilieren hinzugefügt werden.
 Dieses Makefile wird dann verwendet, um die C++-Datei zu kompilieren und 
 die so entstandenen Dateien, sowie die INI-Datei, an die richtigen Stellen in der PHP-Konfiguration zu kopieren. \cite{noauthor_php-cpp_nodate}
+
+
+
