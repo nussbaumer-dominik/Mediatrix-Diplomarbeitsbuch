@@ -10,7 +10,7 @@ CSS-Grid kontrolliert die Größe und Position der Elemente und hält dabei vord
 
 Für einen CSS-Grid muss zuallererst ein Elternelement mit dem Attribut _display: grid_ erstellt werden. Anschließend wird die Anzahl an Reihen mit _grid-template-rows_ und die Anzahl an Spalten mit _grid-template-columns_ festgelegt. Ähnlich zu Flexbox ist, dass die Reihenfolge der Elemente im HTML-Code egal ist. Mit CSS kann diese Anordnung beliebig geändert werden. Dadurch ist es sehr einfach, Elemente mithilfe von Media-Queries neu anzuordnen. Deswegen können gesamte Layouts mit minimalem CSS vollkommen umgestaltet werden, um den verfügbaren Platz so effizient wie möglich auszunutzen. Dies macht Grid zu einem der mächtigsten CSS-Werkzeuge aller Zeiten. \cite{CSS_Grid_Official}
 
-CSS-Grid ist in den meisten Browsern nativ unterstützt und hat bereits eine globale Kompatibilität von über 87% erreicht. \cite{browser_support_grid}
+CSS-Grid ist in den meisten Browsern nativ unterstützt und hat bereits eine globale Kompatibilität von über 87%(Stand 10. März 2018) erreicht. \cite{browser_support_grid}
 
 ### Erklärung anhand eines Beispiels
 
