@@ -8,4 +8,4 @@ Im Präsentationsmodus stehen einem nur Presets zur Verfügung, diese werden jew
 
 ![Die Benutzeroberfläche](bilder/Dominik/Oberflaeche.png){width=90%}
 
-Zusätzlich zu dem Präsentationsmodus gibt es auch einen erweiterten Modus. Dieser gibt einem die Möglichkeit noch weitere einstellungen vorzunehmen. Es können zum Beispiel die verschiedenen Module zur Steuerung der Geräte eingeblendet werden. Weiters ist es möglich, die derzeitige Konfiguration als Preset abzuspeichern. Außerdem gibt es verschiedene Farbpaletten für die Benutzeroberfläche.
+Zusätzlich zu dem Präsentationsmodus gibt es auch einen erweiterten Modus. Dieser gibt einem die Möglichkeit noch weitere Einstellungen vorzunehmen. Es können zum Beispiel die verschiedenen Module zur Steuerung der Geräte eingeblendet werden. Weiters ist es möglich, die derzeitige Konfiguration als Preset abzuspeichern. Außerdem gibt es verschiedene Farbpaletten für die Benutzeroberfläche.
