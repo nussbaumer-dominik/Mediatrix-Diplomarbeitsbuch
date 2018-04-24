@@ -11,7 +11,7 @@ Diese Probleme können mit WebSockets gelöst werden. \cite{einfuehrung_websocke
 Die WebSocket-Spezifikation ermöglicht eine persistente bidirektionale _Socket_-Verbindung zwischen einem Webbrowser und einem Server. Beide Seiten können, wann sie wollen, mit dem Senden von Daten beginnen. Der Client baut eine Verbindung durch einen Prozess namens `"WebSocket-Handshake"` auf. Dieser Prozess beginnt mit einer normalen HTTP-Anfrage an den Server. Ein Upgrade-Header muss in der Anfrage enthalten sein, damit der Server weiß, dass der Client eine WebSocket-Verbindung aufbauen möchte. \cite{websocket_official}
 
 ```javascript
-var verbindung = new WebSocket("ws://mediatrix.at/ws");
+let verbindung = new WebSocket("ws://mediatrix.at/ws");
 
 verbindung.onopen = () => {
 	verbindung.send("Der WebSocket ist offen");
