@@ -34,6 +34,8 @@ Verschachtelung ist wahrscheinlich die zweitbekannteste Funktion von SASS. Durch
 
 Beim Schreiben von CSS ist das mehrfache Definieren von Elementen fast unumgänglich. Allerdings schafft SASS auch hier Abhilfe. _mixins_ und _extends_ sind zwei mächtige Funktionen. Die Möglichkeiten dieser scheinen fast endlos zu sein. Mit _mixins_ können parametrisierte CSS-Funktionen erstellt werden, die im gesamten Dokument wiederverwendbar sind. Hier ein kurzes Beispiel, um _mixins_ genauer zu beleuchten. \cite{SASS_REFERENCE}
 
+\newpage
+
 ```css
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
 	@if $inset {

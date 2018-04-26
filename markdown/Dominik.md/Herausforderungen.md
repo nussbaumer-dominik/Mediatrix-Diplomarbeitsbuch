@@ -1,0 +1,5 @@
+Im Laufe des Projekts tauchten mehrere Herausforderungen auf und bestimmte Entscheidungen waren zu treffen. Am Anfang wurden gewisse Grundlagen definiert. Die Frage, ob ein Webapplikationsframework verwendet werden sollte, musste geklärt werden. Außerdem wurde der Umfang des Frontends definiert. Daraus resultierten Probleme, die ich nun genauer beleuchten möchte. 
+
+## Webapplikationsframework
+
+Im Schulunterricht haben wir das Angular-Framework für die Umsetzung von Frontends kennengelernt. Solch ein Framework bietet eine Vielzahl an Vorteilen wie _Two-way-Data-Binding_, dynamische Single-Page-Applications und Dependency-Injection. Allerdings habe ich mich dafür entschieden, auf solch ein Framework zu verzichten und stattdessen jQuery für das Manipulieren des DOMs zu verwenden. Da der Server ein kleiner Raspberry-Pi ist, wollte ich die Applikation schlank halten. Weiters ist Angular sehr umfangreich und enthält sehr viele Funktionen, die ich bei diesem Projekt nicht benötigt habe.
