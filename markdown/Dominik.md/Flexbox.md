@@ -31,7 +31,7 @@ Die Kindelemente dieses Flex-Containers werden standardmäßig auf der horizonta
 
 Dieses Element ist durch _order: 1_ das erste Element in der Flexbox, allerdings muss es nicht das erste im HTML-Markup sein. Mit Flexbox ist es möglich, die Reihenfolge unabhängig vom HTML-Code zu verändern. Damit die seitliche Navigationsleiste eine fixe Position behält, wird ein Hack angewendet. Denn durch das Setzen des Attributs _overflow-y: hidden_ scrollt die Seite nur den restlichen Teil der Flexbox und nicht die Navigationsleiste. Weiters werden die Elemente innerhalb des Containers mit _justify-content: center_ und _align-items: center_ horizontal und vertikal zentriert und sind durch _flex-direction: column_ entlang der Y-Achse positioniert. \cite{flexbox_official}
 
-\newPage
+\newpage
 
 ```css
 .side-nav {
