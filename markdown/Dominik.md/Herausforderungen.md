@@ -1,4 +1,4 @@
-Im Laufe des Projekts tauchten mehrere Herausforderungen auf und bestimmte Entscheidungen waren zu treffen. Am Anfang wurden gewisse Grundlagen definiert. Die Frage, ob ein Webapplikationsframework verwendet werden sollte, musste geklärt werden. Außerdem wurde der Umfang des Frontends definiert. Daraus resultierten Probleme, die ich nun genauer beleuchten möchte. 
+Im Laufe des Projekts tauchten mehrere Herausforderungen auf und bestimmte Entscheidungen mussten getroffen werden. Am Anfang wurden gewisse Grundlagen definiert. Die Frage, ob ein Webapplikationsframework verwendet werden sollte, musste geklärt werden. Außerdem wurde der Umfang des Frontends definiert. Daraus resultierten Probleme, die ich nun genauer beleuchten möchte. 
 
 ## Webapplikationsframework
 
