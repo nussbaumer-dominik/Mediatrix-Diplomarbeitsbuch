@@ -59,6 +59,8 @@
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
+\usepackage[binary-units]{siunitx}
+\DeclareSIUnit\mybyte{Byte}
 
 %%? \usepackage{textcomp}
 \usepackage[hyphens]{url}
@@ -427,6 +429,12 @@ Wien, \today
 \renewcommand{\kapitelautor}{Autor: Dominik Nußbaumer}
 
     \input{markdown/Dominik.md/UX_Fokus_auf_technisch_unversierte_Benutzer.md}
+
+\section{Herausforderungen}\label{Herausforderungen}
+
+\renewcommand{\kapitelautor}{Autor: Dominik Nußbaumer}
+
+    \input{markdown/Dominik.md/Herausforderungen.md}
 
 %%%%%%%%%%%%%%%%%%%%%% Chapter Zusätzliches %%%%%%%%%%%%%%%%%%%%%
 \chapter{Zusätzliches}\label{Zusätzliches}

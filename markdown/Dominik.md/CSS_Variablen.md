@@ -8,10 +8,8 @@ Wie bereits in Kapitel 5.3 erwähnt, hat man mithilfe von CSS-Präprozessoren di
 
 Variablen fügen CSS zwei neue Funktionen zu.
 
-*   Einen Behälter für einen Wert zu definieren, der im Quelltext durch einen Namen bezeichnet wird.
-*   Die _var()_ funktion, die es dem Entwickler erlaubt, die Werte in jeglichen Eigenschaften zu verwenden.
-
-\cite{css_variables}
+*   Einen Behälter für einen Wert zu definieren, der im Quelltext mit einen Namen bezeichnet wird.
+*   Die _var()_ funktion, die es dem Entwickler erlaubt, die Werte in jeglichen Eigenschaften zu verwenden. \cite{css_variables}
 
 ### Erklärung anhand eines Beispiels
 

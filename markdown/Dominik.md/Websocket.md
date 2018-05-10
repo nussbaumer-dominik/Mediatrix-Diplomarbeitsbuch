@@ -11,10 +11,10 @@ Diese Probleme können mit WebSockets gelöst werden. \cite{einfuehrung_websocke
 Die WebSocket-Spezifikation ermöglicht eine persistente bidirektionale _Socket_-Verbindung zwischen einem Webbrowser und einem Server. Beide Seiten können, wann sie wollen, mit dem Senden von Daten beginnen. Der Client baut eine Verbindung durch einen Prozess namens `"WebSocket-Handshake"` auf. Dieser Prozess beginnt mit einer normalen HTTP-Anfrage an den Server. Ein Upgrade-Header muss in der Anfrage enthalten sein, damit der Server weiß, dass der Client eine WebSocket-Verbindung aufbauen möchte. \cite{websocket_official}
 
 ```javascript
-var verbindung = new WebSocket("ws://mediatrix.at/ws");
+let verbindung = new WebSocket("ws://mediatrix.at/ws");
 
 verbindung.onopen = () => {
-	verbindung.send("Das WebSocket ist offen");
+	verbindung.send("Der WebSocket ist offen");
 };
 
 verbindung.onmessage = nachricht => {
@@ -26,24 +26,24 @@ Eine WebSocket-Verbindung wird geöffnet, indem man den WebSocket-Konstruktor au
 
 Das URL-Schema fängt im Gegensatz zu herkömmlichen URLs nicht mit _http\:\//_, sondern mit _ws\:\//_ an. Allerdings gibt es auch bei WebSockets eine verschlüsselte Variante mit dem Schema _wss\:\//_. Damit können sichere Verbindungen zwischen Browser und Server aufgebaut werden. Weiters stehen verschiedene Ereignis-Handler zur Verfügung, um auf das Eintreten bestimmter Ereignisse reagieren zu können. Dadurch weiß der Client zum Beispiel, ob die Verbindung erfolgreich geöffnet werden konnte oder ob eine Nachricht eingegangen ist. \cite{websocket_events}
 
-Sobald eine Verbindung zum Server erfolgreich aufgebaut wurde, kann der Client sofort damit anfangen mit der _.send()_-Methode Nachrichten an den Server zu übermitteln. Bisher konnten nur Strings versendet werden, aber seit der neuesten Spezifikation ist es auch möglich, binäre Daten zu senden. Der Server hat ebenfalls die Möglichkeit, jederzeit Mitteilungen zu senden. Tritt dieser Fall ein, wird das _.onmessage_-Event ausgelöst. Dieses Ereignis übergibt ein Ereignisobjekt, mit dem auf die Nachricht zugegriffen werden kann. \cite{websocket_spec}
+Sobald eine Verbindung zum Server erfolgreich aufgebaut wurde, kann der Client sofort mit der _.send()_-Methode Nachrichten an den Server übermitteln. Bisher konnten nur Strings versendet werden, aber seit der neuesten Spezifikation, erschienen im April 2018, ist es auch möglich, binäre Daten zu senden \cite{websocket_standard}. Der Server hat ebenfalls die Möglichkeit, jederzeit Mitteilungen zu senden. Tritt dieser Fall ein, wird das _.onmessage_-Event ausgelöst. Dieses Ereignis übergibt ein Ereignisobjekt, mit dem auf die Nachricht zugegriffen werden kann. \cite{websocket_spec}
 
 ## Kommunikation mit dem Mischpult
 
 Im Lern- und Informationszentrum wird ein Soundcraft-Ui16 Mischpult für die Mikrofone und den Audio-Eingang verwendet. Dieses verfügt über eine proprietäre Benutzeroberfläche. Der Hersteller hat sich sehr viel Mühe gegeben, dieses System abzusichern, sodass es nur mit der hauseigenen Software bedient werden kann. \cite{soundcraft_official}
 
-Ich habe den Aufbau und die Verhaltensweise des Mischpults analysiert, um herauszufinden, wie ich darauf zugreifen kann, um es über die Mediatrix-Oberfläche ansteuern zu können. Dabei habe ich erkannt, dass auf dem Mischpult ein Socket.io-Server läuft. Socket-io ist eine JavaScript Bibliothek für Echtzeit-Webapplikationen. Das Mischpult verwendet die von Socket-io implementierte Funktion zur Generierung von Session-Ids. Eine Session-Id ist eine einzigartige Kennzahl, die der Server benötigt, um die Anfragen den jeweiligen Clients zuordnen zu können. Weiters weiß der Server mithilfe der Identifikationsnummern, wieviele einzigartige Clients verbunden sind. Dadurch ist es möglich, dass mehrere Clients gleichzeitig mit dem Server verbunden sind. Genauso funktioniert das Soundcraft-Ui16. \cite{socket_io}
+Der Aufbau und die Verhaltensweise des Mischpults mussten analysiert werden, um herauszufinden, wie darauf zugegriffen werden könnte, um es über die Mediatrix-Oberfläche ansteuern zu können. Dabei habe ich erkannt, dass auf dem Mischpult ein Socket.io-Server läuft. Socket-io ist eine JavaScript Bibliothek für Echtzeit-Webapplikationen. Das Mischpult verwendet die von Socket-io implementierte Funktion zur Generierung von Session-Ids. Eine Session-Id ist eine einzigartige Kennzahl, die der Server benötigt, um die Anfragen den jeweiligen Clients zuordnen zu können. Weiters weiß der Server, mithilfe der Identifikationsnummern, wieviele einzigartige Clients verbunden sind. Dadurch ist es möglich, dass mehrere Clients gleichzeitig mit dem Server verbunden sind. Genauso funktioniert das Soundcraft-Ui16. \cite{socket_io}
 
 Um eine Verbindung aufzubauen, muss zuerst eine Session-Id angefragt werden. Sobald der Server diese bereitstellt, kann die Verbindung geöffnet werden. Der Server wartet ein paar Sekunden nach dem Senden der Id, ob ein Client sich verbinden möchte. Ist dies nicht der Fall, wird die erstellte Session-Id wieder verworfen. Weiters muss die Verbindung mit dem Mischpult am Leben gehalten werden. Das bedeutet, dass alle paar Sekunden eine Nachricht, im Falle des Soundcraft-Ui16 lautet die Nachricht _3:::ALIVE_, gesendet werden muss. Ansonsten wird die Verbindung vom Server geschlossen.
 
-Bevor ich damit anfangen konnte, Befehle an das Mischpult zu senden, musste ich zuerst die Befehlsstruktur analysieren. Dabei ist mir aufgefallen, dass Befehle des Clients mit _3:::_ beginnen müssen. Nachrichten vom Server fangen hingegen mit _2:::_ an. Die Befehle sind logisch aufgebaut. Sie fangen mit _3:::_ an und anschließend folgt der Befehl. Um Werte wie Lautstärke zu setzen, ist folgender Befehl notwendig: _3:::SETD\^i.0.mix\^Wert_. Nach dem _i_ steht die Nummer des Kanals und nach dem _mix\^_ wird der gewünschte Wert platziert. Die Lautstärke kann einen Dezimalwert zwischen Null und Eins haben.
+Um Befehle an das Mischpult senden zu können, musste zuerst die Struktur analysiert werden. Dabei ist mir aufgefallen, dass Befehle des Clients mit _3:::_ beginnen müssen. Nachrichten vom Server fangen hingegen mit _2:::_ an. Die Befehle sind logisch aufgebaut. Sie fangen mit _3:::_ an und anschließend folgt der Befehl. Um Werte wie Lautstärke zu setzen, ist folgender Befehl notwendig: _3:::SETD\^i.0.mix\^Wert_. Nach dem _i_ steht die Nummer des Kanals und nach dem _mix\^_ wird der gewünschte Wert platziert. Die Lautstärke kann einen Dezimalwert zwischen Null und Eins haben.
 
-Zuerst habe ich mit JavaScript einen Prototypen entwickelt, um die Befehle auszuprobieren. Allerdings sollten alle Geräte über den Raspberry Pi gesteuert werden, deswegen musste die Kommunikation mit dem Mischpult am Server umgesetzt werden. Dieser Server baut eine Client-Verbindung zum Socket.io-Server auf. Zuerst wird eine Session-Id mit der cURL-Funktion von PHP angefragt. Mit cURL können HTTP-Anfragen in PHP gemacht werden. Der Server sendet eine Session-Id zurück und die WebSocket-Verbindung zum Mischpult kann geöffnet werden. Wenn nun auf der Benutzeroberfläche zum Beispiel ein Regler eines Mikrofons betätigt wird, sendet der Client dem Server die Daten und dieser generiert das passende Kommando, um sie weiter an das Mischpult zu senden. \cite{curl_official}
+Zuerst wurde ein Prototyp mit JavaScript entwickelt, um die Befehle auszuprobieren. Allerdings sollten alle Geräte ausschließlich über den Raspberry Pi gesteuert werden, deswegen musste die Kommunikation mit dem Mischpult am Server umgesetzt werden. Dieser Server baut eine Client-Verbindung zum Socket.io-Server auf. Zuerst wird eine Session-Id mit der cURL-Funktion von PHP angefragt. Mit cURL können HTTP-Anfragen in PHP gemacht werden. Der Server sendet eine Session-Id zurück und die WebSocket-Verbindung zum Mischpult kann geöffnet werden. Wenn nun auf der Benutzeroberfläche zum Beispiel ein Regler eines Mikrofons betätigt wird, sendet der Client dem Server die Daten und dieser generiert das passende Kommando, um sie weiter an das Mischpult zu senden. \cite{curl_official}
 
 Dank der WebSocket-Spezifikation ist die Latenz minimal, obwohl die Befehle über zwei Verbindungen geschickt werden müssen. Mit herkömmlichen HTTP-Anfragen wäre die gesamte Kommunikation wesentlich langsamer.
 
 ## Die PHP-Library Ratchet
 
-\renewcommand{\kapitelautor}{Autor: Dominik Nußbaumer, Clemens Scharwitzl}
+\renewcommand{\kapitelautor}{Autoren: Dominik Nußbaumer, Clemens Scharwitzl}
 
 \input{markdown/Clemens.md/ratchet.md}
