@@ -31,7 +31,7 @@ Innerhalb der *get_module*-Methode erstellt man eine neue statische Instanz der 
 *Php::Extension* repräsentiert die Extension und *Php::Class* die selbst programmierte C++-Klasse.
 Der *Php::Class* werden nun der Reihe nach die Methoden der C++-Klasse zugewiesen.
 Weiters wird auch spezifiziert, wie diese Methode in PHP heißen soll und 
-welche Parameter von welchem Datentyp sie haben soll.
+welche Parameter welches Datentypes sie haben soll.
 Am Ende wird die *Php::Class* an die *Php::Extension* angehängt und die Php::Extension an die Library zurück geliefert.\cite{noauthor_php-cpp_nodate}
 Nachstehend ist ein Code-Beispiel für eine C++-Extension für PHP dargestellt, wie sie auch in diesem Projekt integriert ist.
 

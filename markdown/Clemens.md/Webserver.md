@@ -70,18 +70,18 @@ In diesem Projekt wurden - neben den Standard-Modulen - die Module: SSL, Proxy m
 Dieses Modul stellt die Verwendung von SSL-gesichertem  HTTP zur Verfügung (HTTPS). 
 Für die Verwendung wird ein SSL-Zertifikat benötigt, dieses kann entweder mit Hilfe der Software OpenSSL selbst erstellt werden,
 oder von einer offiziellen Stelle verifiziert werden. \cite{noauthor_mod_ssl_nodate}
-Bei diesem Projekt wurde das Zertifikat selbst erzeugt, da offizielle registrierte Zertifikate nur kostenpflichtig zu erhalten sind.
+Bei diesem Projekt wurde das Zertifikat selbst erzeugt, da offiziell registrierte Zertifikate nur kostenpflichtig oder domain-gebunden zu erhalten sind.
 
 **Proxy und Proxy WS:**
 Dieses Modul stellt die Funktion eines Proxy-Servers zur Verfügung.
 Unter einem Proxy-Server versteht man einen Server, der als eine Art Vermittler auftritt. Er leitet Anfragen von einem Netz in ein anderes 
 und erledigt somit die Anfrage an den Ziel-Host für den anfragenden Client. \cite{noauthor_was_nodate}
 Die Erweiterung Proxy WS ermöglicht es Websocket-Verbindungen über einen Proxy in ein anderes Netz aufzubauen.
-Dies war in diesem Projekt notwendig, da Ratchet (\siehe{ratchet}) keine verschlüsselte Websocket-Verbindungen (WSS) unterstützt.
+Dies war in diesem Projekt notwendig, da die PHP Library Ratchet (\siehe{die-php-library-ratchet}) keine verschlüsselte Websocket-Verbindungen (WSS) unterstützt.
 Um trotzdem die Verbindung zu verschlüsseln, wurde ein Proxy auf dem localhost eingerichtet, dadurch ist die Verbindung zum Webserver verschlüsselt und 
 wird nur Server-Intern auf eine nicht verschlüsselte Verbindung umgelegt.
 
 **Rewrite:**
-Dieses Modul ermöglicht es, die URL der Anfrage während der Laufzeit zu ändern.
+Dieses Modul ermöglicht es, den URL der Anfrage während der Laufzeit zu ändern.
 Dies geschieht mittels eines regulären Ausdrucks und einer „RewriteRule“ (Umschreibungsregel). \cite{noauthor_mod_rewrite_nodate}
 Dieses Modul wurde eingesetzt, um jede Anfrage, die eine ungesicherte Verbindung herstellen will, automatisch auf eine gesicherte Verbindung umzuleiten.
