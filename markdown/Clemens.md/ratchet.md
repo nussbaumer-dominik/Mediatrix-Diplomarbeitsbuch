@@ -1,5 +1,3 @@
-\renewcommand{\kapitelautor}{Autoren: Dominik Nußbaumer, Clemens Scharwitzl}
-
 Um einen Websocket-Server auf Seiten des Backends aufzusetzen, wurde die PHP Library Ratchet verwendet.
 Ratchet erlaubt es sehr einfach einen ereignisbasierten (event based) Websocket-Server aufzusetzen.
 Für die Erstellung eines Servers auf Ratchet basis ist die Application-Klasse das wichtigste Element,
