@@ -30,7 +30,7 @@ Ein weiterer Unterschied zwischen Flexbox und CSS-Grid ist, dass die Basis von F
 </header>
 ```
 
-Bevor das \<header> Element durch das Attribut _display: flex_ zu einem Flex-Container wird, sieht das derzeitige Markup aus wie in \abb{ohne_flex}. \cite{flexbox_official}
+Bevor das _\<header>_-Element durch das Attribut _display: flex_ zu einem Flex-Container wird, sieht das derzeitige Markup aus wie in \abb{ohne_flex}. \cite{flexbox_official}
 
 ![Derzeitige Darstellung ohne Flexbox \label{ohne_flex}](bilder/Dominik/Flexbox_example_1.pdf){width=90%}
 
@@ -56,7 +56,7 @@ div:nth-child(3) {
 }
 ```
 
-Durch das Setzen von _display: grid_ wird das \<header>-Element zu einem CSS-Grid. Die Anzahl der Spalten wird mit dem Attribut _grid-template-columns_ definiert. Der Hauptunterschied bei diesem Ansatz ist, dass die Spalten, also das Layout, zuerst definiert werden mussten. Man benötigt Spalten, um dort Inhalt zu platzieren. In diesem Fall erstellt man zehn Spalten zu je einem "fr", also einem Bruchteil der Seite. Diese Einheit signalisiert dem Browser, dass er den verfügbaren Platz auf alle Spalten gleichmäßig aufteilen soll. Nun weisen wir jedem einzelnen \<div>-Element eine Spalte zu. Damit der Ausloggen-Knopf am rechten Rand positioniert ist, wird er explizit in die zehnte Spalte mit _grid-column: 10 / 11_ geschoben. Dieser Ansatz zwingt uns, die Anzahl der Spalten festzulegen. Sofern der Raster nicht verändert wird, hat er zehn Spalten. Dies ist eine eindeutige Begrenzung, die in Flexbox nicht vorhanden wäre. \cite{flexbox_official}
+Durch das Setzen von _display: grid_ wird das _\<header>_-Element zu einem CSS-Grid. Die Anzahl der Spalten wird mit dem Attribut _grid-template-columns_ definiert. Der Hauptunterschied bei diesem Ansatz ist, dass die Spalten, also das Layout, zuerst definiert werden mussten. Man benötigt Spalten, um dort Inhalt zu platzieren. In diesem Fall erstellt man zehn Spalten zu je einem "fr", also einem Bruchteil der Seite. Diese Einheit signalisiert dem Browser, dass er den verfügbaren Platz auf alle Spalten gleichmäßig aufteilen soll. Nun weisen wir jedem einzelnen \<div>-Element eine Spalte zu. Damit der Ausloggen-Knopf am rechten Rand positioniert ist, wird er explizit in die zehnte Spalte mit _grid-column: 10 / 11_ geschoben. Dieser Ansatz zwingt uns, die Anzahl der Spalten festzulegen. Sofern der Raster nicht verändert wird, hat er zehn Spalten. Dies ist eine eindeutige Begrenzung, die in Flexbox nicht vorhanden wäre. \cite{flexbox_official}
 
 ### Kombination von CSS-Grid und Flexbox
 

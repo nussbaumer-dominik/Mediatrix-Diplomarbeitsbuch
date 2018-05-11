@@ -2,7 +2,7 @@
 
 Ein Browser verwendet CSS, um DOM-Elemente visuell zu bearbeiten und zu rendern. CSS selbst hat seine eigene Auswahl an Funktionen, welche manchmal allerdings nicht ausreichen, um saubere und wiederverwendbare Regeln zu schreiben. Aufgrund dieser Einschränkungen ist das Konzept eines CSS-Präprozessors entstanden. Dieser bietet einen vergrößerten Funktionsumfang, der die Grundfunktionalität erweitert. Anschließend wird die Datei zu herkömmlichen CSS kompiliert, da der Browser nur reines CSS interpretieren kann. \cite{SASS_REFERENCE}
 
-Es gibt verschiedene CSS-Präprozessoren wie SASS, LESS oder Stylus. All diese bieten verschiedene Funktionen an. Ich persönlich habe mich aus mehreren Gründen für die Verwendung von SASS entschieden.
+Es gibt verschiedene CSS-Präprozessoren wie SASS, LESS oder Stylus. All diese verfügen über verschiedene Funktionen. Ich persönlich habe mich aus mehreren Gründen für die Verwendung von SASS entschieden.
 
 Um die Vorteile von CSS-Präprozessoren zu verstehen, zeige ich zuerst ein paar der Mängel von reinem CSS auf.
 
