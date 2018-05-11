@@ -27,10 +27,6 @@ Das „Mediatrix-System" besteht aus folgenden Komponenten:
 > regelt den Strom der Scheinwerfer, um diese in ihrer Helligkeit
 > steuern zu können.
 
--   Kleinrechner
-
-> dient zum Abspielen von Präsentationen und Multimediainhalten
-> jeglicher Art.
 
 Weitere Komponenten:
 
@@ -57,27 +53,27 @@ Weitere Komponenten:
 > bietet die Schnittstelle zwischen Raspberry Pi und den Scheinwerfern.
 
 Um das System möglichst kompakt und modular zu gestalten, bietet sich
-ein Rack-Schrank mit Montageschienen nach 19" - Standard an. Die
+ein Rack-Schrank mit Montageschienen nach 19-Zoll-Standard an. Die
 Abstände zwischen den Bohrungen an Gerät und Schiene sind genormt,
 ebenso wie der Abstand zwischen den Schienen. Das ermöglicht den
-einfachen Einbau oder Austausch von 19"- konformen Geräten.
+einfachen Einbau oder Austausch von 19-Zoll- konformen Geräten.
 
-## 19" Racks
+## 19-Zoll Racks
 
 Der horizontale Abstand zwischen zwei Montageleisten beträgt genau 19
 Zoll (= 48,26 Zentimeter).
 
 ![Abstand bei 19-Zoll-Schienen \quelle\url{https://bit.ly/2GZvy6y}](bilder/Florian/19zoll.png){width="1.2125in"}
 
-Die minimale Höhe eines 19"- konformen Geräts beträgt 1,75" oder 44,45mm.
+Die minimale Höhe eines 19-Zoll- konformen Geräts beträgt 1,75 Zoll oder 44,45mm. (siehe Abb. 2.1)
 Dieser Abstand wird als eine Höheneinheit (1HE) bezeichnet. Darum werden
 bei Geräten aus den Bereichen Tontechnik oder Großrechner und Server die
-Maße der Geräte oftmals in 19" und Anzahl der Höheneinheiten angegeben.
+Maße der Geräte oftmals in 19-Zoll und Anzahl der Höheneinheiten angegeben.
 Die Tiefe der Geräte kann jedoch variieren und wird darum meist in
 Millimetern angegeben.
 
 In unserem Fall haben das Tonmischpult, die Funkmikrofone und die
-Endstufe konforme Maße, um in ein 19"- Rack eingebaut zu werden. Der
+Endstufe 19-Zoll- konforme Maße. Der
 AV-Receiver ist mittels Rack-Wanne im Rack platziert.
 \cite[S.101]{wirsum_praktische_1991}
 
@@ -86,7 +82,7 @@ AV-Receiver ist mittels Rack-Wanne im Rack platziert.
 
 Die elektronischen Komponenten, wie der Raspberry Pi, die Relais und das
 12V-Netzteil, galt es ebenfalls sicher und kompakt in dem Rack zu
-platzieren. Dazu fiel die Entscheidung auf ein 19"- Gehäuse mit drei
+platzieren. Dazu fiel die Entscheidung auf ein 19-Zoll- Gehäuse mit drei
 Höheneinheiten. Es wurde ein Leergehäuse angeschafft und mit allen
 notwendigen Buchsen bestückt. An der Rückseite des Gehäuses sind alle
 benötigten Anschlüsse ausgeführt.
@@ -169,7 +165,7 @@ alternativ zu den Bananensteckern auch ein blankes Kabel an den Kontakt
 geklemmt werden kann.
 
 Die Ausgänge zu den Lautsprechern sind als vierpolige Speakon-Buchsen
-ausgeführt. So lassen sich jeweils 2 Lautsprecher mit einer Buchse
+ausgeführt. So lassen sich jeweils zwei Lautsprecher mit einer Buchse
 verbinden. Die Lautsprecherpaare sind in die Ausgänge „Center, Front,
 Side und Back" unterteilt.
 
@@ -201,7 +197,7 @@ herausgeführt.
 ## Anschlüsse für Lichtsteuerung
 
 Bei der Lichtsteuerung wurde auf den Branchenstandard, das DMX-Protokoll
-gesetzt. Dieses wird mittels drei- oder fünfpoliger XLR-Steckern
+gesetzt. Dieses wird mittels drei- oder fünfpoliger XLR-Stecker
 übertragen. Im semiprofessionellen Sektor sind dreipolige Anschlüsse
 üblicher, darum ist ein solcher eingebaut. Intern ist diese Buchse mit
 dem ENTTEC DMX-Interface verbunden.
@@ -227,9 +223,9 @@ verfügt, wird die Induktionsspannung an einem PowerCon-Ausgang
 
 ## Anschlüsse für Stromversorgung
 
-Das Mediatrix-Modul wird mittels PowerCon-Kabel mit 230V versorgt. Diese
-werden im Gehäuse intern verteilt und an z.B. den steuerbaren
-PowerCon-Ausgang an die Geräte im Rack weitergegeben.
+Das Mediatrix-Modul wird mittels PowerCon-Kabel mit 230V versorgt. Diese Spannung
+wird im Gehäuse intern verteilt und an den steuerbaren
+PowerCon-Ausgang oder an die Geräte im Rack weitergegeben.
 
 ## Anfertigung des Anschlusspanels
 
@@ -278,7 +274,7 @@ Lochrasterplatine übertragen und verlötet.
 
 Um die Platine oder andere angeschlossene Komponenten möglichst einfach
 ausbauen oder austauschen zu können, sind die Verbindungen als
-verpolungssichere Stecker ausgeführt. Alle Pins des Raspberry Pis sind
+verpolungssichere Stecker ausgeführt. Alle Pins des Raspberry Pi sind
 mit einem IDE-Kabel an eine Stiftleiste auf der Platine angeschlossen.
 Das System kann somit je nach Bedarf um zusätzliche Funktionen erweitert
 werden.
@@ -291,16 +287,16 @@ nicht so zeitaufwendig wie das Ätzen einer Platine.
 
 ## Anschluss der Relais-Platine
 
-Da die Relais eine Schaltspannung von 12V DC benötigen, erfolgt die
+Da die Relais eine Schaltspannung benötigen, erfolgt die
 Versorgung über ein 12V-Netzteil. Diese sind mit JD-VCC und GND
 verbunden. Der VCC Pin an dieser Steckleiste dient der Stromversorgung
 der Optokoppler.
 
 Die zweite Steckleiste verfügt über einen GND, ein VCC 5V und 8 Pins für
 die jeweiligen Relais. Bezogen wird die 5V-Spannung vom Raspberry Pi.
-Jeder Relais-Pin kann mit einem GPIO-Pin des Raspberry Pis verbunden und
+Jeder Relais-Pin kann mit einem GPIO-Pin des Raspberry Pi verbunden und
 somit einzeln angesteuert werden. In diesem Anwendungsfall werden für
-die Lautsprecherabschaltung 7 Relais mit einem GPIO-Pin geschalten, da
+die Lautsprecherabschaltung 7 Relais mit einem GPIO-Pin gesteuert, da
 eine Differenzierung der Leitungen nicht notwendig ist. Gleichzeitig
 wird der Strom zu den Subwoofern über zwei Relais auf der anderen
 Platine geschalten. Ein weiterer GPIO-Pin ist für die Steuerung der
@@ -329,10 +325,9 @@ Spezifikationen. Grundlegend sind jedoch alle ähnlich aufgebaut.
 
 Raspberry Pi 2 Model B:
 
--   A 900MHz quad-core ARM Cortex-A7 CPU
+-   900MHz quad-core ARM Cortex-A7 CPU
 
 -   1GB RAM
-
 
 -   4 USB ports
 
@@ -352,6 +347,7 @@ Raspberry Pi 2 Model B:
 
 -   VideoCore IV 3D graphics core
 
+Spezifikationen laut Hersteller
 \cite{noauthor_raspberry_nodate-4}
 
 ## Eignung für dieses Projekt
@@ -360,7 +356,7 @@ Durch den Preis, die Größe und Möglichkeit, elektronische Schaltungen
 und Komponenten anschließen zu können, ist der Raspberry Pi 2 Model B
 sehr gut auf die Anforderungen des Projekts zugeschnitten. Mittels
 USB-Schnittstellen können die Infrarotplatine und das USB-DMX-Interface
-angeschlossen werden. Die restliche Elektronik lassen sich mit den
+angeschlossen werden. Die restliche Elektronik lässt sich mit den
 „General-Input-Output-Pins" (GPIO-Pins) verbinden. Da eine vollwertige
 CPU verbaut ist, können auch komplexere Programme ausgeführt werden.
 
@@ -389,12 +385,10 @@ benötigt.
 Für die bestmögliche Kompatibilität mit gängigen Laptops und anderen
 Abspielgeräten, sind eine HDMI-Buchse, zwei Cinchbuchsen und eine
 XLR-Female-Buchse verbaut. Zusätzlich sind eine Schutzkontaktsteckdose,
-für mitgebrachte Geräte und eine USB-Buchse für den, im Rack
-verbauten Kleinrechner vorhanden.
+für mitgebrachte Geräte und eine USB-Buchse, die an den Saal-Computer angeschlossen ist, vorhanden.
 
 Die Variante, Buchsen statt Kabeln zu verbauen, hat sich als
-praktikabler erwiesen als die temporäre Lösung mit Kabeln, die sich
-nicht bewährt hat.
+praktikabler erwiesen.
 
 Die Kabel waren im Rack an die Geräte angeschlossen und durch eine
 Öffnung an der Oberseite des Racks herausgeführt. Unglücklicherweise
@@ -453,14 +447,13 @@ der Lautsprecherleitungen.
 Beim Einschalten von Verstärkern und Mischpulten kommt es zu knackenden
 Geräuschen, die auf die Lautsprecher übertragen werden. Diese können
 dadurch beschädigt werden. Zudem ist es für Zuhörende sehr unangenehm.
-Gängige Verstärker unterbinden dies, indem sie erst nachdem sie
+Gängige Verstärker unterbinden dies, indem sie erst, nachdem sie
 vollständig hochgefahren sind, die Lautsprecherleitungen freigeben.
 Mischpulte verfügen in der Regel über keine ähnliche Funktion. Hier
 liegt es in der Verantwortung des Anwenders, die Ausgangslautstärke des
 Pults auf das Minimum einzustellen, bevor das Pult eingeschalten wird.
 Im Fall von Schülerinnen und Schülern kann nicht davon ausgegangen
-werden, dass dies beachtet wird. Darum muss das Unterbrechen zu gewissen
-Ereignissen folgendermaßen passieren:
+werden, dass dies beachtet wird.
 
 Beim Druck des Einschalttasters wird dem Raspberry Pi ein Signal
 übermittelt. In Folge schaltet dieser das Relais ein, das die anderen
@@ -591,19 +584,13 @@ diesem Grund wurde schlussendlich ein getaktetes Netzteil mit 4,1A bei
 Auf der Hauptplatine werden die 12V DC auf verschiedene Komponenten
 verteilt, beispielsweise die Relais-Platinen, Status LEDs und den
 Lüfter. Da der Raspberry Pi nur in der Lage ist Spannungen von 3,3V zu
-schalten, werden für die Status LEDs und der Lüfter MOSFETs verwendet.
+schalten, werden zum Schalten der Status LEDs und des Lüfters MOSFETs verwendet.
 
 ### MOSFET
 
 Bei einem MOSFET handelt es sich um einen
 Metall-Oxid-Halbleiter-Feldeffekttransistor.
 
-\begin{quote}
-„Ein Transistor ist ein Halbleiter-Bauelement aus drei
-aufeinanderfolgenden Halbleiterschichten, also npn- oder pnp-Schichten.
-Er hat somit zwei pn-Übergänge, in deren Grenzgebieten sich
-Sperrschichten ausbilden."\cite[S. 372]{krikava_grundlagen_1981}
-\end{quote}
 
 Der MOSFET verfügt über drei Pins:
 
@@ -617,7 +604,7 @@ Angeschlossen ist der MOSFET wie folgt:
 
 Der Gate-Kontakt ist mit dem IO-Pin des Raspberry Pis verbunden.
 Zwischen Drain-Kontakt und 12V ist die Last angeschlossen. Weiters ist
-eine Freilaufdiode in Flussrichtung von GND zu Drain eingebaut, um den
+eine Freilaufdiode von GND zu Drain eingebaut, um den
 MOSFET vor Überspannungen zu schützen. Source-Kontakt ist auf GND
 geführt.
 
@@ -662,10 +649,10 @@ Die HDMI-Buchse ist an der Rückseite, wie an der Vorderseite mit einer
 HDMI-Buchse ausgestattet. Dies ermöglicht die Verwendung eines üblichen
 HDMI-Kabels, das an einen HDMI-Input des AV-Receivers angeschlossen ist.
 
-Die XLR-Buchse ist mit einem 90cm langen XLR-Kabel mit einem
+Die XLR-Buchse ist mit einem \SI{90}{\centimetre} langen XLR-Kabel mit einem
 Mikrofoneingang des Mischpults verbunden.
 
-Die Cinch-Buchsen führen zum Line-Input des Mischpults. Das Kabel ist
+Die Cinch-Buchsen führen zum Line-Input des AV-Receivers. Das Kabel ist
 mit den Buchsen verlötet.
 
 Die USB-Buchse ist mit einem USB 2.0 Druckerkabel an den Rechner
@@ -702,7 +689,7 @@ Grad Celsius mehr notwendig.
 Damit der Temperatursensor ausgelesen werden kann, muss er zunächst mit
 dem Raspberry Pi verbunden werden. Dazu werden ein GPIO-Pin, eine 3,3V
 Versorgung und der GND folgendermaßen an die Konnektoren des DS1820
-angeschlossen:
+angeschlossen (siehe Abb. 2.4)
 
 ![Schaltplan DS1820 Raspberry Pi \quelle{https://bit.ly/2q76mR5}](bilder/Florian/Tempsensor.png){width="2.5in"}
 
@@ -719,7 +706,7 @@ Bei einem erneuten Versuch wurde nach folgendem Tutorial gearbeitet:
 \url{<https://www.raspberrypi-spy.co.uk/2013/03/raspberry-pi-1-wire-digital-thermometer-sensor/>}
 
 Zudem wurde die Schaltung neu aufgebaut, um sicherzustellen, dass diese
-kein Problem darstellt.
+korrekt ist.
 
 ![Putty-Ausgabe inkorrekt](bilder/Florian/Putty1.png){width=90%}
 
@@ -745,9 +732,9 @@ Auch Erwärmung durch Reiben wurde erkannt und der Temperaturwert änderte
 sich auf 25,062°C.
 
 Nachdem die Temperatur nun manuell ausgelesen werden konnte, galt es
-dies auch automatisch zu bewerkstelligen. Dazu benötigte ich ein
-Programm, das diese Aufgabe übernahm und in gewissen Zeitabständen die
-Temperatur abfragte.
+dies auch automatisch zu bewerkstelligen. Dazu wird ein
+Programm, das diese Aufgabe übernimmt und in gewissen Zeitabständen die
+Temperatur abfragt benötigt.
 
 Dies kann in den Programmiersprachen „C" oder „PYTHON" gelöst werden.\
 Aufgrund des Rates von Herrn Professor August Hörandl fiel die
@@ -879,7 +866,7 @@ fallen die anderen Varianten in diesem Fall weg.
 
 PWM, oder auch Pulsweitenmodulation, ist ein Verfahren, bei dem
 
-\begin{quote}„[...] das Verhältnis zwischen der Einschaltzeit und Periodendauer
+\begin{quote}"[...] das Verhältnis zwischen der Einschaltzeit und Periodendauer
 eines Rechtecksignals bei fester Grundfrequenz variiert wird. Das
 Verhältnis zwischen der Einschaltzeit $t_{ein}$ und der Periodendauer $T =t_{ein} + t_{aus}$ wird
 als das Tastverhältnis $p$ bezeichnet. (laut DIN IEC 60469-1:
@@ -961,7 +948,7 @@ Codes in wenigen Minuten ausgetauscht werden. Weiteren Änderungen sind
 nicht notwendig.
 
 Bislang wurde das IR-Device noch via Serial-Connector angesteuert und
-die Stromversorgung mittels 9V-Batterie gewehrleistet. Da diese
+die Stromversorgung mittels 9V-Batterie gewährleistet. Da diese
 Technologien veraltet sind, wurde auf eine USB Schnittstelle umgerüstet,
 die die Signal- und Stromversorgung übernimmt. Die Platine ist mit einem
 PIC bestückt, der die Infrarotdioden ansteuert. Um Infrarotsignale in
@@ -988,5 +975,5 @@ bestimmt.
 Anders als der Beamer besitzt der AV-Receiver einen „Trigger-Output". An
 jenem liegen 12V an, sobald das Gerät einsatzbereit ist. Via 3,5mm
 Klinkenbuchse wird diese Spannung in das Mediatrix-Modul geleitet und
-dort auf 3.3V umgewandelt. Der Raspberry Pi ist so in der Lage, die
+dort, mit Hilfe eines Optokopplers auf 3.3V umgewandelt. Der Raspberry Pi ist so in der Lage, die
 Spannung auszuwerten.
