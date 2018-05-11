@@ -184,7 +184,7 @@ Längsverbinder                  & 10,43€      & 1       & 1       & 1       \
 Endkappe                        & 2,09€       & 1       & 1       & 1       \\ \hline
 Gesamtpreis                     &             & 262,03€ & 262,03€ & 321,63€ \\ \hline
 \end{tabular}
-\caption{Montage: Preisoptimierte Varianten}
+\caption{Montage: preisoptimierte Varianten}
 \label{monPreisTable}
 \end{table}
 
@@ -224,13 +224,14 @@ Stairville Locking Carabina 6mm    & 1,49€       & 8       & 8       & 8      
 the box Flugöse M8 x 30mm          & 4,88€       & 4       & 4       & 4       \\ \hline
 Gesamtpreis                        &             & 197,64€ & 197,64€ & 221,24€ \\ \hline
 \end{tabular}
-\caption{Montage: Leistungsoptimierte Varianten}
+\caption{Montage: leistungsoptimierte Varianten}
 \label{monLeistTable}
 \end{table}
 
 Alle Produkte und Preise sind am 03.04.2018 von thomann.at entnommen
 worden.
 
+\newpage
 
 #### Einbau der Traverse:
 
@@ -270,3 +271,10 @@ Gesamtpreis        & 1743,64€ & 2165,64€ & 2385,24€ \\ \hline
 \caption{Gesamtpreise der leistungsoptimierten Varianten}
 \label{GesPreisLeistungTable}
 \end{table}
+
+\newpage
+
+## Empfehlung
+
+Ich würde Ihnen zu der Aufhängung, mittels 1-Punkt-Traverse raten, da diese genügend Tragfähigkeit hat, falls später Geräte dazukommen. (siehe Tabelle 6.6)
+An Geräten empfehle ich die Konfiguration "Preisoptimiert Mittel" (siehe Tabelle 6.3), da die enthaltenen Scheinwerfer sehr universell einsetzbar sind. Weiters verfügen sie über ausreichend Lichtleistung für den Konferenzsaal.
