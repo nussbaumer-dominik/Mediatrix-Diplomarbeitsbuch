@@ -2,7 +2,7 @@
 
 In \abb{ui} ist die Benutzeroberfläche auf einem Desktop-Gerät zu sehen. Sie ist in zwei Bereiche eingeteilt. Einerseits die Menüleiste auf der linken Seite und andererseits die Module zur Steuerung der Geräte auf der rechten Seite. In der Menüleiste können die verschiedenen Module ein- und ausgeblendet werden. Dadurch kann der Benutzer die Geräte auswählen, die er/sie bedienen möchte, ohne das die Oberfläche überladen wird. Außerdem kann die derzeitige Konfiguration mit einem Klick auf den Speichern-Knopf in der linken oberen Ecke als Preset abgespeichert werden. Unten links kann das Farbschema geändert werden. Weiters gibt es dort die Möglichkeit den erweiterten Modus zu aktivieren. Danach wechselt das Layout vom Präsentationsmodus zum erweiterten Modus.
 
-Wenn ein Modul eingeblendet wird, dann erscheint es auf der rechten Seite in Form einer Box. Diese enthalten verschiedene Elemente wie zum Beispiel vertikale Schieberegler oder Knöpfe. Da im LIZ mehrere Scheinwerfer installiert sind, erscheint bei der Lichtsteuerung jeder Scheinwerfer als eigene Box.
+Wenn ein Modul eingeblendet wird, dann erscheint es auf der rechten Seite in Form einer Box. Diese enthalten verschiedene Elemente wie zum Beispiel vertikale Schieberegler oder Knöpfe. Da im LIZ mehrere Scheinwerfer installiert sind, erscheint bei der Lichtsteuerung jeder Scheinwerfer als eigene Box. Damit man schnell einen Überblick über die Konfiguration bekommt, gibt es auch noch eine Statusleiste am oberen Rand. In dieser ist die derzeitige Lautstärke des AV-Receivers, die Anzahl der verbundenen Scheinwerfer und der Zustand des Beamers zu sehen.
 
 ![Die Benutzeroberfläche \label{ui}](bilder/Dominik/Oberflaeche.png){width=90%}
 

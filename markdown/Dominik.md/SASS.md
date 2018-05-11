@@ -14,13 +14,13 @@ Präprozessoren haben für all diese Probleme eine Lösung parat. \cite{SASS_REF
 
 ### Partielle CSS-Dateien
 
-Aufgrund der ständig komplexer werdenden Frontend-Entwicklung werden CSS-Dateien immer größer und enthalten oft tausende Zeilen an Code. Umso länger diese Dateien sind, desto unhandlicher und verwirrender werden sie. Dafür bietet SASS bereits eine Lösung. CSS-Dateien können auf mehrere partielle Dateien aufgeteilt werden. Dadurch kann man seine Style-Sheets besser organisieren und modularisieren. Es ist wesentlich einfacher, mehrere kleine Dateien zu schreiben, zu warten und zu erweitern, als eine große Datei mit tausenden Zeilen. Mithilfe der erweiterten _@import_-Funktion des Präprozessors können die einzelnen Dateien beim Speichern zu einer zusammengefasst werden. \cite{SASS_REFERENCE}
+Aufgrund der ständig komplexer werdenden Frontend-Entwicklung werden CSS-Dateien immer größer und enthalten oft tausende Zeilen an Code. Umso länger diese Dateien sind, desto unhandlicher und verwirrender werden sie. Dafür bietet SASS bereits eine Lösung. CSS-Dateien können auf mehrere partielle Dateien aufgeteilt werden. Dadurch kann man seine Style-Sheets besser organisieren und modularisieren. Es ist wesentlich einfacher, mehrere kleine Dateien zu schreiben, zu warten und zu erweitern, als eine große Datei mit tausenden Zeilen. Mithilfe der erweiterten _\@import_-Regel des Präprozessors können die einzelnen Dateien beim Speichern zu einer zusammengefasst werden. \cite{SASS_REFERENCE}
 
-Die _@import_-Regel ist schon sehr lange ein Teil von CSS. Allerdings ist sie nicht besonders beliebt, da jeder Import eine eigene HTTP-Anfrage ausführt, was zu einer langsamen Webseite führt. Was passiert, wenn man diese Funktion mit SASS verwendet? Hoffentlich haben Sie nie damit aufgehört, über den Namen "Präprozessor" nachzudenken. \cite{SASS_REFERENCE}
+Die _\@import_-Regel ist schon sehr lange ein Teil von CSS. Allerdings ist sie nicht besonders beliebt, da jeder Import eine eigene HTTP-Anfrage ausführt, was zu einer langsamen Webseite führt. Was passiert, wenn man diese Funktion mit SASS verwendet? Hoffentlich haben Sie nie damit aufgehört, über den Namen "Präprozessor" nachzudenken. \cite{SASS_REFERENCE}
 
 > "Ein Präprozessor ist ein Computerprogramm, das Eingabedaten vorbereitet und zur weiteren Bearbeitung an ein anderes Programm weitergibt.” — Wikipedia \cite{preprocessor_wiki}
 
-Wenn man dieses Konzept nun auf die _@import_-Regel anwendet, fällt einem auf, dass der Import von SASS damit erledigt wird. Die CSS- und SASS-Dateien werden zusammengefasst und am Ende bleibt nur eine Datei über. Der Browser des Benutzers muss nur eine Anfrage ausführen und bloß eine Datei hinunterladen. Das Projekt könnte aus einer Vielzahl an CSS-Dateien zusammengesetzt sein. \cite{SASS_REFERENCE}
+Wenn man dieses Konzept nun auf die _\@import_-Regel anwendet, fällt einem auf, dass der Import von SASS damit erledigt wird. Die CSS- und SASS-Dateien werden zusammengefasst und am Ende bleibt nur eine Datei über. Der Browser des Benutzers muss nur eine Anfrage ausführen und bloß eine Datei hinunterladen. Das Projekt könnte aus einer Vielzahl an CSS-Dateien zusammengesetzt sein. \cite{SASS_REFERENCE}
 
 ### Variablen in SASS
 
@@ -77,9 +77,7 @@ Wie beim Lernen jeder anderen Technologie werden Designer auch bei SASS mit eini
 *   Für Designer ist der Terminal nicht immer ein beliebtes Werkzeug. Um Präprozessoren zu verwenden, wird jedoch ein gewisses Grundwissen vorausgesetzt.
 *   Da SASS einige Konzepte aus der Programmierung ausborgt, kommt man um das Erlernen dieser nicht herum.
 *   Die Syntax kann für einen Anfänger etwas verwirrend erscheinen, da sie stark von der normalen CSS-Syntax abweicht.
-*   Wenn man nicht vorsichtig mit der Gruppierung von Selektoren umgeht, können diese schnell komplex und tief werden, was die Wartbarkeit verschlechtert.
-
-\cite{SASS_REFERENCE}
+*   Wenn man nicht vorsichtig mit der Gruppierung von Selektoren umgeht, können diese schnell komplex und tief werden, was die Wartbarkeit verschlechtert. \cite{SASS_REFERENCE}
 
 ### Verwenden oder nicht verwenden?
 
