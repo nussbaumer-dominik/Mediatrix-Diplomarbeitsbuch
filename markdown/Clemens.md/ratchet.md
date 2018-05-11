@@ -56,7 +56,7 @@ nach deren Prinzip auch die *Application-Class* in diesem Projekt gestaltet ist.
 class Application implements MessageComponentInterface {
     private $client;
 
-    public function onOpen(ConnectionInterface $conn) {     
+    public function onOpen(ConnectionInterface $conn) {
         //save the connection
         $this->client = $conn;
     }
@@ -78,7 +78,5 @@ class Application implements MessageComponentInterface {
         //close the connection
         $conn->close();
     }
-
 }
-
 ```
