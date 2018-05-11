@@ -1,4 +1,4 @@
-Ein Frontend ist die höchste Schicht beim Entwickeln einer Software, da sie am nähesten zur Eingabe des Benutzers ist. Sie stellt die visuelle Benutzeroberfläche dar und wird verwendet, um das System zu bedienen. Da wir uns entschieden haben, eine Webapplikation zu schreiben, wurde die Oberfläche mit den Webstandards HTML5, CSS3 und JavaScript umgesetzt. \cite{_frontend}
+Ein Frontend ist die höchste Schicht beim Entwickeln einer Software, da sie am nähesten zur Eingabe des Benutzers ist. Sie stellt die visuelle Benutzeroberfläche dar und wird verwendet, um das System zu bedienen. Da wir uns entschieden haben, eine Webapplikation zu schreiben, wurde die Oberfläche mit den Webstandards HTML5, CSS3 und JavaScript umgesetzt. \cite{frontend_def}
 
 **HTML:** kurz für Hypertext Markup Language, ist eine Markup-Sprache, die verwendet wird, um digitale Dokumente zu strukturieren. Diese Dokumente sind das Fundament, auf dem das World Wide Web basiert. \cite{html_official}
 
