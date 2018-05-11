@@ -24,7 +24,7 @@ Um JWTs zu integrieren wurde die Library Firebase-JWT verwendet.
 ## Firebase-JWT
 Durch die Integration der Library wird die *JWT*-Klasse verfügbar.
 Um einen JWT zu erstellen müssen zuerst die Claims in einem Array definiert werden.
-In diesem Projekt wurden fünf registrierte Claims und ein Privater verwendet.
+In diesem Projekt wurden fünf registrierte Claims und ein privater Claim verwendet.
 Das Array wird anschließend gemeinsam mit dem Schlüssel und 
 dem zu verwendenden Algorithmus an die Methode *encode* übergeben, welche den JWT zurückliefert. 
 Nachfolgend ist eine Integration der *JWT*-Klasse beschrieben, wie sie in diesem Projekt getätigt wurde.\cite{noauthor_php-jwt:_2018}

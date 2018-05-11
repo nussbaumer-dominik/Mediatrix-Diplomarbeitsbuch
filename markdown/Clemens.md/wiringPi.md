@@ -78,7 +78,7 @@ while (serialDataAvail (fd))
 Um festzustellen, ob der AV-Receiver und der Beamer eingeschalten sind und nicht im Standby-Modus laufen,
 wurde eine Leistungsmessung integriert, welche über einen GPIO-Pin abgefragt werden kann.
 Liegt an einem Pin Spannung an (HIGH), dann ist das Gerät eingeschaltet. Liegt keinen Spannung an (LOW), ist es im Standby-Modus.
-Vor dem Senden von Infrarotbefehlen kann somit festgestellt werden, ob das Gerät auch eingeschaltet ist und diese empfangen kann.
+Vor dem Senden von Infrarotbefehlen kann somit festgestellt werden, ob das Gerät auch eingeschaltet ist und Daten empfangen kann.
 Um den Status HIGH oder LOW eines Pins festzustellen, wird das Kommandozeilentool von WiringPi über PHP gestartet.
 Das Tool wird mit dem Befehl *gpio* aufgerufen und bietet einen sehr großen Funktionsumfang. \cite{noauthor_wiringpi_nodate}
 Die für dieses Projekt wichtigen Optionen sind:

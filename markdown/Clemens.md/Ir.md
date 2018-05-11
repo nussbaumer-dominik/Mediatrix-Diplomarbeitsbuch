@@ -1,12 +1,12 @@
 Infrarot bezeichnet elektromagnetische Wellen im Bereich zwischen 780 Nanometer und einem Millimeter.\cite{noauthor_baua_nodate} 
 Der Name leitet sich von dem lateinischen Präfix „Infra“, was „unterhalb“ bedeutet, und dem Wort „Rot“ ab und bedeutet somit „unter Rot“. 
 Das soll beschreiben, dass die Wellenlänge unterhalb der von Rot, also dem niedrigsten noch sichtbaren Bereich, liegt (\abb{elektroWellen}). 
-Da Infrarot vom Menschlichen Auge nicht wahrgenommen wird, wird es zur Steuerung von unterschiedlichsten Geräten verwendet. 
+Da Infrarot vom menschlichen Auge nicht wahrgenommen wird, wird es zur Steuerung von unterschiedlichsten Geräten verwendet. 
 Die Steuerung über Infrarot ist in Produkten der Elektronikbranche sehr verbreitet, jedoch wurde kein einheitlicher Standard geschaffen. 
-Die verschiedenen Standards funktionieren jedoch nach ähnlichen Prinzipien.
+Die verschiedenen Standards funktionieren nach ähnlichen Prinzipien.
 Einer der verbreitetsten ist der RC-5 Standard, auf welchen im folgenden Kapitel näher eingegangen wird. \cite{noauthor_sb-projects_nodate}
 
-![Darstellung des elektromagnetischem Spektrums\label{elektroWellen} \quelle\url{https://bit.ly/2EkbfLV}](bilder/Clemens/Optikspectrum.png){width=90%}
+![Darstellung des elektromagnetischem Spektrums\label{elektroWellen} \quelle\url{https://www.baua.de/DE/Themen/Arbeitsgestaltung-im-Betrieb/Physikalische-Faktoren-und-Arbeitsumgebung/Optische-Strahlung/Bilder/Optikspectrum.png}](bilder/Clemens/Optikspectrum.png){width=90%}
 
 ## Funktionsweise des Protokolls (RC-5)
 Der RC-5-Code hat eine Gesamtlänge von 14 Bit. Ursprünglich waren diese Bit folgendermaßen aufgeteilt: zwei Startbit, ein Togglebit, fünf Adressbits und sechs Kommandobits.
