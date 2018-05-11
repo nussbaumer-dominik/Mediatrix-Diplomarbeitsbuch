@@ -24,7 +24,7 @@ Um die Fähigkeiten von CSS-Grid etwas besser zu erläutern, habe ich ein Beispi
 </div>
 ```
 
-Das HTML-Markup ist recht simpel, was auch einer der Vorteile von CSS-Grid ist. Es gibt nur einen Grid-Container. Dieser beinhaltet drei weitere \<div>-Elemente. Der spannende Teil ist allerdings im Style sheet. \cite{CSS_Grid_Official}
+Das HTML-Markup ist recht simpel, was auch einer der Vorteile von CSS-Grid ist. Es gibt nur einen Grid-Container. Dieser beinhaltet drei weitere _\<div>_-Elemente. Der spannende Teil ist allerdings im Style sheet. \cite{CSS_Grid_Official}
 
 ```css
 .facebook {
@@ -34,7 +34,7 @@ Das HTML-Markup ist recht simpel, was auch einer der Vorteile von CSS-Grid ist. 
 }
 ```
 
-Zuallererst wird das \<div>-Element mit der Klasse ".facebook" selektiert und mit dem Attribut _display: grid_ als ein Grid-Container definiert. Die Grid-Eigenschaft legt außerdem einen neuen Kontext für das Grid-Layout fest. Dieser wird benötigt, um mit Grid ein Layout aufzubauen. Dieses Elternelement unterteilt den verfügbaren Raum mit dem Befehl _grid-template-columns: 1fr 1fr 1fr_ auf drei gleich große Spalten. _1 fr_ bedeutet, dass jedes Kindelement einen Teil des verfügbaren Platzes zugewiesen bekommt. Da drei Spalten definiert sind, ist jede Spalte 33.33% breit. Zuletzt müssen die Reihen definiert werden. Da unsere Spalten die gesamte Höhe des Browsers einnehmen sollen, muss mit _grid-template-rows_ eine Zeile mit 100% der Höhe definiert werden. \cite{CSS_Grid_Official}
+Zuallererst wird das _\<div>_-Element mit der Klasse ".facebook" selektiert und mit dem Attribut _display: grid_ als ein Grid-Container definiert. Die Grid-Eigenschaft legt außerdem einen neuen Kontext für das Grid-Layout fest. Dieser wird benötigt, um mit Grid ein Layout aufzubauen. Dieses Elternelement unterteilt den verfügbaren Raum mit dem Befehl _grid-template-columns: 1fr 1fr 1fr_ auf drei gleich große Spalten. _1 fr_ bedeutet, dass jedes Kindelement einen Teil des verfügbaren Platzes zugewiesen bekommt. Da drei Spalten definiert sind, ist jede Spalte 33.33% breit. Zuletzt müssen die Reihen definiert werden. Da unsere Spalten die gesamte Höhe des Browsers einnehmen sollen, muss mit _grid-template-rows_ eine Zeile mit 100% der Höhe definiert werden. \cite{CSS_Grid_Official}
 
 ![Ein dreispaltiges CSS-Grid-Layout mit einer Zeile \label{css-grid_eineSpalte}](bilder/Dominik/CSS_Grid_example_1.pdf){width=90%}
 
