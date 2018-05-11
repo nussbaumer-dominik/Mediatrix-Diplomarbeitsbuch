@@ -1,3 +1,5 @@
+\renewcommand{\kapitelautor}{Autoren: Dominik Nußbaumer, Clemens Scharwitzl}
+
 Um einen Websocket-Server auf Seiten des Backends aufzusetzen, wurde die PHP Library Ratchet verwendet.
 Ratchet erlaubt es sehr einfach einen ereignisbasierten (event based) Websocket-Server aufzusetzen.
 Für die Erstellung eines Servers auf Ratchet basis ist die Application-Klasse das wichtigste Element,
@@ -5,6 +7,8 @@ diese enthält die Methoden *onOpen*, *onMessage*, *onClose* und *onError*.
 Die *Application-Class* wird in \kap{application}, näher beschrieben.
 Diese vier Methoden enthalten die eigentliche Logik des Servers.
 Wenn nun ein Websocket-Server initialisiert werden soll, muss die nachstehende Struktur eingehalten werden.
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
 
 ```php
 $server = IoServer::factory(
@@ -30,7 +34,7 @@ Sie wartet bis ein kompletter Request übertragen wurde und gibt ihn dann erst w
 * **WsServer:** Diese Komponente verarbeitet die Websocket-Verbindungen mit den Browsern nach dem W3C Websocket Standard. \cite{noauthor_ratchet_nodate}
 
 ### *Application-Class* \label{application}
-\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
 Diese Klasse beinhaltet die eigentliche Logik des Websocket-Servers.
 Das *MessageComponentInterface* gibt hier die vier Methoden, die von Ratchet verlangt werden, vor und muss implementiert werden. \cite{noauthor_ratchet_nodate}
 Diese vier Methoden sind:

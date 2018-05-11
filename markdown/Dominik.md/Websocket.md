@@ -44,6 +44,4 @@ Dank der WebSocket-Spezifikation ist die Latenz minimal, obwohl die Befehle übe
 
 ## Die PHP-Library Ratchet
 
-\renewcommand{\kapitelautor}{Autoren: Dominik Nußbaumer, Clemens Scharwitzl}
-
 \input{markdown/Clemens.md/ratchet.md}
