@@ -164,7 +164,7 @@ Gesamtpreis        & 1546€          & 1968€            & 2164€          \\
 
 ## Aufhängung:
 
-Benötigte Gesamtlänge der Aufhängung: 4m
+Benötigte Gesamtlänge der Aufhängung: \SI{4}{\meter}
 
 ### EUTRAC-Stromschiene:
 

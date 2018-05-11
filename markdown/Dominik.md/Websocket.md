@@ -38,6 +38,8 @@ Um eine Verbindung aufzubauen, muss zuerst eine Session-Id angefragt werden. Sob
 
 Um Befehle an das Mischpult senden zu können, musste zuerst die Struktur analysiert werden. Dabei ist mir aufgefallen, dass Befehle des Clients mit _3:::_ beginnen müssen. Nachrichten vom Server fangen hingegen mit _2:::_ an. Die Befehle sind logisch aufgebaut. Sie fangen mit _3:::_ an und anschließend folgt der Befehl. Um Werte wie Lautstärke zu setzen, ist folgender Befehl notwendig: _3:::SETD\^i.0.mix\^Wert_. Nach dem _i_ steht die Nummer des Kanals und nach dem _mix\^_ wird der gewünschte Wert platziert. Die Lautstärke kann einen Dezimalwert zwischen Null und Eins haben.
 
+\renewcommand{\kapitelautor}{Autoren: Dominik Nußbaumer, Clemens Scharwitzl}
+
 Zuerst wurde ein Prototyp mit JavaScript entwickelt, um die Befehle auszuprobieren. Allerdings sollten alle Geräte ausschließlich über den Raspberry Pi gesteuert werden, deswegen musste die Kommunikation mit dem Mischpult am Server umgesetzt werden. Dieser Server baut eine Client-Verbindung zum Socket.io-Server auf. Zuerst wird eine Session-Id mit der cURL-Funktion von PHP angefragt. Mit cURL können HTTP-Anfragen in PHP gemacht werden. Der Server sendet eine Session-Id zurück und die WebSocket-Verbindung zum Mischpult kann geöffnet werden. Wenn nun auf der Benutzeroberfläche zum Beispiel ein Regler eines Mikrofons betätigt wird, sendet der Client dem Server die Daten und dieser generiert das passende Kommando, um sie weiter an das Mischpult zu senden. \cite{curl_official}
 
 Dank der WebSocket-Spezifikation ist die Latenz minimal, obwohl die Befehle über zwei Verbindungen geschickt werden müssen. Mit herkömmlichen HTTP-Anfragen wäre die gesamte Kommunikation wesentlich langsamer.

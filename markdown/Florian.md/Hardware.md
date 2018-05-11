@@ -649,7 +649,7 @@ Die HDMI-Buchse ist an der Rückseite, wie an der Vorderseite mit einer
 HDMI-Buchse ausgestattet. Dies ermöglicht die Verwendung eines üblichen
 HDMI-Kabels, das an einen HDMI-Input des AV-Receivers angeschlossen ist.
 
-Die XLR-Buchse ist mit einem \SI{90}{\centimetre} langen XLR-Kabel mit einem
+Die XLR-Buchse ist mit einem \SI{90}{centi\meter} langen XLR-Kabel mit einem
 Mikrofoneingang des Mischpults verbunden.
 
 Die Cinch-Buchsen führen zum Line-Input des AV-Receivers. Das Kabel ist

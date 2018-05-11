@@ -6,7 +6,7 @@ Die *Application-Class* wird in \kap{application}, näher beschrieben.
 Diese vier Methoden enthalten die eigentliche Logik des Servers.
 Wenn nun ein Websocket-Server initialisiert werden soll, muss die nachstehende Struktur eingehalten werden.
 
-\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+\renewcommand{\kapitelautor}{Autoren: Dominik Nußbaumer, Clemens Scharwitzl}
 
 ```php
 $server = IoServer::factory(
@@ -30,6 +30,8 @@ Weiters sendet und empfängt sie auch Daten vom Client. \cite{noauthor_ratchet_n
 Sie wartet bis ein kompletter Request übertragen wurde und gibt ihn dann erst weiter. \cite{noauthor_ratchet_nodate}
 
 * **WsServer:** Diese Komponente verarbeitet die Websocket-Verbindungen mit den Browsern nach dem W3C Websocket Standard. \cite{noauthor_ratchet_nodate}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
 
 ### *Application-Class* \label{application}
 
